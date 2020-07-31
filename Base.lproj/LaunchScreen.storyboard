@@ -16,18 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_transfer_wise" translatesAutoresizingMaskIntoConstraints="NO" id="xvm-xC-xtW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transferwise-logo" translatesAutoresizingMaskIntoConstraints="NO" id="7Z0-UF-6jT">
+                                <rect key="frame" x="7" y="168" width="400" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.27058823529999998" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="xvm-xC-xtW" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="5Z8-CA-API"/>
-                            <constraint firstAttribute="trailing" secondItem="xvm-xC-xtW" secondAttribute="trailing" id="9Vn-sv-I4J"/>
-                            <constraint firstItem="xvm-xC-xtW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Igr-RF-d4I"/>
-                            <constraint firstAttribute="bottom" secondItem="xvm-xC-xtW" secondAttribute="bottom" id="YEn-Rv-PhH"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -37,6 +32,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="home_transfer_wise" width="1024" height="1024"/>
+        <image name="transferwise-logo" width="499.66665649414062" height="340.33334350585938"/>
     </resources>
 </document>

@@ -9,10 +9,26 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    // MARK: - IBOutlets
+    @IBOutlet private weak var openButton: UIButton!
+    @IBOutlet private weak var transactionView: UIView!
 
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.configuration()
+    }
+    
+    // MARK: - Configuration
+    private func configuration() {
+        self.openButton.customCorner(cornerRadius: 10, borderWidth: 0.2, borderColor: .gray)
+        self.transactionView.layer.cornerRadius = 10
+    }
+    
+    // MARK: - IBActions
+    @IBAction private func openBalance() {
+        let vc = SetUpBalanceViewController()
+        self.present(vc, animated: true)
     }
 }

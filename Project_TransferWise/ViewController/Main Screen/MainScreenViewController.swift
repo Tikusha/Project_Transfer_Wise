@@ -11,11 +11,11 @@ import UIKit
 class MainScreenViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pictureView: UIImageView!
-    @IBOutlet weak var logInButton: UIButton!
-    @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var googleButton: UIButton!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var pictureView: UIImageView!
+    @IBOutlet private weak var logInButton: UIButton!
+    @IBOutlet private weak var signInButton: UIButton!
+    @IBOutlet private weak var googleButton: UIButton!
     
     private let listTexts = MoneyTexts()
     
@@ -30,9 +30,9 @@ class MainScreenViewController: UIViewController {
     
     // MARK: - Configuration
     private func configuration() {
-        self.logInButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.blue)
-        self.signInButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.blue)
-        self.googleButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.blue)
+        self.logInButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
+        self.signInButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
+        self.googleButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
     }
     
     private func registerCell() {
@@ -51,12 +51,14 @@ class MainScreenViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction private func logIn(_ sender: Any) {
+        let vc = LogInViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
         
-        //        self.present(LogInViewController(), animated: true, completion: nil)
-        self.navigationController?.pushViewController(LogInViewController(), animated: true)
+        //        self.navigationController?.pushViewController(LogInViewController(), animated: true)
     }
     
-    @IBAction private func signIn(_ sender: Any) {
+    @IBAction private func register(_ sender: Any) {
         self.present(SignInViewController(), animated: true, completion: nil)
     }
 }

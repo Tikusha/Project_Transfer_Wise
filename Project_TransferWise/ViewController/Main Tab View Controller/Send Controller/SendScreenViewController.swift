@@ -9,9 +9,14 @@
 import UIKit
 
 class SendScreenViewController: UIViewController {
-
+    
+    // MARK: - View LifeCyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .gray
+    }
+    
+    // MARK: -IBActions
+    @IBAction func dismis() {
+        self.dismiss(animated: true)
     }
 }
