@@ -10,7 +10,7 @@ import UIKit
 
 extension UIButton {
     
-    // MARK: - round corners
+    // MARK: - Round corners
     func customCorner(cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor) {
         self.layer.cornerRadius = cornerRadius
         self.layer.borderWidth = borderWidth
