@@ -21,5 +21,7 @@ struct Constants {
         static let disabledGrey = UIColor(rgb: 0xa8aaac)
         static let backgroundGrey = UIColor(rgb: 0xa8aaac)
         static let navyDark = UIColor(rgb: 0x253655)
+        static let lightGray = UIColor(rgb: 0xFAFAFA)
+        static let keylineGrey = UIColor(rgb: 0xE2E6E8)
     }
 }

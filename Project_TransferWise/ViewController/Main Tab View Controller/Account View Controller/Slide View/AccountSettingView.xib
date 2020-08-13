@@ -21,34 +21,40 @@
                         <color key="titleColor" red="0.14509803921568626" green="0.21176470588235294" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
-                        <action selector="settings" destination="-1" eventType="touchUpInside" id="dg7-ff-C2X"/>
+                        <action selector="settings" destination="iN0-l3-epB" eventType="touchUpInside" id="VUM-jx-XPb"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlv-jY-3Ge">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlv-jY-3Ge" userLabel="Line Top">
                     <rect key="frame" x="186.33333333333334" y="12" width="41.333333333333343" height="11"/>
-                    <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.82745098039215681" green="0.83529411764705885" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0k-zr-eEo">
-                    <rect key="frame" x="20" y="116" width="374" height="1"/>
-                    <color key="backgroundColor" red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0k-zr-eEo" userLabel="Line Middle">
+                    <rect key="frame" x="20" y="116" width="374" height="0.6666666666666714"/>
+                    <color key="backgroundColor" red="0.82745098039215681" green="0.83529411764705885" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qh6-ft-zlS">
-                    <rect key="frame" x="20" y="197" width="374" height="1.3333333333333428"/>
-                    <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qh6-ft-zlS" userLabel="Line Bottom">
+                    <rect key="frame" x="20" y="196.66666666666666" width="374" height="1"/>
+                    <color key="backgroundColor" red="0.82745098039215681" green="0.83529411764705885" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcS-Bl-mjw">
-                    <rect key="frame" x="20" y="147" width="81" height="20"/>
+                    <rect key="frame" x="20" y="146.66666666666666" width="81" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <state key="normal" title="   Help" image="help">
                         <color key="titleColor" red="0.14509803921568626" green="0.21176470588235294" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="help" destination="iN0-l3-epB" eventType="touchUpInside" id="jR7-ds-Uw6"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLX-4d-IS9">
-                    <rect key="frame" x="20" y="228.33333333333334" width="110" height="20"/>
+                    <rect key="frame" x="20" y="227.66666666666666" width="110" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <state key="normal" title="   Log out" image="log_out">
                         <color key="titleColor" red="0.14509803921568626" green="0.21176470588235294" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="logOut" destination="iN0-l3-epB" eventType="touchUpInside" id="BOF-5C-gL4"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,7 +66,7 @@
                 <constraint firstItem="jLX-4d-IS9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="JDW-o9-8HP"/>
                 <constraint firstItem="dcS-Bl-mjw" firstAttribute="top" secondItem="S0k-zr-eEo" secondAttribute="bottom" constant="30" id="MNM-xn-vUt"/>
                 <constraint firstItem="Tlv-jY-3Ge" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="N1g-N8-sEm"/>
-                <constraint firstItem="Qh6-ft-zlS" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.0015" id="Pay-cs-jUg"/>
+                <constraint firstItem="Qh6-ft-zlS" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.001" id="Pay-cs-jUg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jLX-4d-IS9" secondAttribute="trailing" priority="750" constant="284" id="TaU-eo-7wx"/>
                 <constraint firstItem="dcS-Bl-mjw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="UbC-T6-s65"/>
                 <constraint firstItem="Tlv-jY-3Ge" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.1" id="Xxd-DX-flB"/>
@@ -68,7 +74,7 @@
                 <constraint firstItem="S0k-zr-eEo" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Ztb-sM-ngg"/>
                 <constraint firstItem="Qh6-ft-zlS" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="aoJ-j6-fGR"/>
                 <constraint firstItem="Tlv-jY-3Ge" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.015" id="eHL-CS-YR3"/>
-                <constraint firstItem="S0k-zr-eEo" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.0015" id="fni-GE-xzv"/>
+                <constraint firstItem="S0k-zr-eEo" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.001" id="fni-GE-xzv"/>
                 <constraint firstItem="omD-Pe-4lO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="jTh-Uy-wxQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="omD-Pe-4lO" secondAttribute="trailing" priority="750" constant="284" id="msE-Jk-aKq"/>
                 <constraint firstItem="Qh6-ft-zlS" firstAttribute="top" secondItem="dcS-Bl-mjw" secondAttribute="bottom" constant="30" id="p0d-Qm-C9N"/>

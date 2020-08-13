@@ -8,14 +8,26 @@
 
 import UIKit
 
+protocol MoveOtherScreenDelegate {
+    func selectLogOut()
+}
+
 class AccountSettingView: UIView {
     
     // MARK: - @IBOutlets
     @IBOutlet private weak var viewLine: UIView!
     
+    // MARK: - Properties
+    var delegate: MoveOtherScreenDelegate?
+    
     // MARK: - View LifeCyrcle
     override func layoutSubviews() {
         super.layoutSubviews()
+        self.configuration()
+    }
+    
+    // MARK: - Configuration
+    private func configuration() {
         self.roundCorners(corners: [.topLeft, .topRight], radius: 15)
         self.viewLine.customBorder(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.disabledGrey)
     }
@@ -35,6 +47,7 @@ class AccountSettingView: UIView {
     }
     
     @IBAction func logOut() {
-        
+        self.delegate?.selectLogOut()
     }
 }
+

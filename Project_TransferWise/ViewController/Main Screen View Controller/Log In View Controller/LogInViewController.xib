@@ -74,23 +74,23 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxt-3o-2Xo">
-                    <rect key="frame" x="20" y="210.66666666666666" width="82.666666666666671" height="14.333333333333343"/>
+                    <rect key="frame" x="20" y="210.33333333333334" width="82.666666666666671" height="14.333333333333343"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="pppp" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Add-RI-wnn" userLabel="email">
-                    <rect key="frame" x="20" y="148.33333333333334" width="374" height="19.666666666666657"/>
+                    <rect key="frame" x="20" y="148" width="374" height="19.666666666666657"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="muv-Gj-saV">
-                    <rect key="frame" x="20" y="230" width="374" height="19.666666666666657"/>
+                    <rect key="frame" x="20" y="229.66666666666666" width="374" height="19.666666666666657"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmM-jg-3cU">
-                    <rect key="frame" x="20" y="129" width="63" height="14.333333333333343"/>
+                    <rect key="frame" x="20" y="128.66666666666666" width="63" height="14.333333333333343"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -102,13 +102,13 @@
                         <action selector="close:" destination="-1" eventType="touchUpInside" id="mAL-kY-f32"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5P-Og-Dfl">
-                    <rect key="frame" x="21" y="261.66666666666669" width="372" height="0.33333333333331439"/>
-                    <color key="backgroundColor" red="0.6588235294117647" green="0.66666666666666663" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dcx-gt-Vep" userLabel="Line Top">
+                    <rect key="frame" x="21" y="179.66666666666666" width="372" height="0.66666666666665719"/>
+                    <color key="backgroundColor" red="0.82745098039215681" green="0.83529411764705885" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dcx-gt-Vep">
-                    <rect key="frame" x="21" y="180" width="372" height="0.66666666666665719"/>
-                    <color key="backgroundColor" red="0.6588235294" green="0.66666666669999997" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5P-Og-Dfl" userLabel="Line Bottom">
+                    <rect key="frame" x="21" y="261.33333333333331" width="372" height="0.66666666666668561"/>
+                    <color key="backgroundColor" red="0.82745098039215681" green="0.83529411764705885" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,8 +134,8 @@
                 <constraint firstItem="P9T-Kb-zSa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ew8-wk-AfX"/>
                 <constraint firstItem="Add-RI-wnn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="G9N-wu-Tp1"/>
                 <constraint firstItem="Dcx-gt-Vep" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="21" id="Gus-Lg-mA7"/>
-                <constraint firstItem="A5P-Og-Dfl" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0007" id="HLk-Pc-3ug"/>
-                <constraint firstItem="Dcx-gt-Vep" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0007" id="Hjv-nI-Q4H"/>
+                <constraint firstItem="A5P-Og-Dfl" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.001" id="HLk-Pc-3ug"/>
+                <constraint firstItem="Dcx-gt-Vep" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.001" id="Hjv-nI-Q4H"/>
                 <constraint firstItem="zxt-3o-2Xo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="KdG-nr-SBZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zxt-3o-2Xo" secondAttribute="trailing" priority="750" constant="320.33333333333331" id="Oxa-mM-XAN"/>
                 <constraint firstItem="lTc-UB-T4a" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="RSX-FL-plr"/>

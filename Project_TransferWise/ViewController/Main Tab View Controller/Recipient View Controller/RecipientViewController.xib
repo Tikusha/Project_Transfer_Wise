@@ -24,14 +24,17 @@
                     <state key="normal" title="Add">
                         <color key="titleColor" red="0.0" green="0.64313725490196072" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="add" destination="-1" eventType="touchUpInside" id="hPi-py-kEU"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1V0-cE-Y6Y">
-                    <rect key="frame" x="41" y="85" width="81" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <rect key="frame" x="30" y="85" width="92" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1_PB-ESh09HT1ErTwVB5BBHg" translatesAutoresizingMaskIntoConstraints="NO" id="4i8-bB-L22">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recipient" translatesAutoresizingMaskIntoConstraints="NO" id="4i8-bB-L22">
                     <rect key="frame" x="-15.666666666666657" y="278.66666666666669" width="445.33333333333326" height="179"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3f-7V-PaV">
@@ -40,7 +43,7 @@
                         <fragment content="Once you've added some recipients, you'll              see them saved here. Tap 'add' to get                started.">
                             <attributes>
                                 <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="NSColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" red="0.6588235294117647" green="0.66666666666666663" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" metaFont="system" size="16"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                             </attributes>
@@ -53,11 +56,12 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="enc-zd-8pL" secondAttribute="trailing" constant="41" id="2Yi-5w-IlT"/>
                 <constraint firstItem="4i8-bB-L22" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Efx-YT-6cd"/>
+                <constraint firstItem="1V0-cE-Y6Y" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.222222" id="GAu-OW-Zq9"/>
                 <constraint firstAttribute="trailing" secondItem="v3f-7V-PaV" secondAttribute="trailing" constant="25" id="JI7-R7-EzI"/>
-                <constraint firstItem="1V0-cE-Y6Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="41" id="Klw-NF-du4"/>
+                <constraint firstItem="1V0-cE-Y6Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Klw-NF-du4"/>
                 <constraint firstItem="4i8-bB-L22" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.243207" id="Rbe-1G-euM"/>
+                <constraint firstItem="1V0-cE-Y6Y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="85" id="U6A-9L-Stw"/>
                 <constraint firstItem="v3f-7V-PaV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Z0N-zM-yMo"/>
-                <constraint firstItem="1V0-cE-Y6Y" firstAttribute="top" secondItem="enc-zd-8pL" secondAttribute="bottom" constant="35" id="ZtZ-bB-zIv"/>
                 <constraint firstItem="4i8-bB-L22" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aqX-wg-4Nz"/>
                 <constraint firstItem="v3f-7V-PaV" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.15" id="dfK-RV-Aol"/>
                 <constraint firstItem="4i8-bB-L22" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1.07488" id="hEy-GJ-kHC"/>
@@ -65,13 +69,13 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="v3f-7V-PaV" secondAttribute="bottom" constant="84" id="jpB-JC-mNG"/>
                 <constraint firstItem="v3f-7V-PaV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="sw6-dG-uwe"/>
                 <constraint firstItem="v3f-7V-PaV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.879227" id="tPd-nM-Ug1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1V0-cE-Y6Y" secondAttribute="trailing" constant="292" id="wae-Nb-aUF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1V0-cE-Y6Y" secondAttribute="trailing" priority="750" constant="292" id="wae-Nb-aUF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="141" y="135"/>
+            <point key="canvasLocation" x="140.57971014492756" y="134.5108695652174"/>
         </view>
     </objects>
     <resources>
-        <image name="1_PB-ESh09HT1ErTwVB5BBHg" width="404.33334350585938" height="179"/>
+        <image name="recipient" width="404.33334350585938" height="179"/>
     </resources>
 </document>

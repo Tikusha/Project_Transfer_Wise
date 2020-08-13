@@ -27,11 +27,10 @@ class MainTabViewController: UITabBarController {
     
     private func setupTabBarColor() {
         self.tabBar.tintColor = Constants.Color.brandBlue
-//        self.tabBar.layer.backgroundColor = UIColor.white.cgColor
-        self.tabBar.layer.borderWidth = 0.5
+        self.tabBar.layer.borderWidth = 0.3
         self.tabBar.layer.borderColor = Constants.Color.disabledGrey.cgColor
         self.tabBar.clipsToBounds = true
-        self.tabBar.backgroundColor = UIColor.white
+//        self.tabBar.backgroundColor = Constants.Color.lightGray
     }
     
     // MARK: - Generate controllers
@@ -59,7 +58,7 @@ class MainTabViewController: UITabBarController {
     private func setupMiddleIcon() {
         let frame = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         var shadeFrame = frame.frame
-        shadeFrame.origin.y = self.view.bounds.height - self.tabBar.frame.height - shadeFrame.height
+        shadeFrame.origin.y = self.view.bounds.height - self.tabBar.frame.height - shadeFrame.height/2
         shadeFrame.origin.x = self.view.bounds.width/2 - shadeFrame.size.width/2
         frame.frame = shadeFrame
         frame.backgroundColor = UIColor.white
@@ -68,7 +67,7 @@ class MainTabViewController: UITabBarController {
         
         let roundLine = CAShapeLayer()
         roundLine.path = UIBezierPath(ovalIn: CGRect(x: 0.0, y: 0.0, width: frame.frame.size.width, height: frame.frame.size.height)).cgPath
-        roundLine.lineWidth = 0.5
+        roundLine.lineWidth = 0.3
         roundLine.strokeStart = 0.5
         roundLine.strokeEnd = 1.0
         roundLine.fillColor = UIColor.white.cgColor

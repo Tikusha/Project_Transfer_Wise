@@ -32,6 +32,8 @@
 		AC6A938024C4C5DF005347C7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6A937E24C4C5DF005347C7 /* HomeViewController.xib */; };
 		AC6A938324C4DBCE005347C7 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A938124C4DBCE005347C7 /* InviteViewController.swift */; };
 		AC6A938424C4DBCE005347C7 /* InviteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6A938224C4DBCE005347C7 /* InviteViewController.xib */; };
+		AC735CD224E5A69A00BBCF04 /* AddRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC735CD024E5A69A00BBCF04 /* AddRecipientViewController.swift */; };
+		AC735CD324E5A69A00BBCF04 /* AddRecipientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC735CD124E5A69A00BBCF04 /* AddRecipientViewController.xib */; };
 		AC9DE3B524B84EBB00E6A8A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DE3B424B84EBB00E6A8A4 /* AppDelegate.swift */; };
 		AC9DE3B924B84EBB00E6A8A4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DE3B824B84EBB00E6A8A4 /* MainScreenViewController.swift */; };
 		AC9DE3BE24B84EBD00E6A8A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9DE3BD24B84EBD00E6A8A4 /* Assets.xcassets */; };
@@ -76,6 +78,8 @@
 		AC6A937E24C4C5DF005347C7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		AC6A938124C4DBCE005347C7 /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		AC6A938224C4DBCE005347C7 /* InviteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InviteViewController.xib; sourceTree = "<group>"; };
+		AC735CD024E5A69A00BBCF04 /* AddRecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientViewController.swift; sourceTree = "<group>"; };
+		AC735CD124E5A69A00BBCF04 /* AddRecipientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRecipientViewController.xib; sourceTree = "<group>"; };
 		AC9DE3B124B84EBB00E6A8A4 /* Project_TransferWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_TransferWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9DE3B424B84EBB00E6A8A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC9DE3B824B84EBB00E6A8A4 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 			children = (
 				AC2F77CA24D5B87E00119F48 /* RecipientViewController.xib */,
 				AC2F77C924D5B87E00119F48 /* RecipientViewController.swift */,
+				AC735CCF24E5A63900BBCF04 /* Add Recipient Screan View Controller */,
 			);
 			path = "Recipient View Controller";
 			sourceTree = "<group>";
@@ -229,6 +234,15 @@
 			path = "Invite View Controller";
 			sourceTree = "<group>";
 		};
+		AC735CCF24E5A63900BBCF04 /* Add Recipient Screan View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC735CD024E5A69A00BBCF04 /* AddRecipientViewController.swift */,
+				AC735CD124E5A69A00BBCF04 /* AddRecipientViewController.xib */,
+			);
+			path = "Add Recipient Screan View Controller";
+			sourceTree = "<group>";
+		};
 		AC9DE3A824B84EBB00E6A8A4 = {
 			isa = PBXGroup;
 			children = (
@@ -268,8 +282,8 @@
 				AC9DE3C824B850B200E6A8A4 /* MainScreen.xib */,
 				AC9DE3B824B84EBB00E6A8A4 /* MainScreenViewController.swift */,
 				AC9DE3D324B9AEE800E6A8A4 /* Table Cells */,
-				AC1B7EFD24B9C03400826349 /* Sign In View Controller */,
 				AC1B7EFC24B9C02A00826349 /* Log In View Controller */,
+				AC1B7EFD24B9C03400826349 /* Sign In View Controller */,
 			);
 			path = "Main Screen View Controller";
 			sourceTree = "<group>";
@@ -353,8 +367,8 @@
 		ACF7FE4424D75F63007B9A0E /* Setting View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ACF7FE4724D76063007B9A0E /* SettingsViewController.swift */,
 				ACF7FE4824D76063007B9A0E /* SettingsViewController.xib */,
+				ACF7FE4724D76063007B9A0E /* SettingsViewController.swift */,
 			);
 			path = "Setting View Controller";
 			sourceTree = "<group>";
@@ -362,8 +376,8 @@
 		ACF7FE4624D7603D007B9A0E /* Help View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ACF7FE4B24D76071007B9A0E /* HelpViewController.swift */,
 				ACF7FE4C24D76071007B9A0E /* HelpViewController.xib */,
+				ACF7FE4B24D76071007B9A0E /* HelpViewController.swift */,
 			);
 			path = "Help View Controller";
 			sourceTree = "<group>";
@@ -439,6 +453,7 @@
 				AC1B7F0524B9C1AC00826349 /* SignInViewController.xib in Resources */,
 				AC1B7F0124B9C19800826349 /* LogInViewController.xib in Resources */,
 				AC41576524CDE681001B06B6 /* SendScreenViewController.xib in Resources */,
+				AC735CD324E5A69A00BBCF04 /* AddRecipientViewController.xib in Resources */,
 				AC41578A24D340A2001B06B6 /* SetUpBalanceViewController.xib in Resources */,
 				AC2F77C824D5B7C200119F48 /* AccountViewController.xib in Resources */,
 				AC6A938024C4C5DF005347C7 /* HomeViewController.xib in Resources */,
@@ -486,6 +501,7 @@
 				AC41576424CDE681001B06B6 /* SendScreenViewController.swift in Sources */,
 				AC1B7F0024B9C19800826349 /* LogInViewController.swift in Sources */,
 				ACF7FE4D24D76071007B9A0E /* HelpViewController.swift in Sources */,
+				AC735CD224E5A69A00BBCF04 /* AddRecipientViewController.swift in Sources */,
 				AC9DE3B924B84EBB00E6A8A4 /* MainScreenViewController.swift in Sources */,
 				AC9DE3D624B9AF1500E6A8A4 /* TitleCell.swift in Sources */,
 				AC6A937F24C4C5DF005347C7 /* HomeViewController.swift in Sources */,

@@ -24,13 +24,13 @@ class MainScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerCell()
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
         self.configuration()
     }
     
     // MARK: - Configuration
     private func configuration() {
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
         self.logInButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
         self.signInButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
         self.googleButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)

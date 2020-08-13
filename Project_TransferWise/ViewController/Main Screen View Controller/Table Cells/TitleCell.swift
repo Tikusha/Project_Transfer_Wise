@@ -16,7 +16,5 @@ class TitleCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-//        self.largeText.attributedText = NSMutableAttributedString(string: "Bold")
-              
     }
 }
