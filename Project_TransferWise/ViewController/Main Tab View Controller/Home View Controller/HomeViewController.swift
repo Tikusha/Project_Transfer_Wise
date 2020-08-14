@@ -28,7 +28,6 @@ class HomeViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction private func openBalance() {
-        let vc = SetUpBalanceViewController()
-        self.present(vc, animated: true)
+        self.present(SetUpBalanceViewController(), animated: true)
     }
 }

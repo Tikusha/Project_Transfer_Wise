@@ -58,7 +58,7 @@
                         <color key="titleColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account services" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVz-Wj-zdv">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account services " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GVz-Wj-zdv">
                     <rect key="frame" x="20" y="288.66666666666669" width="374" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12.300000190734863"/>
                     <color key="textColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -112,7 +112,7 @@
                         <constraint firstItem="FsS-gk-aN1" firstAttribute="width" secondItem="DM7-sN-dpz" secondAttribute="width" multiplier="0.704" id="OzG-wR-ONb"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direct Debits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17L-iJ-sjh">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direct Debits " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="17L-iJ-sjh">
                     <rect key="frame" x="77.333333333333329" y="433" width="95.999999999999986" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <color key="textColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -135,6 +135,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="DM7-sN-dpz" firstAttribute="width" secondItem="f1p-r3-gWF" secondAttribute="width" multiplier="0.109457" id="0KS-jz-t0W"/>
+                <constraint firstItem="ECx-G6-2sr" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0iw-9k-uKi" secondAttribute="trailing" id="2UT-f0-RCB"/>
                 <constraint firstItem="f1p-r3-gWF" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4Ch-Z7-b9L"/>
                 <constraint firstItem="NuR-Qp-XaE" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6Zs-1U-zWZ"/>
                 <constraint firstItem="6Xl-TL-Dd7" firstAttribute="centerY" secondItem="0iw-9k-uKi" secondAttribute="centerY" id="80V-Jc-HbA"/>
@@ -164,11 +165,13 @@
                 <constraint firstItem="17L-iJ-sjh" firstAttribute="width" secondItem="f1p-r3-gWF" secondAttribute="width" multiplier="0.252189" id="Y7x-dY-L3q"/>
                 <constraint firstItem="FAG-Bf-wQ4" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.001" id="YOu-x0-WWQ"/>
                 <constraint firstItem="f1p-r3-gWF" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1176" id="a2X-v1-Fh9"/>
+                <constraint firstItem="f1p-r3-gWF" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="5f6-N7-vPB" secondAttribute="trailing" constant="306" id="aA2-Qq-lyL"/>
                 <constraint firstItem="cBc-Hm-grR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aEG-xg-wzm"/>
                 <constraint firstItem="0iw-9k-uKi" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.92" id="aGR-Ov-xZs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NuR-Qp-XaE" secondAttribute="bottom" constant="28" id="bQE-Zy-gFf"/>
                 <constraint firstItem="FAG-Bf-wQ4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="c7P-Jh-uwF"/>
                 <constraint firstItem="GVz-Wj-zdv" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0285326" id="c80-cg-bzY"/>
+                <constraint firstItem="17L-iJ-sjh" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="f1p-r3-gWF" secondAttribute="trailing" id="dxf-fi-TGW"/>
                 <constraint firstItem="17L-iJ-sjh" firstAttribute="height" secondItem="f1p-r3-gWF" secondAttribute="height" multiplier="0.241379" id="eJ4-uw-rxS"/>
                 <constraint firstItem="ukA-VU-bFJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="52" id="eL3-bk-pei"/>
                 <constraint firstItem="yHn-wl-Kpm" firstAttribute="top" secondItem="GVz-Wj-zdv" secondAttribute="bottom" constant="16" id="fGP-1w-exQ"/>

@@ -23,7 +23,6 @@ class LogInViewController: UIViewController {
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.setInitilazer()
         self.configuration()
         
     }

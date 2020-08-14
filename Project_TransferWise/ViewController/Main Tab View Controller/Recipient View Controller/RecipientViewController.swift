@@ -17,7 +17,6 @@ class RecipientViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction private func add() {
-        let vc = AddRecipientViewController()
-        self.present(vc, animated: true)
+        self.present(AddRecipientViewController(), animated: true)
     }
 }
