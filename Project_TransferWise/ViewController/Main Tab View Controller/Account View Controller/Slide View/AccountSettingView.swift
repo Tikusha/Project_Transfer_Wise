@@ -29,7 +29,7 @@ class AccountSettingView: UIView {
     // MARK: - Configuration
     private func configuration() {
         self.roundCorners(corners: [.topLeft, .topRight], radius: 15)
-        self.viewLine.customBorder(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.disabledGrey)
+        self.viewLine.cornerView(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.disabledGrey)
     }
     
     // MARK: - IBActions

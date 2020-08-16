@@ -132,7 +132,7 @@
                     <rect key="frame" x="0.0" y="531.33333333333337" width="414" height="176.66666666666663"/>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="DM7-sN-dpz" firstAttribute="width" secondItem="f1p-r3-gWF" secondAttribute="width" multiplier="0.109457" id="0KS-jz-t0W"/>
                 <constraint firstItem="ECx-G6-2sr" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0iw-9k-uKi" secondAttribute="trailing" id="2UT-f0-RCB"/>

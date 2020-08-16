@@ -13,6 +13,19 @@ class SetUpBalanceViewController: UIViewController {
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .cyan
+        self.configuration()
+    }
+    
+    // MARK: - Configuration
+    private func configuration() {
+    }
+    
+    // MARK: - IBActions
+    @IBAction private func close(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction private func letsGo(){
+        print("Lets go")
     }
 }

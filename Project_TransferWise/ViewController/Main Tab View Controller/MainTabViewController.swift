@@ -20,7 +20,7 @@ class MainTabViewController: UITabBarController {
     private func configuration() {
         self.delegate = self
         UINavigationBar.appearance().prefersLargeTitles = true
-        UITabBar.appearance().backgroundColor = UIColor.white
+//        UITabBar.appearance().backgroundColor = UIColor.white
         self.viewControllers = generateControllers()
         self.setupTabBarColor()
     }
@@ -79,7 +79,7 @@ class MainTabViewController: UITabBarController {
         buttonFrame.origin.y = frame.bounds.height/2 - buttonFrame.height/2
         buttonFrame.origin.x = frame.bounds.width/2 - buttonFrame.size.width/2
         middleButton.frame = buttonFrame
-        middleButton.backgroundColor = Constants.Color.borderlessGreen
+        middleButton.backgroundColor = Constants.Color.payGreen
         middleButton.layer.cornerRadius = buttonFrame.height/2
         middleButton.addTarget(self, action: #selector(actionButton), for: .touchUpInside)
         frame.addSubview(middleButton)

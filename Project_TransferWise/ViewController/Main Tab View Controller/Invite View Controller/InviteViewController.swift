@@ -25,7 +25,7 @@ class InviteViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func inviteFriend() {
+    @IBAction private func inviteFriend() {
         self.present(InviteFriendViewController(), animated: true)
     }
 }

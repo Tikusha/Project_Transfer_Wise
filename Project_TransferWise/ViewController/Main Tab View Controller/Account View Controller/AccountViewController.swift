@@ -29,13 +29,12 @@ class AccountViewController: UIViewController {
     
     // MARK: - Configuration
     private func configuration() {
-        self.view.backgroundColor = .white
         let heightContact = self.contactView.frame.size.height
         let heightHome = self.homeView.frame.size.height
         let heightdetail = self.detailView.frame.size.height
-        self.homeView.customBorder(cornerRadius: heightHome/2, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
-        self.detailView.customBorder(cornerRadius: heightdetail/2, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
-        self.contactView.customBorder(cornerRadius: heightContact/2, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
+        self.homeView.cornerView(cornerRadius: heightHome/2, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
+        self.detailView.cornerView(cornerRadius: heightdetail/2, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
+        self.contactView.cornerView(cornerRadius: heightContact/2, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
     }
     
     // MARK: Load table on slide

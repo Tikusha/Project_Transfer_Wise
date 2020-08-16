@@ -43,6 +43,10 @@
 		AC9DE3D724B9AF1500E6A8A4 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9DE3D524B9AF1500E6A8A4 /* TitleCell.xib */; };
 		ACBA327424E6F41900D7CD7C /* InviteFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA327224E6F41900D7CD7C /* InviteFriendViewController.swift */; };
 		ACBA327524E6F41900D7CD7C /* InviteFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBA327324E6F41900D7CD7C /* InviteFriendViewController.xib */; };
+		ACBA327924E9646A00D7CD7C /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA327724E9646A00D7CD7C /* CountryViewController.swift */; };
+		ACBA327A24E9646A00D7CD7C /* CountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBA327824E9646A00D7CD7C /* CountryViewController.xib */; };
+		ACBA327F24E99DD800D7CD7C /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA327D24E99DD800D7CD7C /* CountryCell.swift */; };
+		ACBA328024E99DD800D7CD7C /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBA327E24E99DD800D7CD7C /* CountryCell.xib */; };
 		ACDA488F24BA19DB00A8773E /* MoneyTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA488E24BA19DB00A8773E /* MoneyTexts.swift */; };
 		ACF7FE4924D76063007B9A0E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF7FE4724D76063007B9A0E /* SettingsViewController.swift */; };
 		ACF7FE4A24D76063007B9A0E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF7FE4824D76063007B9A0E /* SettingsViewController.xib */; };
@@ -93,6 +97,10 @@
 		AC9DE3D524B9AF1500E6A8A4 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		ACBA327224E6F41900D7CD7C /* InviteFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendViewController.swift; sourceTree = "<group>"; };
 		ACBA327324E6F41900D7CD7C /* InviteFriendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InviteFriendViewController.xib; sourceTree = "<group>"; };
+		ACBA327724E9646A00D7CD7C /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		ACBA327824E9646A00D7CD7C /* CountryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryViewController.xib; sourceTree = "<group>"; };
+		ACBA327D24E99DD800D7CD7C /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		ACBA327E24E99DD800D7CD7C /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
 		ACDA488E24BA19DB00A8773E /* MoneyTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTexts.swift; sourceTree = "<group>"; };
 		ACF7FE4724D76063007B9A0E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ACF7FE4824D76063007B9A0E /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
@@ -202,6 +210,7 @@
 			children = (
 				AC41576324CDE681001B06B6 /* SendScreenViewController.xib */,
 				AC41576224CDE681001B06B6 /* SendScreenViewController.swift */,
+				ACBA327624E9643F00D7CD7C /* Country View Controller */,
 			);
 			path = "Send View Controller";
 			sourceTree = "<group>";
@@ -368,6 +377,25 @@
 			path = "Invite friends View Controller";
 			sourceTree = "<group>";
 		};
+		ACBA327624E9643F00D7CD7C /* Country View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACBA327824E9646A00D7CD7C /* CountryViewController.xib */,
+				ACBA327724E9646A00D7CD7C /* CountryViewController.swift */,
+				ACBA328124E99DE500D7CD7C /* Country Cell */,
+			);
+			path = "Country View Controller";
+			sourceTree = "<group>";
+		};
+		ACBA328124E99DE500D7CD7C /* Country Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ACBA327E24E99DD800D7CD7C /* CountryCell.xib */,
+				ACBA327D24E99DD800D7CD7C /* CountryCell.swift */,
+			);
+			path = "Country Cell";
+			sourceTree = "<group>";
+		};
 		ACD423F124D4BB9D00AE4717 /* Home View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +483,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACBA328024E99DD800D7CD7C /* CountryCell.xib in Resources */,
 				AC9DE3D724B9AF1500E6A8A4 /* TitleCell.xib in Resources */,
 				ACBA327524E6F41900D7CD7C /* InviteFriendViewController.xib in Resources */,
 				AC6A938424C4DBCE005347C7 /* InviteViewController.xib in Resources */,
@@ -471,6 +500,7 @@
 				AC735CD324E5A69A00BBCF04 /* AddRecipientViewController.xib in Resources */,
 				AC41578A24D340A2001B06B6 /* SetUpBalanceViewController.xib in Resources */,
 				AC2F77C824D5B7C200119F48 /* AccountViewController.xib in Resources */,
+				ACBA327A24E9646A00D7CD7C /* CountryViewController.xib in Resources */,
 				AC6A938024C4C5DF005347C7 /* HomeViewController.xib in Resources */,
 				ACF7FE4E24D76071007B9A0E /* HelpViewController.xib in Resources */,
 			);
@@ -515,8 +545,10 @@
 				ACBA327424E6F41900D7CD7C /* InviteFriendViewController.swift in Sources */,
 				AC6A938324C4DBCE005347C7 /* InviteViewController.swift in Sources */,
 				AC41576424CDE681001B06B6 /* SendScreenViewController.swift in Sources */,
+				ACBA327F24E99DD800D7CD7C /* CountryCell.swift in Sources */,
 				AC1B7F0024B9C19800826349 /* LogInViewController.swift in Sources */,
 				ACF7FE4D24D76071007B9A0E /* HelpViewController.swift in Sources */,
+				ACBA327924E9646A00D7CD7C /* CountryViewController.swift in Sources */,
 				AC735CD224E5A69A00BBCF04 /* AddRecipientViewController.swift in Sources */,
 				AC9DE3B924B84EBB00E6A8A4 /* MainScreenViewController.swift in Sources */,
 				AC9DE3D624B9AF1500E6A8A4 /* TitleCell.swift in Sources */,
