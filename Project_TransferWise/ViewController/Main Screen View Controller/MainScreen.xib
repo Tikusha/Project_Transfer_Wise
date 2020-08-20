@@ -24,16 +24,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvg-Ji-mmb">
-                    <rect key="frame" x="20" y="654.33333333333337" width="374" height="51.666666666666629"/>
+                    <rect key="frame" x="20" y="656" width="374" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="sqq-ij-Kwh"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <state key="normal" title="Sing in with Apple" image="apple_black">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNM-i6-Kdo">
-                    <rect key="frame" x="217" y="583" width="177" height="51.333333333333371"/>
+                    <rect key="frame" x="217" y="586" width="177" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ZI0-qN-462"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                     <state key="normal" title="Register">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,8 +49,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6r-wp-Cx2">
-                    <rect key="frame" x="20" y="583" width="177" height="51.333333333333371"/>
+                    <rect key="frame" x="20" y="586" width="177" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="glU-RG-NDh"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                     <state key="normal" title="Log in">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -54,7 +63,7 @@
                     </connections>
                 </button>
                 <collectionView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="cPP-oB-69H">
-                    <rect key="frame" x="30" y="323" width="354" height="170"/>
+                    <rect key="frame" x="30" y="326" width="354" height="170"/>
                     <color key="backgroundColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EMU-Kb-aTc">
                         <size key="itemSize" width="128" height="128"/>
@@ -69,8 +78,6 @@
             </subviews>
             <color key="backgroundColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="YNM-i6-Kdo" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.07" id="67b-LW-2Cg"/>
-                <constraint firstItem="rvg-Ji-mmb" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.07" id="83Q-u4-KTt"/>
                 <constraint firstItem="R6r-wp-Cx2" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.427536" id="C0g-db-vfu"/>
                 <constraint firstItem="S39-45-UGI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Cw3-oA-PsK"/>
                 <constraint firstItem="R6r-wp-Cx2" firstAttribute="top" secondItem="cPP-oB-69H" secondAttribute="bottom" constant="90" id="DNi-9q-jTf"/>
@@ -84,7 +91,6 @@
                 <constraint firstItem="YNM-i6-Kdo" firstAttribute="top" secondItem="cPP-oB-69H" secondAttribute="bottom" constant="90" id="d1j-He-xyo"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YNM-i6-Kdo" secondAttribute="trailing" constant="20" id="dM4-q0-w2D"/>
                 <constraint firstItem="R6r-wp-Cx2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hyj-jG-FF2"/>
-                <constraint firstItem="R6r-wp-Cx2" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.07" id="myK-fz-9zd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rvg-Ji-mmb" secondAttribute="trailing" constant="20" id="r8N-o4-M7M"/>
                 <constraint firstItem="rvg-Ji-mmb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="rBn-I5-s9g"/>
                 <constraint firstItem="S39-45-UGI" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="tfP-AG-3rC"/>

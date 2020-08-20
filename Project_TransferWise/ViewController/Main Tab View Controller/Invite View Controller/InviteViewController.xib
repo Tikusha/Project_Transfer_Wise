@@ -50,8 +50,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvt-xx-Ski">
-                    <rect key="frame" x="20" y="562" width="374" height="48"/>
+                    <rect key="frame" x="20" y="562" width="374" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="7wD-gA-GIf"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <state key="normal" title="Invite friends">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,7 +64,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLl-Iw-SVc">
-                    <rect key="frame" x="20" y="622" width="374" height="30"/>
+                    <rect key="frame" x="20" y="624" width="374" height="30"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <state key="normal" title="Learn more">
                         <color key="titleColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,7 +85,6 @@
                 <constraint firstItem="KTL-pr-8ep" firstAttribute="top" secondItem="ur4-gi-LIQ" secondAttribute="bottom" constant="17" id="Ssd-B7-hNQ"/>
                 <constraint firstItem="KTL-pr-8ep" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="39" id="TnK-0F-RUA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ur4-gi-LIQ" secondAttribute="bottom" constant="263" id="Vxr-rc-SQZ"/>
-                <constraint firstItem="Cvt-xx-Ski" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="XW3-2Z-zlC"/>
                 <constraint firstItem="Cvt-xx-Ski" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="YYQ-vz-9fh"/>
                 <constraint firstItem="sLl-Iw-SVc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Znl-OJ-9FL"/>
                 <constraint firstItem="aSS-ZZ-iad" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="65" id="eG6-yq-4Hu"/>

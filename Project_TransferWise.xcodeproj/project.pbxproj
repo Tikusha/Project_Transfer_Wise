@@ -47,6 +47,8 @@
 		ACBA327A24E9646A00D7CD7C /* CountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBA327824E9646A00D7CD7C /* CountryViewController.xib */; };
 		ACBA327F24E99DD800D7CD7C /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA327D24E99DD800D7CD7C /* CountryCell.swift */; };
 		ACBA328024E99DD800D7CD7C /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBA327E24E99DD800D7CD7C /* CountryCell.xib */; };
+		ACBA328524EEBA7000D7CD7C /* CurrencyRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA328424EEBA7000D7CD7C /* CurrencyRate.swift */; };
+		ACBA328724EEBACE00D7CD7C /* FetchCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA328624EEBACE00D7CD7C /* FetchCurrency.swift */; };
 		ACDA488F24BA19DB00A8773E /* MoneyTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA488E24BA19DB00A8773E /* MoneyTexts.swift */; };
 		ACF7FE4924D76063007B9A0E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF7FE4724D76063007B9A0E /* SettingsViewController.swift */; };
 		ACF7FE4A24D76063007B9A0E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF7FE4824D76063007B9A0E /* SettingsViewController.xib */; };
@@ -101,6 +103,8 @@
 		ACBA327824E9646A00D7CD7C /* CountryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryViewController.xib; sourceTree = "<group>"; };
 		ACBA327D24E99DD800D7CD7C /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		ACBA327E24E99DD800D7CD7C /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		ACBA328424EEBA7000D7CD7C /* CurrencyRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRate.swift; sourceTree = "<group>"; };
+		ACBA328624EEBACE00D7CD7C /* FetchCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCurrency.swift; sourceTree = "<group>"; };
 		ACDA488E24BA19DB00A8773E /* MoneyTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTexts.swift; sourceTree = "<group>"; };
 		ACF7FE4724D76063007B9A0E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ACF7FE4824D76063007B9A0E /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 				AC41576324CDE681001B06B6 /* SendScreenViewController.xib */,
 				AC41576224CDE681001B06B6 /* SendScreenViewController.swift */,
 				ACBA327624E9643F00D7CD7C /* Country View Controller */,
+				ACBA328424EEBA7000D7CD7C /* CurrencyRate.swift */,
+				ACBA328624EEBACE00D7CD7C /* FetchCurrency.swift */,
 			);
 			path = "Send View Controller";
 			sourceTree = "<group>";
@@ -553,7 +559,9 @@
 				AC9DE3B924B84EBB00E6A8A4 /* MainScreenViewController.swift in Sources */,
 				AC9DE3D624B9AF1500E6A8A4 /* TitleCell.swift in Sources */,
 				AC6A937F24C4C5DF005347C7 /* HomeViewController.swift in Sources */,
+				ACBA328724EEBACE00D7CD7C /* FetchCurrency.swift in Sources */,
 				AC41578924D340A2001B06B6 /* SetUpBalanceViewController.swift in Sources */,
+				ACBA328524EEBA7000D7CD7C /* CurrencyRate.swift in Sources */,
 				AC1B7F0424B9C1AC00826349 /* SignInViewController.swift in Sources */,
 				AC2F77CB24D5B87E00119F48 /* RecipientViewController.swift in Sources */,
 				AC9DE3B524B84EBB00E6A8A4 /* AppDelegate.swift in Sources */,

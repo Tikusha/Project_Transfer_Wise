@@ -27,6 +27,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8d-FY-1rP" userLabel="Balance Button">
                     <rect key="frame" x="25" y="20.000000000000007" width="364" height="117.66666666666669"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="117.67" id="Q67-ax-4HH"/>
+                    </constraints>
                     <connections>
                         <action selector="openBalance" destination="-1" eventType="touchUpInside" id="UXQ-NZ-Roi"/>
                     </connections>
@@ -82,7 +85,6 @@
                 <constraint firstItem="VAn-Xt-jZd" firstAttribute="top" secondItem="y8d-FY-1rP" secondAttribute="bottom" constant="20.333333333333314" id="EPL-y2-Vft"/>
                 <constraint firstItem="mES-t1-1uf" firstAttribute="trailing" secondItem="y8d-FY-1rP" secondAttribute="trailing" id="FdL-MT-N6d"/>
                 <constraint firstItem="Fw8-ee-L4o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fdw-H3-1gn"/>
-                <constraint firstItem="y8d-FY-1rP" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.16" id="Io9-qy-5Ee"/>
                 <constraint firstItem="y8d-FY-1rP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="JnK-ev-SFI"/>
                 <constraint firstItem="VAn-Xt-jZd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NME-NX-4I2"/>
                 <constraint firstItem="07T-RQ-SSU" firstAttribute="leading" secondItem="y8d-FY-1rP" secondAttribute="leading" id="PaE-ts-zcY"/>
