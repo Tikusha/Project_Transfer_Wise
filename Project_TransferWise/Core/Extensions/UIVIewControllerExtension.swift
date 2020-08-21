@@ -9,10 +9,9 @@
 import UIKit
 
 extension UIViewController {
-    
  
-    func loadSlide(sliderBackground: UIView?, slider: UIView?, tapGesture: UITapGestureRecognizer?) {
-        slider?.backgroundColor = .systemGreen
+    func loadSlide1(sliderBackground: UIView?, slider: UIView?, slideHeight: CGFloat) {
+        slider?.backgroundColor = .white
         
         // Create shadow layer
         sliderBackground?.backgroundColor = UIColor.black.withAlphaComponent(0.5)
@@ -21,25 +20,28 @@ extension UIViewController {
         UIApplication.shared.keyWindow?.addSubview(sliderBackground!)
         
         // Placement of slider
-        let slideHeight: CGFloat = 220.0
+        
         slider?.frame.origin.y = self.view.frame.size.height
         slider?.frame.size.height = slideHeight
         slider?.frame.size.width = self.view.frame.size.width
         
         // Presentation of viewSelector
         UIApplication.shared.keyWindow?.addSubview(slider!)
-        UIView.animate(withDuration: 0.7) {
+        UIView.animate(withDuration: 0.5) {
             slider?.frame.origin.y = self.view.frame.size.height - slideHeight
         }
-       
-        sliderBackground?.addGestureRecognizer(tapGesture!)
+    }
+}
+
+extension UIViewController {
+    func dismissKeyboard() {
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleTap)))
     }
     
-    @objc func closeSlideView1(sliderBackground: UIView?, slider: UIView?) {
-        print("iiiii")
-        UIView.animate(withDuration: 0.5) {
-            sliderBackground?.alpha = 0.0
-            slider?.frame.origin.y = self.view.frame.size.height
+    @objc func handleTap(sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            self.view.endEditing(true)
         }
+        sender.cancelsTouchesInView = false
     }
 }

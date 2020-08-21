@@ -59,6 +59,9 @@
                     <state key="normal" title="Personal account">
                         <color key="titleColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="personalAccount" destination="-1" eventType="touchUpInside" id="ICz-qQ-po2"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account services " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GVz-Wj-zdv">
                     <rect key="frame" x="20" y="288.66666666666669" width="374" height="21"/>
