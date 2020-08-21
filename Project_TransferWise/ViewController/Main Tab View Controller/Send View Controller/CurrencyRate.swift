@@ -11,8 +11,6 @@ import Foundation
 struct CurrencyRate {
     let from: String
     let to: String
+    let amount: Int
+    let value: Double
 }
-
-
- /*
- {  "from": "USD",  "to": "GEL",  "amount": 1,  "value": 3.265}*/

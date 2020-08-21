@@ -16,6 +16,9 @@ class AccountSettingView: UIView {
     
     // MARK: - @IBOutlets
     @IBOutlet private weak var viewLine: UIView!
+    @IBOutlet private weak var settingView: UIView!
+    @IBOutlet private weak var helpView: UIView!
+    @IBOutlet private weak var logOutView: UIView!
     
     // MARK: - Properties
     var delegate: MoveOtherScreenDelegate?
@@ -30,6 +33,12 @@ class AccountSettingView: UIView {
     private func configuration() {
         self.roundCorners(corners: [.topLeft, .topRight], radius: 15)
         self.viewLine.cornerView(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.disabledGrey)
+        let heightSetting = self.settingView.frame.size.height
+        let heightHelp = self.helpView.frame.size.height
+        let heightLogOut = self.logOutView.frame.size.height
+        self.settingView.cornerView(cornerRadius: heightSetting/2, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
+        self.helpView.cornerView(cornerRadius: heightHelp/2, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
+        self.logOutView.cornerView(cornerRadius: heightLogOut/2, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
     }
     
     // MARK: - IBActions

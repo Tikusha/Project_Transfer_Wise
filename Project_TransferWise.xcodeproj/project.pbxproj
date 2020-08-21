@@ -141,7 +141,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AC140DD224D72AAE00EC0E86 /* Slide View */ = {
+		AC140DD224D72AAE00EC0E86 /* Settings Slide View */ = {
 			isa = PBXGroup;
 			children = (
 				AC140DD524D72AE300EC0E86 /* AccountSettingView.xib */,
@@ -149,7 +149,7 @@
 				ACF7FE4624D7603D007B9A0E /* Help View Controller */,
 				ACF7FE4424D75F63007B9A0E /* Setting View Controller */,
 			);
-			path = "Slide View";
+			path = "Settings Slide View";
 			sourceTree = "<group>";
 		};
 		AC1B7EFC24B9C02A00826349 /* Log In View Controller */ = {
@@ -194,7 +194,8 @@
 			children = (
 				AC2F77C624D5B7C200119F48 /* AccountViewController.xib */,
 				AC2F77C524D5B7C200119F48 /* AccountViewController.swift */,
-				AC140DD224D72AAE00EC0E86 /* Slide View */,
+				AC608C7124EF9B1900BD51E9 /* Personal Account Slide View */,
+				AC140DD224D72AAE00EC0E86 /* Settings Slide View */,
 			);
 			path = "Account View Controller";
 			sourceTree = "<group>";
@@ -228,6 +229,13 @@
 				AC41578724D340A2001B06B6 /* SetUpBalanceViewController.swift */,
 			);
 			path = "SetUpBalance View Controller";
+			sourceTree = "<group>";
+		};
+		AC608C7124EF9B1900BD51E9 /* Personal Account Slide View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Personal Account Slide View";
 			sourceTree = "<group>";
 		};
 		AC6A937624C4C17C005347C7 /* Main Tab View Controller */ = {
