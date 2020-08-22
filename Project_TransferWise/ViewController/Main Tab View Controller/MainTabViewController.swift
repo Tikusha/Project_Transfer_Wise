@@ -30,7 +30,7 @@ class MainTabViewController: UITabBarController {
         self.tabBar.layer.borderWidth = 0.3
         self.tabBar.layer.borderColor = Constants.Color.disabledGrey.cgColor
         self.tabBar.clipsToBounds = true
-        self.tabBar.backgroundColor = .white
+//        self.tabBar.isTranslucent = false
     }
     
     // MARK: - Generate controllers
@@ -59,6 +59,10 @@ class MainTabViewController: UITabBarController {
         let frame = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         var shadeFrame = frame.frame
         shadeFrame.origin.y = self.view.bounds.height - self.tabBar.frame.height - shadeFrame.height/2
+        print(shadeFrame.origin.y)
+        print(self.view.bounds.height)
+        print(self.tabBar.frame.height)
+        print(shadeFrame.height/2)
         shadeFrame.origin.x = self.view.bounds.width/2 - shadeFrame.size.width/2
         frame.frame = shadeFrame
         frame.backgroundColor = UIColor.white
@@ -76,13 +80,22 @@ class MainTabViewController: UITabBarController {
         
         let middleButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         var buttonFrame = middleButton.frame
-        buttonFrame.origin.y = frame.bounds.height/2 - buttonFrame.height/2
         buttonFrame.origin.x = frame.bounds.width/2 - buttonFrame.size.width/2
+        buttonFrame.origin.y = frame.bounds.height/2 - buttonFrame.height/2
         middleButton.frame = buttonFrame
         middleButton.backgroundColor = Constants.Color.payGreen
         middleButton.layer.cornerRadius = buttonFrame.height/2
         middleButton.addTarget(self, action: #selector(actionButton), for: .touchUpInside)
         frame.addSubview(middleButton)
+        
+        let middleImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 15, height: 15))
+        var imageFrame = middleImage.frame
+        imageFrame.origin.x = middleButton.bounds.width/2 - imageFrame.width/2
+        imageFrame.origin.y = middleButton.bounds.height/2 - imageFrame.height/2
+        middleImage.frame = imageFrame
+        middleImage.layer.cornerRadius = imageFrame.height/2
+        middleImage.image = UIImage(named: "send_arrow")
+        middleButton.addSubview(middleImage)
     }
     
     @objc func actionButton() {

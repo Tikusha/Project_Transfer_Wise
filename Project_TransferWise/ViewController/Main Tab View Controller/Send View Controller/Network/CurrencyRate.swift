@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CurrencyRate {
+struct CurrencyRate: Codable {
     let from: String
     let to: String
     let amount: Int

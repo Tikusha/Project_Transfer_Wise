@@ -56,8 +56,9 @@ class AccountViewController: UIViewController {
         self.sliderBackground = UIView(frame: CGRect(origin: .zero, size: self.view.bounds.size))
         guard let shadow = Bundle.main.loadNibNamed("AccountSettingView", owner: nil, options: nil)?.first as? AccountSettingView else { return }
         self.sliderSettings = shadow
+        self.sliderSettings?.delegate = self
         let slideHeight: CGFloat = self.view.frame.size.height/2.5
-        loadSlide1(sliderBackground: self.sliderBackground, slider: self.sliderSettings, slideHeight: slideHeight)
+        loadSlide(sliderBackground: self.sliderBackground, slider: self.sliderSettings, slideHeight: slideHeight)
         self.sliderBackground?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.closeSlideOfSettings)))
     }
     
@@ -66,7 +67,7 @@ class AccountViewController: UIViewController {
         guard let shadow = Bundle.main.loadNibNamed("PersonalAccountView", owner: nil, options: nil)?.first as? PersonalAccountView else { return }
         self.sliderPersonal = shadow
         let slideHeight: CGFloat = self.view.frame.size.height/2
-        loadSlide1(sliderBackground: self.sliderBackground, slider: self.sliderPersonal, slideHeight: slideHeight)
+        loadSlide(sliderBackground: self.sliderBackground, slider: self.sliderPersonal, slideHeight: slideHeight)
         self.sliderBackground?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.closeSlideOfPersonal)))
     }
 }

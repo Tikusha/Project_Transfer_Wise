@@ -8,6 +8,7 @@ target 'Project_TransferWise' do
   # Pods for Project_TransferWise
 
 pod 'SwiftLint'
+pod 'Alamofire'
 	
 end
 

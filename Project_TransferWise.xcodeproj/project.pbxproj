@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -219,9 +219,8 @@
 			children = (
 				AC41576324CDE681001B06B6 /* SendScreenViewController.xib */,
 				AC41576224CDE681001B06B6 /* SendScreenViewController.swift */,
+				AC608C7624F13F4700BD51E9 /* Network */,
 				ACBA327624E9643F00D7CD7C /* Country View Controller */,
-				ACBA328424EEBA7000D7CD7C /* CurrencyRate.swift */,
-				ACBA328624EEBACE00D7CD7C /* FetchCurrency.swift */,
 			);
 			path = "Send View Controller";
 			sourceTree = "<group>";
@@ -242,6 +241,15 @@
 				AC608C7424EF9C0400BD51E9 /* PersonalAccountView.swift */,
 			);
 			path = "Personal Account Slide View";
+			sourceTree = "<group>";
+		};
+		AC608C7624F13F4700BD51E9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ACBA328424EEBA7000D7CD7C /* CurrencyRate.swift */,
+				ACBA328624EEBACE00D7CD7C /* FetchCurrency.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		AC6A937624C4C17C005347C7 /* Main Tab View Controller */ = {
@@ -455,6 +463,7 @@
 				AC9DE3AD24B84EBB00E6A8A4 /* Sources */,
 				AC9DE3AE24B84EBB00E6A8A4 /* Frameworks */,
 				AC9DE3AF24B84EBB00E6A8A4 /* Resources */,
+				61A8FE8CB1BB9BB96F55B7FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -550,6 +559,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61A8FE8CB1BB9BB96F55B7FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project_TransferWise/Pods-Project_TransferWise-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project_TransferWise/Pods-Project_TransferWise-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Project_TransferWise/Pods-Project_TransferWise-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

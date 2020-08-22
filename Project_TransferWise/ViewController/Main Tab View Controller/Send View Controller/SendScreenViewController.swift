@@ -14,6 +14,11 @@ class SendScreenViewController: UIViewController {
     @IBOutlet private weak var priceComparisonButton: UIButton!
     @IBOutlet private weak var topView: UIView!
     @IBOutlet private weak var bottomView: UIView!
+    @IBOutlet private weak var recipientTextField: UITextField!
+    @IBOutlet private weak var sendAmountTextField: UITextField!
+    
+    // MARK: - Properties
+    private let fetchRate = FetchCurrency()
     
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
@@ -26,6 +31,19 @@ class SendScreenViewController: UIViewController {
         self.priceComparisonButton.customCorner(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.brandBlue)
         self.topView.cornerView(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
         self.bottomView.cornerView(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.fetchRate.fetch { currencyRates in
+            guard let items = currencyRates else { return }
+            self.sendAmountTextField.text = String(items.amount)
+            self.recipientTextField.text = String(items.value)
+            print(items.from)
+            print(items.to)
+            print(items.amount)
+            print(items.value)
+        }
     }
     
     // MARK: - IBActions

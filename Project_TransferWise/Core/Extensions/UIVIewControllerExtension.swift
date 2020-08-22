@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
  
-    func loadSlide1(sliderBackground: UIView?, slider: UIView?, slideHeight: CGFloat) {
+    func loadSlide(sliderBackground: UIView?, slider: UIView?, slideHeight: CGFloat) {
         slider?.backgroundColor = .white
         
         // Create shadow layer

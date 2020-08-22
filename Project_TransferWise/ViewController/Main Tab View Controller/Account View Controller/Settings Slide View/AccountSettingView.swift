@@ -56,6 +56,7 @@ class AccountSettingView: UIView {
     }
     
     @IBAction func logOut() {
+        print("jjjjj")
         self.delegate?.selectLogOut()
     }
 }
