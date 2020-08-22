@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendScreenViewController" customModule="Project_TransferWise" customModuleProvider="target">
             <connections>
                 <outlet property="bottomView" destination="qNk-6a-lpE" id="W2c-9h-BEU"/>
+                <outlet property="currencyFirstLabel" destination="HUc-tS-eYj" id="QEf-HD-tz4"/>
+                <outlet property="currencySecondLabel" destination="niL-Cf-YvK" id="BXu-IM-0Ei"/>
                 <outlet property="priceComparisonButton" destination="TsT-H9-3pB" id="Lh5-1v-2Ec"/>
                 <outlet property="recipientTextField" destination="k1l-9I-2z7" id="t7p-qb-sZD"/>
                 <outlet property="sendAmountTextField" destination="K65-nR-ioh" id="dwR-kP-rDI"/>
@@ -61,12 +63,15 @@
                                     <color key="textColor" red="0.6588235294117647" green="0.66666666666666663" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K65-nR-ioh" userLabel="Send Amount">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K65-nR-ioh" userLabel="Send Amount">
                                     <rect key="frame" x="0.0" y="30.666666666666671" width="248.66666666666666" height="24.666666666666671"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="textColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <action selector="sendFirstValue" destination="-1" eventType="editingChanged" id="11Z-O3-G8X"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                         </stackView>
@@ -128,12 +133,15 @@
                                     <color key="textColor" red="0.6588235294" green="0.66666666669999997" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k1l-9I-2z7" userLabel="Recipient amount">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k1l-9I-2z7" userLabel="Recipient amount">
                                     <rect key="frame" x="0.0" y="33.333333333333371" width="248.66666666666666" height="27.333333333333329"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="textColor" red="0.2156862745" green="0.31764705879999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <action selector="sendSecondValue" destination="-1" eventType="editingChanged" id="slZ-No-SQ9"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                         </stackView>

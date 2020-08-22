@@ -19,12 +19,14 @@ class LogInViewController: UIViewController {
     @IBOutlet private weak var passwordTextfield: UITextField!
     @IBOutlet private weak var mailLabel: UILabel!
     @IBOutlet private weak var passwordLabel: UILabel!
+    @IBOutlet private weak var lineTopView: UIView!
+    @IBOutlet private weak var lineBottomView: UIView!
 
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configuration()
-        
+        self.dismissKeyboard()
     }
     
     // MARK: - Configuration
@@ -39,32 +41,16 @@ class LogInViewController: UIViewController {
         self.passwordLabel.isHidden = true
     }
     
-//    private func setInitilazer() {
-//            let image = UIImage(named: "general_icon_back")
-//            let barButton = UIBarButtonItem(image: image, style: .done, target: self, action: #selector(back))
-//    //        let barButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(back))
-//    //        print(barButton)
-//            self.navigationItem.setRightBarButton(barButton, animated: true)
-//    //        let button = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(back))
-//    //               self.navigationItem.setRightBarButton(button, animated: true)
-//
-//            let btn1 = UIButton(type: .custom)
-//            btn1.setImage(UIImage(named: "general_icon_back"), for: .normal)
-//            btn1.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
-//            btn1.addTarget(self, action: #selector(back), for: .touchUpInside)
-//            let item1 = UIBarButtonItem(customView: btn1)
-//            self.navigationItem.setRightBarButton(item1, animated: true)
-//        }
-//
-//        @objc func back() {
-//            self.navigationController?.popViewController(animated: true)
-//    }
-    
     // MARK: - IBActions
     @IBAction private func logIn(_ sender: Any) {
         let vc = MainTabViewController()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction private func chandeColorMail() {
+        self.lineTopView.backgroundColor = .red
+        print("lll")
     }
     
     @IBAction private func close(_ sender: Any) {

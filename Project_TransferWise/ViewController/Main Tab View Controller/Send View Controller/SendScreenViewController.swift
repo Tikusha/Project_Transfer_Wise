@@ -16,6 +16,8 @@ class SendScreenViewController: UIViewController {
     @IBOutlet private weak var bottomView: UIView!
     @IBOutlet private weak var recipientTextField: UITextField!
     @IBOutlet private weak var sendAmountTextField: UITextField!
+    @IBOutlet private weak var currencyFirstLabel: UILabel!
+    @IBOutlet private weak var currencySecondLabel: UILabel!
     
     // MARK: - Properties
     private let fetchRate = FetchCurrency()
@@ -24,6 +26,7 @@ class SendScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configuration()
+        self.dismissKeyboard()
     }
     
     // MARK: - Configuration
@@ -31,22 +34,55 @@ class SendScreenViewController: UIViewController {
         self.priceComparisonButton.customCorner(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.brandBlue)
         self.topView.cornerView(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
         self.bottomView.cornerView(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
+//        self.sendAmountTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.fetchRate.fetch { currencyRates in
-            guard let items = currencyRates else { return }
-            self.sendAmountTextField.text = String(items.amount)
-            self.recipientTextField.text = String(items.value)
-            print(items.from)
-            print(items.to)
-            print(items.amount)
-            print(items.value)
+        self.fetchRate.fetch { currencyRate in
+            guard let rates = currencyRate else { return }
+            self.recipientTextField.text = String(rates.value)
         }
     }
     
+    @objc func editingFirstChanged() {
+        if self.sendAmountTextField.text == "" {
+            self.sendAmountTextField.placeholder = "0"
+            self.recipientTextField.placeholder = "0"
+            return
+        }
+        self.fetchRate.amount = self.sendAmountTextField.text
+        self.fetchRate.currencyFrom = "GEL"
+        self.fetchRate.currencyTo = "USD"
+        self.fetchRate.fetch { currencyRate in
+            guard let rates = currencyRate else { return }
+            self.recipientTextField.text = String(rates.value)
+        }
+    }
+    
+    @objc func editingSecondChanged() {
+        if self.recipientTextField.text == "" {
+            self.recipientTextField.placeholder = "0"
+            self.sendAmountTextField.placeholder = "0"
+        }
+        self.fetchRate.amount = self.recipientTextField.text
+        self.fetchRate.currencyFrom = "USD"
+        self.fetchRate.currencyTo = "GEL"
+        self.fetchRate.fetch { currencyRate in
+            guard let rates = currencyRate else { return }
+            self.sendAmountTextField.text = String(rates.value)
+        }
+    }
+   
     // MARK: - IBActions
+    @IBAction func sendFirstValue() {
+        self.sendAmountTextField.addTarget(self, action: #selector(self.editingFirstChanged), for: .editingChanged)
+    }
+    
+    @IBAction func sendSecondValue() {
+        self.recipientTextField.addTarget(self, action: #selector(self.editingSecondChanged), for: .editingChanged)
+    }
+    
     @IBAction private func close() {
         self.dismiss(animated: true)
     }
@@ -60,4 +96,8 @@ class SendScreenViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
+}
+
+extension SendScreenViewController: UITextFieldDelegate {
+    
 }

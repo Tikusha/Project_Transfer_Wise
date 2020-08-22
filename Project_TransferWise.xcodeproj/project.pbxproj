@@ -246,8 +246,8 @@
 		AC608C7624F13F4700BD51E9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				ACBA328424EEBA7000D7CD7C /* CurrencyRate.swift */,
 				ACBA328624EEBACE00D7CD7C /* FetchCurrency.swift */,
+				ACBA328424EEBA7000D7CD7C /* CurrencyRate.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";

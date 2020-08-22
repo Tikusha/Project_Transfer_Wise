@@ -11,8 +11,12 @@ import Alamofire
 
 class FetchCurrency {
     
+    var amount: String? = "1000"
+    var currencyFrom: String? = "GEL"
+    var currencyTo: String? = "EUR"
+    
     public func fetch(_ completion: @escaping (CurrencyRate?) -> Void) {
-        let parameters = ["amount": "1000", "from": "GEL", "to": "EUR"]
+        let parameters = ["amount": amount, "from": currencyFrom, "to": currencyTo]
         let headers: HTTPHeaders = [
             .authorization("0mAIbRdM6nlmkllYSUCGF5R1PRhAQ3Iy"),
             .accept("application/json")

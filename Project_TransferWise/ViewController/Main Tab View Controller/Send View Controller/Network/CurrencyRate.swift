@@ -11,6 +11,6 @@ import Foundation
 struct CurrencyRate: Codable {
     let from: String
     let to: String
-    let amount: Int
+    let amount: Double
     let value: Double
 }

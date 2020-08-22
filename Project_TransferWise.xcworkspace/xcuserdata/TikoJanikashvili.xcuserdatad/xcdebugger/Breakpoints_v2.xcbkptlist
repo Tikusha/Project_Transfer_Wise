@@ -85,111 +85,48 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
-            uuid = "DA131C93-80FC-41B0-8274-CF499F2B8E06"
+            uuid = "5A21E4D1-620D-4E95-9921-3583E741F84B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Project_TransferWise/ViewController/Main Tab View Controller/Account View Controller/AccountViewController.swift"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "766784F3-5383-411D-B59E-AEB88EECD5E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project_TransferWise/Core/Extensions/UIVIewControllerExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "AccountViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "DA131C93-80FC-41B0-8274-CF499F2B8E06 - 1b31d42bb17bbee5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Project_TransferWise.AccountViewController.(sliderSettings in _A93F16EDB8516675FED429A57BD908F0).getter : Swift.Optional&lt;Project_TransferWise.AccountSettingView&gt;"
-                  moduleName = "Project_TransferWise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/TikoJanikashvili/Documents/IOS/Gits/Project_Transfer_Wise/Project_TransferWise/ViewController/Main%20Tab%20View%20Controller/Account%20View%20Controller/AccountViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "126">
-               </Location>
-               <Location
-                  uuid = "DA131C93-80FC-41B0-8274-CF499F2B8E06 - 1b31d42bb17bbee5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Project_TransferWise.AccountViewController.(sliderSettings in _A93F16EDB8516675FED429A57BD908F0).setter : Swift.Optional&lt;Project_TransferWise.AccountSettingView&gt;"
-                  moduleName = "Project_TransferWise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/TikoJanikashvili/Documents/IOS/Gits/Project_Transfer_Wise/Project_TransferWise/ViewController/Main%20Tab%20View%20Controller/Account%20View%20Controller/AccountViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "164">
-               </Location>
-               <Location
-                  uuid = "DA131C93-80FC-41B0-8274-CF499F2B8E06 - 1b31d42bb17bbee5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Project_TransferWise.AccountViewController.(sliderSettings in _A93F16EDB8516675FED429A57BD908F0).modify : Swift.Optional&lt;Project_TransferWise.AccountSettingView&gt;"
-                  moduleName = "Project_TransferWise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/TikoJanikashvili/Documents/IOS/Gits/Project_Transfer_Wise/Project_TransferWise/ViewController/Main%20Tab%20View%20Controller/Account%20View%20Controller/AccountViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "18">
-               </Location>
-               <Location
-                  uuid = "DA131C93-80FC-41B0-8274-CF499F2B8E06 - e52484872956f1bb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Project_TransferWise.AccountViewController.(sliderSettings in _A93F16EDB8516675FED429A57BD908F0).modify : Swift.Optional&lt;Project_TransferWise.AccountSettingView&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Project_TransferWise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/TikoJanikashvili/Documents/IOS/Gits/Project_Transfer_Wise/Project_TransferWise/ViewController/Main%20Tab%20View%20Controller/Account%20View%20Controller/AccountViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  uuid = "DA131C93-80FC-41B0-8274-CF499F2B8E06 - fd835537a8174ba1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Project_TransferWise.AccountViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Project_TransferWise.AccountViewController"
-                  moduleName = "Project_TransferWise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/TikoJanikashvili/Documents/IOS/Gits/Project_Transfer_Wise/Project_TransferWise/ViewController/Main%20Tab%20View%20Controller/Account%20View%20Controller/AccountViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "669">
-               </Location>
-               <Location
-                  uuid = "DA131C93-80FC-41B0-8274-CF499F2B8E06 - b219ee7b18e3ef63"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Project_TransferWise.AccountViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Project_TransferWise.AccountViewController&gt;"
-                  moduleName = "Project_TransferWise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/TikoJanikashvili/Documents/IOS/Gits/Project_Transfer_Wise/Project_TransferWise/ViewController/Main%20Tab%20View%20Controller/Account%20View%20Controller/AccountViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "610">
-               </Location>
-            </Locations>
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "dismissKeyboard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31F4B707-9ED3-40C7-9E45-7BF6FAF035A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Project_TransferWise/Core/Extensions/UIVIewControllerExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "handleTap(sender:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
