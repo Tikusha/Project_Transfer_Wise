@@ -11,8 +11,6 @@
 		AC140DD624D72AE300EC0E86 /* AccountSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC140DD524D72AE300EC0E86 /* AccountSettingView.xib */; };
 		AC1B7F0024B9C19800826349 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B7EFE24B9C19800826349 /* LogInViewController.swift */; };
 		AC1B7F0124B9C19800826349 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1B7EFF24B9C19800826349 /* LogInViewController.xib */; };
-		AC1B7F0424B9C1AC00826349 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B7F0224B9C1AC00826349 /* SignInViewController.swift */; };
-		AC1B7F0524B9C1AC00826349 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1B7F0324B9C1AC00826349 /* SignInViewController.xib */; };
 		AC2F77C724D5B7C200119F48 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2F77C524D5B7C200119F48 /* AccountViewController.swift */; };
 		AC2F77C824D5B7C200119F48 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2F77C624D5B7C200119F48 /* AccountViewController.xib */; };
 		AC2F77CB24D5B87E00119F48 /* RecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2F77C924D5B87E00119F48 /* RecipientViewController.swift */; };
@@ -29,6 +27,8 @@
 		AC608C7324EF9BDE00BD51E9 /* PersonalAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC608C7224EF9BDE00BD51E9 /* PersonalAccountView.xib */; };
 		AC608C7524EF9C0400BD51E9 /* PersonalAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC608C7424EF9C0400BD51E9 /* PersonalAccountView.swift */; };
 		AC608C9E24F24D8F00BD51E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC608C9D24F24D8F00BD51E9 /* GoogleService-Info.plist */; };
+		AC608CA124F2561D00BD51E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC608C9F24F2561D00BD51E9 /* RegisterViewController.swift */; };
+		AC608CA224F2561D00BD51E9 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC608CA024F2561D00BD51E9 /* RegisterViewController.xib */; };
 		AC6A937924C4C2F0005347C7 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A937724C4C2F0005347C7 /* MainTabViewController.swift */; };
 		AC6A937A24C4C2F0005347C7 /* MainTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6A937824C4C2F0005347C7 /* MainTabViewController.xib */; };
 		AC6A937F24C4C5DF005347C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A937D24C4C5DF005347C7 /* HomeViewController.swift */; };
@@ -68,8 +68,6 @@
 		AC140DD524D72AE300EC0E86 /* AccountSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSettingView.xib; sourceTree = "<group>"; };
 		AC1B7EFE24B9C19800826349 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		AC1B7EFF24B9C19800826349 /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
-		AC1B7F0224B9C1AC00826349 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		AC1B7F0324B9C1AC00826349 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		AC2F77C524D5B7C200119F48 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		AC2F77C624D5B7C200119F48 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		AC2F77C924D5B87E00119F48 /* RecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +84,8 @@
 		AC608C7224EF9BDE00BD51E9 /* PersonalAccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalAccountView.xib; sourceTree = "<group>"; };
 		AC608C7424EF9C0400BD51E9 /* PersonalAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountView.swift; sourceTree = "<group>"; };
 		AC608C9D24F24D8F00BD51E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC608C9F24F2561D00BD51E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AC608CA024F2561D00BD51E9 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		AC6A937724C4C2F0005347C7 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		AC6A937824C4C2F0005347C7 /* MainTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabViewController.xib; sourceTree = "<group>"; };
 		AC6A937D24C4C5DF005347C7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -167,13 +167,13 @@
 			path = "Log In View Controller";
 			sourceTree = "<group>";
 		};
-		AC1B7EFD24B9C03400826349 /* Sign In View Controller */ = {
+		AC1B7EFD24B9C03400826349 /* Register View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AC1B7F0324B9C1AC00826349 /* SignInViewController.xib */,
-				AC1B7F0224B9C1AC00826349 /* SignInViewController.swift */,
+				AC608CA024F2561D00BD51E9 /* RegisterViewController.xib */,
+				AC608C9F24F2561D00BD51E9 /* RegisterViewController.swift */,
 			);
-			path = "Sign In View Controller";
+			path = "Register View Controller";
 			sourceTree = "<group>";
 		};
 		AC41575724CDC766001B06B6 /* Extensions */ = {
@@ -328,7 +328,7 @@
 				AC9DE3B824B84EBB00E6A8A4 /* MainScreenViewController.swift */,
 				AC9DE3D324B9AEE800E6A8A4 /* Table Cells */,
 				AC1B7EFC24B9C02A00826349 /* Log In View Controller */,
-				AC1B7EFD24B9C03400826349 /* Sign In View Controller */,
+				AC1B7EFD24B9C03400826349 /* Register View Controller */,
 			);
 			path = "Main Screen View Controller";
 			sourceTree = "<group>";
@@ -526,8 +526,8 @@
 				AC140DD624D72AE300EC0E86 /* AccountSettingView.xib in Resources */,
 				AC2F77CC24D5B87E00119F48 /* RecipientViewController.xib in Resources */,
 				AC9DE3BE24B84EBD00E6A8A4 /* Assets.xcassets in Resources */,
+				AC608CA224F2561D00BD51E9 /* RegisterViewController.xib in Resources */,
 				AC608C7324EF9BDE00BD51E9 /* PersonalAccountView.xib in Resources */,
-				AC1B7F0524B9C1AC00826349 /* SignInViewController.xib in Resources */,
 				AC1B7F0124B9C19800826349 /* LogInViewController.xib in Resources */,
 				AC41576524CDE681001B06B6 /* SendScreenViewController.xib in Resources */,
 				AC735CD324E5A69A00BBCF04 /* AddRecipientViewController.xib in Resources */,
@@ -607,12 +607,12 @@
 				ACBA328724EEBACE00D7CD7C /* FetchCurrency.swift in Sources */,
 				AC41578924D340A2001B06B6 /* SetUpBalanceViewController.swift in Sources */,
 				ACBA328524EEBA7000D7CD7C /* CurrencyRate.swift in Sources */,
-				AC1B7F0424B9C1AC00826349 /* SignInViewController.swift in Sources */,
 				AC2F77CB24D5B87E00119F48 /* RecipientViewController.swift in Sources */,
 				AC9DE3B524B84EBB00E6A8A4 /* AppDelegate.swift in Sources */,
 				AC2F77C724D5B7C200119F48 /* AccountViewController.swift in Sources */,
 				AC6A937924C4C2F0005347C7 /* MainTabViewController.swift in Sources */,
 				ACDA488F24BA19DB00A8773E /* MoneyTexts.swift in Sources */,
+				AC608CA124F2561D00BD51E9 /* RegisterViewController.swift in Sources */,
 				AC608C7524EF9C0400BD51E9 /* PersonalAccountView.swift in Sources */,
 				AC60661A24D6E448009BFF4D /* UIVIewControllerExtension.swift in Sources */,
 				AC41575E24CDD061001B06B6 /* Constants.swift in Sources */,

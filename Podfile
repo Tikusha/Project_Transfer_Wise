@@ -10,6 +10,7 @@ target 'Project_TransferWise' do
 pod 'SwiftLint'
 pod 'Alamofire'
 pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
 	
 end
 

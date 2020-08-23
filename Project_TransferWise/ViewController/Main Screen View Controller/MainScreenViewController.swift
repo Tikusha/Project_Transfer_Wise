@@ -67,7 +67,9 @@ class MainScreenViewController: UIViewController {
     }
     
     @IBAction private func register(_ sender: Any) {
-        self.present(SignInViewController(), animated: true, completion: nil)
+        let vc = RegisterViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

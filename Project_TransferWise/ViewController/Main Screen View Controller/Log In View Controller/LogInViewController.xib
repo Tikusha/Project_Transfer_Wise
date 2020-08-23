@@ -37,9 +37,9 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9T-Kb-zSa">
-                    <rect key="frame" x="20" y="58.666666666666664" width="82.666666666666671" height="25.333333333333336"/>
-                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
-                    <color key="textColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="20" y="55.666666666666742" width="82.666666666666671" height="27.666666666666664"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                    <color key="textColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmM-jg-3cU" userLabel="Your email Label">
@@ -149,7 +149,7 @@
                 <constraint firstItem="1b8-xe-3iE" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.3" id="7Nw-xn-cqV"/>
                 <constraint firstItem="1b8-xe-3iE" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0285326" id="8XL-eb-hFJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Add-RI-wnn" secondAttribute="trailing" constant="20" id="8bO-Sm-OaB"/>
-                <constraint firstItem="P9T-Kb-zSa" firstAttribute="top" secondItem="w0b-T4-Q1O" secondAttribute="bottom" constant="24.666666666666657" id="9Vu-n0-4e9"/>
+                <constraint firstItem="P9T-Kb-zSa" firstAttribute="top" secondItem="w0b-T4-Q1O" secondAttribute="bottom" constant="21.666666666666742" id="9Vu-n0-4e9"/>
                 <constraint firstItem="tzh-JK-yOr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-58" id="9iv-0J-Uaq"/>
                 <constraint firstItem="Dcx-gt-Vep" firstAttribute="top" secondItem="Add-RI-wnn" secondAttribute="bottom" constant="12" id="9xu-Wj-qlP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TZw-F6-Igg" secondAttribute="trailing" constant="20" id="CTp-hO-61U"/>

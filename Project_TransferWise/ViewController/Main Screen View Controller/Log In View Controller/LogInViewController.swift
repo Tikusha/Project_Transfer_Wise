@@ -104,7 +104,7 @@ class LogInViewController: UIViewController {
 extension LogInViewController : UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print("begin")
-        let margins = self.view.layoutMarginsGuide
+//        let margins = self.view.layoutMarginsGuide
         NSLayoutConstraint.activate([
 //                emailLabel.centerXAnchor.constraint(equalToConstant: 10),
 //                emailLabel.centerYAnchor.constraint(equalToConstant: 10),
