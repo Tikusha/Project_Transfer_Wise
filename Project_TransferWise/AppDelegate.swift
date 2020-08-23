@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,7 @@ var window: UIWindow?
         let mainVC = MainScreenViewController(nibName: "MainScreen", bundle: nil)
         let main = UINavigationController(rootViewController: mainVC)
         window?.rootViewController = main
-        
+        FirebaseApp.configure()
         return true
     }
 }

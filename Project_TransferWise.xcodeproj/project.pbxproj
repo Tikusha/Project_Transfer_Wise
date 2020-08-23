@@ -28,6 +28,7 @@
 		AC60661A24D6E448009BFF4D /* UIVIewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC60661924D6E448009BFF4D /* UIVIewControllerExtension.swift */; };
 		AC608C7324EF9BDE00BD51E9 /* PersonalAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC608C7224EF9BDE00BD51E9 /* PersonalAccountView.xib */; };
 		AC608C7524EF9C0400BD51E9 /* PersonalAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC608C7424EF9C0400BD51E9 /* PersonalAccountView.swift */; };
+		AC608C9E24F24D8F00BD51E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC608C9D24F24D8F00BD51E9 /* GoogleService-Info.plist */; };
 		AC6A937924C4C2F0005347C7 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A937724C4C2F0005347C7 /* MainTabViewController.swift */; };
 		AC6A937A24C4C2F0005347C7 /* MainTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6A937824C4C2F0005347C7 /* MainTabViewController.xib */; };
 		AC6A937F24C4C5DF005347C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A937D24C4C5DF005347C7 /* HomeViewController.swift */; };
@@ -84,6 +85,7 @@
 		AC60661924D6E448009BFF4D /* UIVIewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewControllerExtension.swift; sourceTree = "<group>"; };
 		AC608C7224EF9BDE00BD51E9 /* PersonalAccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalAccountView.xib; sourceTree = "<group>"; };
 		AC608C7424EF9C0400BD51E9 /* PersonalAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountView.swift; sourceTree = "<group>"; };
+		AC608C9D24F24D8F00BD51E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC6A937724C4C2F0005347C7 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		AC6A937824C4C2F0005347C7 /* MainTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabViewController.xib; sourceTree = "<group>"; };
 		AC6A937D24C4C5DF005347C7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				AC9DE3CB24B8532800E6A8A4 /* ViewController */,
 				AC9DE3CF24B8544200E6A8A4 /* Resources */,
 				AC9DE3C224B84EBD00E6A8A4 /* Info.plist */,
+				AC608C9D24F24D8F00BD51E9 /* GoogleService-Info.plist */,
 				AC9DE3CE24B8543300E6A8A4 /* Supporting Files */,
 			);
 			path = Project_TransferWise;
@@ -531,6 +534,7 @@
 				AC41578A24D340A2001B06B6 /* SetUpBalanceViewController.xib in Resources */,
 				AC2F77C824D5B7C200119F48 /* AccountViewController.xib in Resources */,
 				ACBA327A24E9646A00D7CD7C /* CountryViewController.xib in Resources */,
+				AC608C9E24F24D8F00BD51E9 /* GoogleService-Info.plist in Resources */,
 				AC6A938024C4C5DF005347C7 /* HomeViewController.xib in Resources */,
 				ACF7FE4E24D76071007B9A0E /* HelpViewController.xib in Resources */,
 			);

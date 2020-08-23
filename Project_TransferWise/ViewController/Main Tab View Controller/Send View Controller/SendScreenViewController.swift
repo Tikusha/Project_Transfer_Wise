@@ -34,7 +34,6 @@ class SendScreenViewController: UIViewController {
         self.priceComparisonButton.customCorner(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.brandBlue)
         self.topView.cornerView(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
         self.bottomView.cornerView(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
-//        self.sendAmountTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,8 +95,4 @@ class SendScreenViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
-}
-
-extension SendScreenViewController: UITextFieldDelegate {
-    
 }

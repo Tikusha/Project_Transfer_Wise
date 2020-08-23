@@ -16,6 +16,10 @@ class MainScreenViewController: UIViewController {
     @IBOutlet private weak var logInButton: UIButton!
     @IBOutlet private weak var signInButton: UIButton!
     @IBOutlet private weak var googleButton: UIButton!
+    @IBOutlet private weak var lineOneView: UIView!
+    @IBOutlet private weak var lineTwoView: UIView!
+    @IBOutlet private weak var lineThreeView: UIView!
+    @IBOutlet private weak var lineFourView: UIView!
     
     // MARK: - Properties
     private let listTexts = MoneyTexts()
@@ -34,6 +38,10 @@ class MainScreenViewController: UIViewController {
         self.logInButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
         self.signInButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
         self.googleButton.customCorner(cornerRadius: 2, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
+        self.lineOneView.cornerView(cornerRadius: 4, borderWidth: 0.2, borderColor: Constants.Color.backgroundGrey)
+        self.lineTwoView.cornerView(cornerRadius: 4, borderWidth: 0.2, borderColor: Constants.Color.backgroundGrey)
+        self.lineThreeView.cornerView(cornerRadius: 4, borderWidth: 0.2, borderColor: Constants.Color.backgroundGrey)
+        self.lineFourView.cornerView(cornerRadius: 4, borderWidth: 0.2, borderColor: Constants.Color.backgroundGrey)
     }
     
     private func registerCell() {
