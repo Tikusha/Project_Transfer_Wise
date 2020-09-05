@@ -79,6 +79,7 @@ class MainScreenViewController: UIViewController {
 extension MainScreenViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.pictureView.image = self.listImage.images[indexPath.row]
+        print("ppp")
     }
 }
 
