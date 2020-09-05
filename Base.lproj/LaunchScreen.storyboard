@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transferwise-logo" translatesAutoresizingMaskIntoConstraints="NO" id="7Z0-UF-6jT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transfer_wise_logo" translatesAutoresizingMaskIntoConstraints="NO" id="7Z0-UF-6jT">
                                 <rect key="frame" x="7" y="168" width="400" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -32,6 +32,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="transferwise-logo" width="499.66665649414062" height="340.33334350585938"/>
+        <image name="transfer_wise_logo" width="499.66665649414062" height="340.33334350585938"/>
     </resources>
 </document>

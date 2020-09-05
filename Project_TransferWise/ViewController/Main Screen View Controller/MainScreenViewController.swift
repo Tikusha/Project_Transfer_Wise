@@ -23,6 +23,7 @@ class MainScreenViewController: UIViewController {
     
     // MARK: - Properties
     private let listTexts = MoneyTexts()
+    private let listImage = TransferWiseImage()
     
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
@@ -42,6 +43,7 @@ class MainScreenViewController: UIViewController {
         self.lineTwoView.cornerView(cornerRadius: 4, borderWidth: 0.2, borderColor: Constants.Color.backgroundGrey)
         self.lineThreeView.cornerView(cornerRadius: 4, borderWidth: 0.2, borderColor: Constants.Color.backgroundGrey)
         self.lineFourView.cornerView(cornerRadius: 4, borderWidth: 0.2, borderColor: Constants.Color.backgroundGrey)
+//        self.pictureView.image = UIImage(named: "transfer_wise_blue")
     }
     
     private func registerCell() {
@@ -76,17 +78,16 @@ class MainScreenViewController: UIViewController {
 // MARK: - UICollectionViewDelegate
 extension MainScreenViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.pictureView.image = UIImage(named: "general_icon_back")
+        self.pictureView.image = self.listImage.images[indexPath.row]
     }
 }
 
 // MARK: - UIScrollViewDelegate
 extension MainScreenViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        self.pictureView.image = UIImage(named: "general_icon_back")
-    }
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        print("dfnkndkjfkdnfnldf")
+        if let random = self.listImage.images.randomElement() {
+            self.pictureView.image = random
+        }
     }
 }
 

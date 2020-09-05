@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 protocol MoveOtherScreenDelegate {
     func selectLogOut()
@@ -56,8 +57,14 @@ class AccountSettingView: UIView {
     }
     
     @IBAction func logOut() {
-        print("jjjjj")
-        self.delegate?.selectLogOut()
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            self.delegate?.selectLogOut()
+             print("LogOut")
+        } catch let sighOutError as NSError {
+            print("Error signing out: %@", sighOutError)
+        }
     }
 }
 

@@ -29,6 +29,7 @@
 		AC608C9E24F24D8F00BD51E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC608C9D24F24D8F00BD51E9 /* GoogleService-Info.plist */; };
 		AC608CA124F2561D00BD51E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC608C9F24F2561D00BD51E9 /* RegisterViewController.swift */; };
 		AC608CA224F2561D00BD51E9 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC608CA024F2561D00BD51E9 /* RegisterViewController.xib */; };
+		AC608CA424F39C6400BD51E9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC608CA324F39C6400BD51E9 /* CustomTextField.swift */; };
 		AC6A937924C4C2F0005347C7 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A937724C4C2F0005347C7 /* MainTabViewController.swift */; };
 		AC6A937A24C4C2F0005347C7 /* MainTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6A937824C4C2F0005347C7 /* MainTabViewController.xib */; };
 		AC6A937F24C4C5DF005347C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A937D24C4C5DF005347C7 /* HomeViewController.swift */; };
@@ -37,6 +38,7 @@
 		AC6A938424C4DBCE005347C7 /* InviteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6A938224C4DBCE005347C7 /* InviteViewController.xib */; };
 		AC735CD224E5A69A00BBCF04 /* AddRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC735CD024E5A69A00BBCF04 /* AddRecipientViewController.swift */; };
 		AC735CD324E5A69A00BBCF04 /* AddRecipientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC735CD124E5A69A00BBCF04 /* AddRecipientViewController.xib */; };
+		AC7A956B24F6C1A9002A4E75 /* TransferWiseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A956A24F6C1A9002A4E75 /* TransferWiseImage.swift */; };
 		AC9DE3B524B84EBB00E6A8A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DE3B424B84EBB00E6A8A4 /* AppDelegate.swift */; };
 		AC9DE3B924B84EBB00E6A8A4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DE3B824B84EBB00E6A8A4 /* MainScreenViewController.swift */; };
 		AC9DE3BE24B84EBD00E6A8A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9DE3BD24B84EBD00E6A8A4 /* Assets.xcassets */; };
@@ -86,6 +88,7 @@
 		AC608C9D24F24D8F00BD51E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC608C9F24F2561D00BD51E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AC608CA024F2561D00BD51E9 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		AC608CA324F39C6400BD51E9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		AC6A937724C4C2F0005347C7 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		AC6A937824C4C2F0005347C7 /* MainTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabViewController.xib; sourceTree = "<group>"; };
 		AC6A937D24C4C5DF005347C7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 		AC6A938224C4DBCE005347C7 /* InviteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InviteViewController.xib; sourceTree = "<group>"; };
 		AC735CD024E5A69A00BBCF04 /* AddRecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientViewController.swift; sourceTree = "<group>"; };
 		AC735CD124E5A69A00BBCF04 /* AddRecipientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRecipientViewController.xib; sourceTree = "<group>"; };
+		AC7A956A24F6C1A9002A4E75 /* TransferWiseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferWiseImage.swift; sourceTree = "<group>"; };
 		AC9DE3B124B84EBB00E6A8A4 /* Project_TransferWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_TransferWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9DE3B424B84EBB00E6A8A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC9DE3B824B84EBB00E6A8A4 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			children = (
 				AC1B7EFF24B9C19800826349 /* LogInViewController.xib */,
 				AC1B7EFE24B9C19800826349 /* LogInViewController.swift */,
+				AC608CA324F39C6400BD51E9 /* CustomTextField.swift */,
 			);
 			path = "Log In View Controller";
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				ACDA488E24BA19DB00A8773E /* MoneyTexts.swift */,
+				AC7A956A24F6C1A9002A4E75 /* TransferWiseImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 				AC41575B24CDC94B001B06B6 /* UIButtonExtension.swift in Sources */,
 				ACF7FE4924D76063007B9A0E /* SettingsViewController.swift in Sources */,
 				ACBA327424E6F41900D7CD7C /* InviteFriendViewController.swift in Sources */,
+				AC608CA424F39C6400BD51E9 /* CustomTextField.swift in Sources */,
 				AC6A938324C4DBCE005347C7 /* InviteViewController.swift in Sources */,
 				AC41576424CDE681001B06B6 /* SendScreenViewController.swift in Sources */,
 				ACBA327F24E99DD800D7CD7C /* CountryCell.swift in Sources */,
@@ -602,6 +609,7 @@
 				ACBA327924E9646A00D7CD7C /* CountryViewController.swift in Sources */,
 				AC735CD224E5A69A00BBCF04 /* AddRecipientViewController.swift in Sources */,
 				AC9DE3B924B84EBB00E6A8A4 /* MainScreenViewController.swift in Sources */,
+				AC7A956B24F6C1A9002A4E75 /* TransferWiseImage.swift in Sources */,
 				AC9DE3D624B9AF1500E6A8A4 /* TitleCell.swift in Sources */,
 				AC6A937F24C4C5DF005347C7 /* HomeViewController.swift in Sources */,
 				ACBA328724EEBACE00D7CD7C /* FetchCurrency.swift in Sources */,

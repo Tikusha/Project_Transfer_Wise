@@ -70,6 +70,17 @@ class AccountViewController: UIViewController {
         loadSlide(sliderBackground: self.sliderBackground, slider: self.sliderPersonal, slideHeight: slideHeight)
         self.sliderBackground?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.closeSlideOfPersonal)))
     }
+    
+    @IBAction func tapPiece(_ gestureRecognizer : UITapGestureRecognizer ) {
+    guard gestureRecognizer.view != nil else { return }
+         
+    if gestureRecognizer.state == .ended {      // Move the view down and to the right when tapped.
+       let animator = UIViewPropertyAnimator(duration: 0.2, curve: .easeInOut, animations: {
+          gestureRecognizer.view!.center.x += 100
+          gestureRecognizer.view!.center.y += 100
+       })
+       animator.startAnimation()
+    }}
 }
 
 extension AccountViewController: MoveOtherScreenDelegate {
