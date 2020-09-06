@@ -9,15 +9,14 @@
 import UIKit
 
 class CountryCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
     
+    // MARK: - IBOutlets
+    @IBOutlet weak var imageCountry: UIImageView!
+    @IBOutlet weak var codeLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    
+    // MARK: - View LifeCyrcle
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
 }

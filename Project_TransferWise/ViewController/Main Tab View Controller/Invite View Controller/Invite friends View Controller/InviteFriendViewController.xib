@@ -102,10 +102,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vk9-xj-ANc">
-                    <rect key="frame" x="20" y="15" width="25" height="25"/>
+                    <rect key="frame" x="20" y="15" width="20" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="25" id="BEA-dO-5GO"/>
-                        <constraint firstAttribute="width" constant="25" id="j3x-Wl-9Gl"/>
+                        <constraint firstAttribute="height" constant="20" id="BEA-dO-5GO"/>
+                        <constraint firstAttribute="width" constant="20" id="j3x-Wl-9Gl"/>
                     </constraints>
                     <state key="normal" image="close_white"/>
                     <connections>

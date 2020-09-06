@@ -18,15 +18,21 @@ class SendScreenViewController: UIViewController {
     @IBOutlet private weak var sendAmountTextField: UITextField!
     @IBOutlet private weak var currencyFirstLabel: UILabel!
     @IBOutlet private weak var currencySecondLabel: UILabel!
+    @IBOutlet private weak var currentFirstImage: UIImageView!
+    @IBOutlet private weak var currentSecondImage: UIImageView!
+    @IBOutlet private weak var currentFirstButton: UIButton!
+    @IBOutlet private weak var currentSecondButton: UIButton!
     
     // MARK: - Properties
     private let fetchRate = FetchCurrency()
+    var isTagCurrentFirstButton: Bool = false
     
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configuration()
         self.dismissKeyboard()
+        self.editingFirstChanged()
     }
     
     // MARK: - Configuration
@@ -36,12 +42,11 @@ class SendScreenViewController: UIViewController {
         self.bottomView.cornerView(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.fetchRate.fetch { currencyRate in
-            guard let rates = currencyRate else { return }
-            self.recipientTextField.text = String(rates.value)
-        }
+    private func moveCountryScreen() {
+        let vc = CountryViewController()
+        vc.delegate = self
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
     
     @objc func editingFirstChanged() {
@@ -51,8 +56,8 @@ class SendScreenViewController: UIViewController {
             return
         }
         self.fetchRate.amount = self.sendAmountTextField.text
-        self.fetchRate.currencyFrom = "GEL"
-        self.fetchRate.currencyTo = "USD"
+        self.fetchRate.currencyFrom = self.currencyFirstLabel.text
+        self.fetchRate.currencyTo = self.currencySecondLabel.text
         self.fetchRate.fetch { currencyRate in
             guard let rates = currencyRate else { return }
             self.recipientTextField.text = String(rates.value)
@@ -65,20 +70,20 @@ class SendScreenViewController: UIViewController {
             self.sendAmountTextField.placeholder = "0"
         }
         self.fetchRate.amount = self.recipientTextField.text
-        self.fetchRate.currencyFrom = "USD"
-        self.fetchRate.currencyTo = "GEL"
+        self.fetchRate.currencyFrom = self.currencySecondLabel.text
+        self.fetchRate.currencyTo = self.currencyFirstLabel.text
         self.fetchRate.fetch { currencyRate in
             guard let rates = currencyRate else { return }
             self.sendAmountTextField.text = String(rates.value)
         }
     }
-   
+    
     // MARK: - IBActions
-    @IBAction func sendFirstValue() {
+    @IBAction private func sendFirstValue() {
         self.sendAmountTextField.addTarget(self, action: #selector(self.editingFirstChanged), for: .editingChanged)
     }
     
-    @IBAction func sendSecondValue() {
+    @IBAction private func sendSecondValue() {
         self.recipientTextField.addTarget(self, action: #selector(self.editingSecondChanged), for: .editingChanged)
     }
     
@@ -90,9 +95,30 @@ class SendScreenViewController: UIViewController {
         print("Price Comparison")
     }
     
-    @IBAction private func currentCountry() {
-        let vc = CountryViewController()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+    @IBAction private func getCountryFrom(_ sender: UIButton) {
+        self.isTagCurrentFirstButton = true
+        self.moveCountryScreen()
+    }
+    
+    @IBAction private func getCountryTo(_ sender: UIButton) {
+        self.isTagCurrentFirstButton = false
+        self.moveCountryScreen()
+    }
+}
+
+// MARK: - Delegate set country code
+extension SendScreenViewController: SetCountryCodeDelegate {
+    func setCountryCode(image: UIImage, code: String) {
+        if self.isTagCurrentFirstButton {
+            print(self.isTagCurrentFirstButton)
+            self.currentFirstImage.image = image
+            self.currencyFirstLabel.text = code
+            self.editingFirstChanged()
+        } else {
+            print(self.isTagCurrentFirstButton)
+            self.currentSecondImage.image = image
+            self.currencySecondLabel.text = code
+            self.editingSecondChanged()
+        }
     }
 }

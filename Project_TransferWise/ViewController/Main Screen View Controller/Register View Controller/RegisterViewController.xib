@@ -80,7 +80,7 @@
                         <constraint firstAttribute="height" constant="24" id="Lar-4Q-Udp"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="done" secureTextEntry="YES"/>
+                    <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Choose a password"/>
                     </userDefinedRuntimeAttributes>
@@ -136,7 +136,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdO-kH-Hzt">
-                    <rect key="frame" x="57" y="489.66666666666669" width="300" height="31.333333333333314"/>
+                    <rect key="frame" x="57" y="489.66666666666669" width="300" height="33.666666666666686"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="300" id="oyX-24-Lm4"/>
                     </constraints>

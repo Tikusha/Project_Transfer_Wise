@@ -46,6 +46,7 @@
 		AC9DE3C924B850B200E6A8A4 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9DE3C824B850B200E6A8A4 /* MainScreen.xib */; };
 		AC9DE3D624B9AF1500E6A8A4 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DE3D424B9AF1500E6A8A4 /* TitleCell.swift */; };
 		AC9DE3D724B9AF1500E6A8A4 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9DE3D524B9AF1500E6A8A4 /* TitleCell.xib */; };
+		ACB1D5F12504C07A003C0AEF /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1D5F02504C07A003C0AEF /* CountryModel.swift */; };
 		ACBA327424E6F41900D7CD7C /* InviteFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA327224E6F41900D7CD7C /* InviteFriendViewController.swift */; };
 		ACBA327524E6F41900D7CD7C /* InviteFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBA327324E6F41900D7CD7C /* InviteFriendViewController.xib */; };
 		ACBA327924E9646A00D7CD7C /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA327724E9646A00D7CD7C /* CountryViewController.swift */; };
@@ -107,6 +108,7 @@
 		AC9DE3C824B850B200E6A8A4 /* MainScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
 		AC9DE3D424B9AF1500E6A8A4 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		AC9DE3D524B9AF1500E6A8A4 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
+		ACB1D5F02504C07A003C0AEF /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		ACBA327224E6F41900D7CD7C /* InviteFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendViewController.swift; sourceTree = "<group>"; };
 		ACBA327324E6F41900D7CD7C /* InviteFriendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InviteFriendViewController.xib; sourceTree = "<group>"; };
 		ACBA327724E9646A00D7CD7C /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				ACDA488E24BA19DB00A8773E /* MoneyTexts.swift */,
 				AC7A956A24F6C1A9002A4E75 /* TransferWiseImage.swift */,
+				ACB1D5F02504C07A003C0AEF /* CountryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				AC2F77C724D5B7C200119F48 /* AccountViewController.swift in Sources */,
 				AC6A937924C4C2F0005347C7 /* MainTabViewController.swift in Sources */,
 				ACDA488F24BA19DB00A8773E /* MoneyTexts.swift in Sources */,
+				ACB1D5F12504C07A003C0AEF /* CountryModel.swift in Sources */,
 				AC608CA124F2561D00BD51E9 /* RegisterViewController.swift in Sources */,
 				AC608C7524EF9C0400BD51E9 /* PersonalAccountView.swift in Sources */,
 				AC60661A24D6E448009BFF4D /* UIVIewControllerExtension.swift in Sources */,
