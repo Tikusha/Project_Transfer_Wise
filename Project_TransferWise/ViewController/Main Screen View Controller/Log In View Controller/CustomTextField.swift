@@ -25,7 +25,7 @@ class CustomTextField: UITextField {
     }
     
     @IBInspectable
-    var floatingLabelFont: UIFont = UIFont.systemFont(ofSize: 14) {
+    var floatingLabelFont: UIFont = UIFont.systemFont(ofSize: 12) {
         didSet {
             self.customLabel.font = self.floatingLabelFont
             self.font = self.floatingLabelFont

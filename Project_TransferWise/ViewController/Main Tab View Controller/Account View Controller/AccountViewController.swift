@@ -72,15 +72,22 @@ class AccountViewController: UIViewController {
     }
     
     @IBAction func tapPiece(_ gestureRecognizer : UITapGestureRecognizer ) {
-    guard gestureRecognizer.view != nil else { return }
-         
-    if gestureRecognizer.state == .ended {      // Move the view down and to the right when tapped.
-       let animator = UIViewPropertyAnimator(duration: 0.2, curve: .easeInOut, animations: {
-          gestureRecognizer.view!.center.x += 100
-          gestureRecognizer.view!.center.y += 100
-       })
-       animator.startAnimation()
-    }}
+        guard gestureRecognizer.view != nil else { return }
+        
+        if gestureRecognizer.state == .ended {      // Move the view down and to the right when tapped.
+            let animator = UIViewPropertyAnimator(duration: 0.2, curve: .easeInOut, animations: {
+                gestureRecognizer.view!.center.x += 100
+                gestureRecognizer.view!.center.y += 100
+            })
+            animator.startAnimation()
+        }}
+    
+    @IBAction private func aboutUser() {
+        let vc = AboutUserViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true)
+//        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension AccountViewController: MoveOtherScreenDelegate {

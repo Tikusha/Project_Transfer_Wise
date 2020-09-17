@@ -24,6 +24,7 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         self.dismissKeyboard()
         self.configuration()
+        self.changeLineColors()
     }
     
     // MARK: - Configuration
@@ -31,6 +32,8 @@ class RegisterViewController: UIViewController {
         self.emailTextfield.attributedPlaceholder = NSAttributedString(string: "Your email", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
         self.passwordTextfield.attributedPlaceholder = NSAttributedString(string: "Choose a password", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
         self.eyeImage.isHidden = true
+        self.passwordTextfield.delegate = self
+        self.emailTextfield.delegate = self
     }
     
     // MARK: - IBActions
@@ -46,7 +49,7 @@ class RegisterViewController: UIViewController {
         self.emailLineView.backgroundColor = Constants.Color.keylineGrey
     }
     
-    @IBAction private func register(_ sender: Any) {
+    @IBAction private func register() {
         guard let email = self.emailTextfield.text?.isNotEmpty,
             let password = self.passwordTextfield.text?.isNotEmpty else {
             return
@@ -57,6 +60,8 @@ class RegisterViewController: UIViewController {
                 let vc = MainTabViewController()
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
+            } else {
+//                print(error)
             }
         }
     }
@@ -70,5 +75,34 @@ extension String {
     var isNotEmpty: String? {
         if self.isEmpty { return nil }
         return self
+    }
+}
+
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case self.emailTextfield:
+            self.passwordTextfield.becomeFirstResponder()
+        default:
+            self.passwordTextfield.resignFirstResponder()
+            self.register()
+        }
+        return true
+    }
+}
+
+extension RegisterViewController {
+    func changeLineColors() {
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.changeColor)))
+    }
+    
+    @objc func changeColor(sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            self.view.endEditing(true)
+        }
+        sender.cancelsTouchesInView = false
+        self.eyeImage.isHidden = true
+        self.emailLineView.backgroundColor = Constants.Color.keylineGrey
+        self.passwordLineView.backgroundColor = Constants.Color.keylineGrey
     }
 }

@@ -59,7 +59,7 @@
                         <constraint firstAttribute="height" constant="24" id="W6e-53-9Ek"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Your email"/>
                     </userDefinedRuntimeAttributes>
@@ -80,7 +80,7 @@
                         <constraint firstAttribute="height" constant="24" id="Lar-4Q-Udp"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Choose a password"/>
                     </userDefinedRuntimeAttributes>

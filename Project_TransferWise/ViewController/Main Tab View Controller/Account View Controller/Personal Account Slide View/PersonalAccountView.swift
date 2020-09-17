@@ -30,4 +30,11 @@ class PersonalAccountView: UIView {
         self.personalView.cornerView(cornerRadius: heightPersonal/2, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
         self.businessView.cornerView(cornerRadius: heightBusiness/2, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
     }
+    
+    // MARK: - IBActions
+    @IBAction private func aboutUser() {
+        let vc = AboutUserViewController(nibName: "AboutUserViewController", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+//        self.present(vc, animated: true)
+    }
 }

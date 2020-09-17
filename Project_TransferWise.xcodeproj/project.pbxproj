@@ -39,6 +39,10 @@
 		AC735CD224E5A69A00BBCF04 /* AddRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC735CD024E5A69A00BBCF04 /* AddRecipientViewController.swift */; };
 		AC735CD324E5A69A00BBCF04 /* AddRecipientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC735CD124E5A69A00BBCF04 /* AddRecipientViewController.xib */; };
 		AC7A956B24F6C1A9002A4E75 /* TransferWiseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A956A24F6C1A9002A4E75 /* TransferWiseImage.swift */; };
+		AC9C1B3E251369F500E6AF9D /* AboutUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9C1B3C251369F500E6AF9D /* AboutUserViewController.swift */; };
+		AC9C1B3F251369F500E6AF9D /* AboutUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9C1B3D251369F500E6AF9D /* AboutUserViewController.xib */; };
+		AC9C1B43251396BC00E6AF9D /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9C1B41251396BC00E6AF9D /* AlertViewController.swift */; };
+		AC9C1B44251396BC00E6AF9D /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9C1B42251396BC00E6AF9D /* AlertViewController.xib */; };
 		AC9DE3B524B84EBB00E6A8A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DE3B424B84EBB00E6A8A4 /* AppDelegate.swift */; };
 		AC9DE3B924B84EBB00E6A8A4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DE3B824B84EBB00E6A8A4 /* MainScreenViewController.swift */; };
 		AC9DE3BE24B84EBD00E6A8A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9DE3BD24B84EBD00E6A8A4 /* Assets.xcassets */; };
@@ -99,6 +103,10 @@
 		AC735CD024E5A69A00BBCF04 /* AddRecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientViewController.swift; sourceTree = "<group>"; };
 		AC735CD124E5A69A00BBCF04 /* AddRecipientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRecipientViewController.xib; sourceTree = "<group>"; };
 		AC7A956A24F6C1A9002A4E75 /* TransferWiseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferWiseImage.swift; sourceTree = "<group>"; };
+		AC9C1B3C251369F500E6AF9D /* AboutUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUserViewController.swift; sourceTree = "<group>"; };
+		AC9C1B3D251369F500E6AF9D /* AboutUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUserViewController.xib; sourceTree = "<group>"; };
+		AC9C1B41251396BC00E6AF9D /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		AC9C1B42251396BC00E6AF9D /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
 		AC9DE3B124B84EBB00E6A8A4 /* Project_TransferWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_TransferWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9DE3B424B84EBB00E6A8A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC9DE3B824B84EBB00E6A8A4 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +217,7 @@
 				AC2F77C524D5B7C200119F48 /* AccountViewController.swift */,
 				AC608C7124EF9B1900BD51E9 /* Personal Account Slide View */,
 				AC140DD224D72AAE00EC0E86 /* Settings Slide View */,
+				AC9C1B3B251369CC00E6AF9D /* About User View Controller */,
 			);
 			path = "Account View Controller";
 			sourceTree = "<group>";
@@ -292,6 +301,25 @@
 				AC735CD024E5A69A00BBCF04 /* AddRecipientViewController.swift */,
 			);
 			path = "Add Recipient Screan View Controller";
+			sourceTree = "<group>";
+		};
+		AC9C1B3B251369CC00E6AF9D /* About User View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC9C1B3D251369F500E6AF9D /* AboutUserViewController.xib */,
+				AC9C1B3C251369F500E6AF9D /* AboutUserViewController.swift */,
+				AC9C1B402513966E00E6AF9D /* Alert Screen */,
+			);
+			path = "About User View Controller";
+			sourceTree = "<group>";
+		};
+		AC9C1B402513966E00E6AF9D /* Alert Screen */ = {
+			isa = PBXGroup;
+			children = (
+				AC9C1B42251396BC00E6AF9D /* AlertViewController.xib */,
+				AC9C1B41251396BC00E6AF9D /* AlertViewController.swift */,
+			);
+			path = "Alert Screen";
 			sourceTree = "<group>";
 		};
 		AC9DE3A824B84EBB00E6A8A4 = {
@@ -529,6 +557,7 @@
 				ACBA327524E6F41900D7CD7C /* InviteFriendViewController.xib in Resources */,
 				AC6A938424C4DBCE005347C7 /* InviteViewController.xib in Resources */,
 				AC6A937A24C4C2F0005347C7 /* MainTabViewController.xib in Resources */,
+				AC9C1B3F251369F500E6AF9D /* AboutUserViewController.xib in Resources */,
 				AC9DE3C124B84EBD00E6A8A4 /* LaunchScreen.storyboard in Resources */,
 				ACF7FE4A24D76063007B9A0E /* SettingsViewController.xib in Resources */,
 				AC9DE3C924B850B200E6A8A4 /* MainScreen.xib in Resources */,
@@ -546,6 +575,7 @@
 				AC608C9E24F24D8F00BD51E9 /* GoogleService-Info.plist in Resources */,
 				AC6A938024C4C5DF005347C7 /* HomeViewController.xib in Resources */,
 				ACF7FE4E24D76071007B9A0E /* HelpViewController.xib in Resources */,
+				AC9C1B44251396BC00E6AF9D /* AlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +635,7 @@
 				ACBA327424E6F41900D7CD7C /* InviteFriendViewController.swift in Sources */,
 				AC608CA424F39C6400BD51E9 /* CustomTextField.swift in Sources */,
 				AC6A938324C4DBCE005347C7 /* InviteViewController.swift in Sources */,
+				AC9C1B43251396BC00E6AF9D /* AlertViewController.swift in Sources */,
 				AC41576424CDE681001B06B6 /* SendScreenViewController.swift in Sources */,
 				ACBA327F24E99DD800D7CD7C /* CountryCell.swift in Sources */,
 				AC1B7F0024B9C19800826349 /* LogInViewController.swift in Sources */,
@@ -615,6 +646,7 @@
 				AC7A956B24F6C1A9002A4E75 /* TransferWiseImage.swift in Sources */,
 				AC9DE3D624B9AF1500E6A8A4 /* TitleCell.swift in Sources */,
 				AC6A937F24C4C5DF005347C7 /* HomeViewController.swift in Sources */,
+				AC9C1B3E251369F500E6AF9D /* AboutUserViewController.swift in Sources */,
 				ACBA328724EEBACE00D7CD7C /* FetchCurrency.swift in Sources */,
 				AC41578924D340A2001B06B6 /* SetUpBalanceViewController.swift in Sources */,
 				ACBA328524EEBA7000D7CD7C /* CurrencyRate.swift in Sources */,
