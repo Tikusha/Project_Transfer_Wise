@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBc-Hm-grR">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBc-Hm-grR">
                     <rect key="frame" x="349" y="0.0" width="30" height="48"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <state key="normal" title="...">
@@ -54,17 +54,17 @@
                     </variation>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwJ-T3-eLf">
-                    <rect key="frame" x="103.66666666666669" y="199.66666666666666" width="207" height="29"/>
+                    <rect key="frame" x="103.66666666666669" y="163" width="207" height="65.666666666666686"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                     <state key="normal" title="Personal account">
                         <color key="titleColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="personalAccount" destination="-1" eventType="touchUpInside" id="ICz-qQ-po2"/>
+                        <action selector="personalAccount" destination="-1" eventType="touchUpInside" id="13j-6M-BUx"/>
                     </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down arrow" translatesAutoresizingMaskIntoConstraints="NO" id="lux-fY-8jh">
-                    <rect key="frame" x="278.66666666666669" y="204.33333333333337" width="15" height="20"/>
+                    <rect key="frame" x="278.66666666666669" y="186" width="15" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="41m-zk-C2Z"/>
                         <constraint firstAttribute="width" constant="15" id="i22-VJ-phx"/>
@@ -80,7 +80,7 @@
                     <rect key="frame" x="16.666666666666657" y="325.66666666666669" width="380.66666666666674" height="0.66666666666668561"/>
                     <color key="backgroundColor" red="0.82745098039999998" green="0.83529411760000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iw-9k-uKi" userLabel="Bank Details Button">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iw-9k-uKi" userLabel="Bank Details Button">
                     <rect key="frame" x="16.666666666666657" y="326.33333333333331" width="380.66666666666674" height="87"/>
                     <connections>
                         <action selector="aboutUser" destination="-1" eventType="touchUpInside" id="JpA-qb-wz0"/>
@@ -119,7 +119,7 @@
                     <rect key="frame" x="16.666666666666657" y="413.33333333333331" width="380.66666666666674" height="0.66666666666668561"/>
                     <color key="backgroundColor" red="0.82745098039999998" green="0.83529411760000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1p-r3-gWF" userLabel="Direct Debits Button">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1p-r3-gWF" userLabel="Direct Debits Button">
                     <rect key="frame" x="16.666666666666657" y="414" width="380.66666666666674" height="86.666666666666686"/>
                     <connections>
                         <action selector="aboutUser" destination="-1" eventType="touchUpInside" id="QV7-ko-iLA"/>
@@ -168,6 +168,7 @@
                     <rect key="frame" x="0.0" y="531.33333333333337" width="414" height="176.66666666666663"/>
                 </imageView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="ECx-G6-2sr" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0iw-9k-uKi" secondAttribute="trailing" id="2UT-f0-RCB"/>
@@ -194,6 +195,7 @@
                 <constraint firstItem="NuR-Qp-XaE" firstAttribute="top" secondItem="FAG-Bf-wQ4" secondAttribute="bottom" constant="30" id="P99-k0-HjT"/>
                 <constraint firstItem="17L-iJ-sjh" firstAttribute="leading" secondItem="DM7-sN-dpz" secondAttribute="trailing" constant="19.000000000000028" id="Pkm-hn-wUu"/>
                 <constraint firstItem="f1p-r3-gWF" firstAttribute="top" secondItem="wNO-IX-MGw" secondAttribute="bottom" id="Uu3-go-ZFu"/>
+                <constraint firstItem="PwJ-T3-eLf" firstAttribute="top" secondItem="ukA-VU-bFJ" secondAttribute="bottom" constant="50" id="VOC-x0-9wk"/>
                 <constraint firstItem="0iw-9k-uKi" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Vht-gs-voZ"/>
                 <constraint firstItem="FAG-Bf-wQ4" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.001" id="YOu-x0-WWQ"/>
                 <constraint firstItem="f1p-r3-gWF" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1176" id="a2X-v1-Fh9"/>
@@ -206,7 +208,7 @@
                 <constraint firstItem="172-ZH-pLD" firstAttribute="trailing" secondItem="f1p-r3-gWF" secondAttribute="trailing" id="dlk-6k-tVk"/>
                 <constraint firstItem="17L-iJ-sjh" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="f1p-r3-gWF" secondAttribute="trailing" id="dxf-fi-TGW"/>
                 <constraint firstItem="17L-iJ-sjh" firstAttribute="height" secondItem="f1p-r3-gWF" secondAttribute="height" multiplier="0.241379" id="eJ4-uw-rxS"/>
-                <constraint firstItem="ukA-VU-bFJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="52" id="eL3-bk-pei"/>
+                <constraint firstItem="ukA-VU-bFJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" priority="750" constant="52" id="eL3-bk-pei"/>
                 <constraint firstItem="yHn-wl-Kpm" firstAttribute="top" secondItem="GVz-Wj-zdv" secondAttribute="bottom" constant="16" id="fGP-1w-exQ"/>
                 <constraint firstItem="DM7-sN-dpz" firstAttribute="leading" secondItem="f1p-r3-gWF" secondAttribute="leading" id="h0x-aY-bw3"/>
                 <constraint firstItem="17L-iJ-sjh" firstAttribute="top" secondItem="FsS-gk-aN1" secondAttribute="top" constant="-10" id="hIg-XK-8nT"/>
@@ -229,7 +231,6 @@
                 <constraint firstItem="5f6-N7-vPB" firstAttribute="height" secondItem="f1p-r3-gWF" secondAttribute="height" multiplier="0.241379" id="wNz-dE-rvq"/>
                 <constraint firstItem="FAG-Bf-wQ4" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.92" id="zhC-rg-8lB"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="Lmc-Zk-JUf"/>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,7 +66,7 @@
                     </constraints>
                     <color key="textColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                    <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="done" secureTextEntry="YES"/>
+                    <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Password"/>
                     </userDefinedRuntimeAttributes>
@@ -76,7 +76,7 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-q3-B2r" userLabel="Eye Button">
                     <rect key="frame" x="365" y="248.66666666666663" width="29" height="29"/>
-                    <state key="normal" image="eye"/>
+                    <state key="normal" image="closed_eye"/>
                     <connections>
                         <action selector="showPassword:" destination="-1" eventType="touchUpInside" id="pCE-Pb-ZKW"/>
                     </connections>
@@ -85,7 +85,7 @@
                     <rect key="frame" x="21" y="287.33333333333331" width="372" height="0.66666666666668561"/>
                     <color key="backgroundColor" red="0.88627450980392153" green="0.90196078431372551" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzh-JK-yOr">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzh-JK-yOr">
                     <rect key="frame" x="20" y="312" width="374" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -133,6 +133,7 @@
                     </constraints>
                 </stackView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="tzh-JK-yOr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1sd-TC-4fv"/>
@@ -172,14 +173,13 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A5P-Og-Dfl" secondAttribute="trailing" constant="21" id="vXQ-Nt-EeU"/>
                 <constraint firstItem="4em-ED-exF" firstAttribute="top" secondItem="1b8-xe-3iE" secondAttribute="bottom" constant="22" id="x7l-U8-1pR"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="98.641304347826093"/>
         </view>
     </objects>
     <resources>
         <image name="apple_black_29" width="29" height="29"/>
         <image name="close" width="20" height="20"/>
-        <image name="eye" width="29" height="29"/>
+        <image name="closed_eye" width="29" height="29"/>
         <image name="face" width="20" height="20"/>
         <image name="google" width="20" height="20"/>
     </resources>

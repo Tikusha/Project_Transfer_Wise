@@ -81,11 +81,14 @@ class LogInViewController: UIViewController {
     
     @IBAction private func showPassword(_ sender: Any) {
         if self.isSecureTextEntryPassword {
+            self.eyeButton.setImage(UIImage(named: "opened_eye"), for: .normal)
             self.passwordTextfield.isSecureTextEntry = false
+            self.isSecureTextEntryPassword = false
         } else {
+            self.eyeButton.setImage(UIImage(named: "closed_eye"), for: .normal)
             self.passwordTextfield.isSecureTextEntry = true
+            self.isSecureTextEntryPassword = true
         }
-        self.isSecureTextEntryPassword = !isSecureTextEntryPassword
     }
 }
 
@@ -108,12 +111,16 @@ extension LogInViewController {
     }
     
     @objc func changeColor(sender: UITapGestureRecognizer) {
-        if sender.state == .ended {
-            self.view.endEditing(true)
+        if !self.isSecureTextEntryPassword {
+            self.view.endEditing(false)
+        } else {
+            if sender.state == .ended {
+                self.view.endEditing(true)
+                sender.cancelsTouchesInView = false
+                self.eyeButton.isHidden = true
+                self.lineBottomView.backgroundColor = Constants.Color.keylineGrey
+                self.lineTopView.backgroundColor = Constants.Color.keylineGrey
+            }
         }
-        sender.cancelsTouchesInView = false
-        self.eyeButton.isHidden = true
-        self.lineBottomView.backgroundColor = Constants.Color.keylineGrey
-        self.lineTopView.backgroundColor = Constants.Color.keylineGrey
     }
 }

@@ -63,6 +63,7 @@ class AccountViewController: UIViewController {
     }
     
     @IBAction private func personalAccount() {
+        print("sndsndvksnkjnvjkds")
         self.sliderBackground = UIView(frame: CGRect(origin: .zero, size: self.view.bounds.size))
         guard let shadow = Bundle.main.loadNibNamed("PersonalAccountView", owner: nil, options: nil)?.first as? PersonalAccountView else { return }
         self.sliderPersonal = shadow
