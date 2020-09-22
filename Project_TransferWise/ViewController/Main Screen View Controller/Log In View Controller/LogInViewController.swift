@@ -24,7 +24,8 @@ class LogInViewController: UIViewController {
     
     // MARK: - Properties
     private var isSecureTextEntryPassword = true
-
+    var alert = UIAlertController()
+    
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +47,28 @@ class LogInViewController: UIViewController {
         self.emailTextfield.delegate = self
     }
     
+    private func showAlert() {
+        self.alert = UIAlertController(title: "Info", message: "Please fill in all fields", preferredStyle: UIAlertController.Style.alert)
+        present(alert, animated: true)
+    }
+    
+    private func incorrectAlert() {
+        self.alert = UIAlertController(title: "Info", message: "Your mail or password is not correct", preferredStyle: UIAlertController.Style.alert)
+        present(alert, animated: true)
+    }
+    
+    private func dismissAlert() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+            self.alert.dismiss(animated: true, completion: nil)
+        })
+    }
+    
     // MARK: - IBActions
     @IBAction private func logIn() {
         guard let email = self.emailTextfield.text?.isNotEmpty,
-            let password = self.passwordTextfield.text?.isNotEmpty else {
+              let password = self.passwordTextfield.text?.isNotEmpty else {
+            self.showAlert()
+            self.dismissAlert()
             return
         }
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
@@ -59,6 +78,9 @@ class LogInViewController: UIViewController {
                 let vc = MainTabViewController()
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
+            } else {
+                self.incorrectAlert()
+                self.dismissAlert()
             }
         }
     }
@@ -120,6 +142,7 @@ extension LogInViewController {
                 self.eyeButton.isHidden = true
                 self.lineBottomView.backgroundColor = Constants.Color.keylineGrey
                 self.lineTopView.backgroundColor = Constants.Color.keylineGrey
+                
             }
         }
     }

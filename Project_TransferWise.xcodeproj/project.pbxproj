@@ -351,7 +351,6 @@
 				AC9DE3CF24B8544200E6A8A4 /* Resources */,
 				AC9DE3C224B84EBD00E6A8A4 /* Info.plist */,
 				AC608C9D24F24D8F00BD51E9 /* GoogleService-Info.plist */,
-				AC9DE3CE24B8543300E6A8A4 /* Supporting Files */,
 			);
 			path = Project_TransferWise;
 			sourceTree = "<group>";
@@ -396,27 +395,12 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		AC9DE3CE24B8543300E6A8A4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		AC9DE3CF24B8544200E6A8A4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AC9DE3D124B8549300E6A8A4 /* Fonts */,
 				AC9DE3D224B8549C00E6A8A4 /* Media */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		AC9DE3D124B8549300E6A8A4 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AC9DE3D224B8549C00E6A8A4 /* Media */ = {

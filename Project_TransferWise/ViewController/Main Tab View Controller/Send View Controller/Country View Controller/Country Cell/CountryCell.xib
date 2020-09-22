@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,20 +18,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rhq-AO-IRi">
-                        <rect key="frame" x="0.0" y="79.5" width="20" height="20"/>
+                        <rect key="frame" x="30" y="79.5" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="O9v-SA-Ye7"/>
                             <constraint firstAttribute="height" constant="20" id="lCy-5X-mTZ"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOu-yF-9vj">
-                        <rect key="frame" x="30" y="80" width="41.5" height="19.5"/>
+                        <rect key="frame" x="60" y="80" width="41.5" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIY-PD-Y3L">
-                        <rect key="frame" x="81.5" y="81" width="259" height="17"/>
+                        <rect key="frame" x="111.5" y="81" width="259" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
                     <constraint firstItem="TOu-yF-9vj" firstAttribute="leading" secondItem="Rhq-AO-IRi" secondAttribute="trailing" constant="10" id="L9v-L8-BB9"/>
                     <constraint firstItem="TOu-yF-9vj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QTE-Ps-RQ0"/>
                     <constraint firstItem="dIY-PD-Y3L" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aMU-JP-KEc"/>
-                    <constraint firstItem="Rhq-AO-IRi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ocC-01-UbZ"/>
+                    <constraint firstItem="Rhq-AO-IRi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="ocC-01-UbZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

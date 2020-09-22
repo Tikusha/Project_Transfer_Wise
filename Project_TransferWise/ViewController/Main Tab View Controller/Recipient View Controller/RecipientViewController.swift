@@ -9,7 +9,8 @@
 import UIKit
 
 class RecipientViewController: UIViewController {
-
+    
+    // MARK: - View LifeCyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
     }

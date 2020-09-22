@@ -11,13 +11,13 @@ import UIKit
 class CustomTextField: UITextField {
     
     // MARK: - Properties
-    var customLabel: UILabel!
+    private var customLabel: UILabel!
     
     @IBInspectable
-    var _placeholder: String?
+    private var _placeholder: String?
     
     @IBInspectable
-    var floatingLabelBackground: UIColor = UIColor.white.withAlphaComponent(1) {
+    private var floatingLabelBackground: UIColor = UIColor.white.withAlphaComponent(1) {
         didSet {
             self.customLabel.backgroundColor = self.floatingLabelBackground
             self.setNeedsDisplay()
@@ -25,7 +25,7 @@ class CustomTextField: UITextField {
     }
     
     @IBInspectable
-    var floatingLabelFont: UIFont = UIFont.systemFont(ofSize: 12) {
+    private var floatingLabelFont: UIFont = UIFont.systemFont(ofSize: 12) {
         didSet {
             self.customLabel.font = self.floatingLabelFont
             self.font = self.floatingLabelFont

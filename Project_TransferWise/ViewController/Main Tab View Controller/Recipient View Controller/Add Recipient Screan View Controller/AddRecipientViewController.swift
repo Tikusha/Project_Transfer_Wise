@@ -9,9 +9,15 @@
 import UIKit
 
 class AddRecipientViewController: UIViewController {
-
+    
+    // MARK: - View LifeCyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+    }
+    
+    // MARK: - IBActions
+    @IBAction private func close() {
+        
     }
 }

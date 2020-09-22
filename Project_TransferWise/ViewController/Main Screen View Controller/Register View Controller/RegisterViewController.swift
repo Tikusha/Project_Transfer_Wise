@@ -18,6 +18,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet private weak var eyeImage: UIImageView!
     @IBOutlet private weak var passwordLineView: UIView!
     @IBOutlet private weak var emailLineView: UIView!
+    
+    // MARK: - Properties
+    var alert = UIAlertController()
 
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
@@ -36,6 +39,22 @@ class RegisterViewController: UIViewController {
         self.emailTextfield.delegate = self
     }
     
+    private func showAlert() {
+        self.alert = UIAlertController(title: "Info", message: "Please fill in all fields", preferredStyle: UIAlertController.Style.alert)
+        present(self.alert, animated: true)
+    }
+    
+    private func dismissAlert() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+            self.alert.dismiss(animated: true, completion: nil)
+        })
+    }
+    
+    private func alertPasword() {
+        self.alert = UIAlertController(title: "Info", message: "Password must be more than 8", preferredStyle: UIAlertController.Style.alert)
+        present(self.alert, animated: true)
+    }
+    
     // MARK: - IBActions
     @IBAction private func chandeColorMail() {
         self.emailLineView.backgroundColor = Constants.Color.brandBlue
@@ -52,6 +71,8 @@ class RegisterViewController: UIViewController {
     @IBAction private func register() {
         guard let email = self.emailTextfield.text?.isNotEmpty,
             let password = self.passwordTextfield.text?.isNotEmpty else {
+            self.showAlert()
+            self.dismissAlert()
             return
         }
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
@@ -61,7 +82,8 @@ class RegisterViewController: UIViewController {
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
             } else {
-//                print(error)
+                self.alertPasword()
+                self.dismissAlert()
             }
         }
     }

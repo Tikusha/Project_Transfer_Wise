@@ -50,31 +50,38 @@ class SendScreenViewController: UIViewController {
     }
     
     @objc func editingFirstChanged() {
-        if self.sendAmountTextField.text == "" {
+        guard let text = self.sendAmountTextField.text else { return }
+        if text.isEmpty {
+            self.sendAmountTextField.text = ""
+            self.recipientTextField.text = ""
             self.sendAmountTextField.placeholder = "0"
             self.recipientTextField.placeholder = "0"
-            return
-        }
-        self.fetchRate.amount = self.sendAmountTextField.text
-        self.fetchRate.currencyFrom = self.currencyFirstLabel.text
-        self.fetchRate.currencyTo = self.currencySecondLabel.text
-        self.fetchRate.fetch { currencyRate in
-            guard let rates = currencyRate else { return }
-            self.recipientTextField.text = String(rates.value)
+        } else {
+            self.fetchRate.amount = self.sendAmountTextField.text
+            self.fetchRate.currencyFrom = self.currencyFirstLabel.text
+            self.fetchRate.currencyTo = self.currencySecondLabel.text
+            self.fetchRate.fetch { currencyRate in
+                guard let rates = currencyRate else { return }
+                self.recipientTextField.text = String(rates.value)
+            }
         }
     }
     
     @objc func editingSecondChanged() {
-        if self.recipientTextField.text == "" {
+        guard let text = self.recipientTextField.text else { return }
+        if text.isEmpty {
+            self.sendAmountTextField.text = ""
+            self.recipientTextField.text = ""
             self.recipientTextField.placeholder = "0"
             self.sendAmountTextField.placeholder = "0"
-        }
-        self.fetchRate.amount = self.recipientTextField.text
-        self.fetchRate.currencyFrom = self.currencySecondLabel.text
-        self.fetchRate.currencyTo = self.currencyFirstLabel.text
-        self.fetchRate.fetch { currencyRate in
-            guard let rates = currencyRate else { return }
-            self.sendAmountTextField.text = String(rates.value)
+        } else {
+            self.fetchRate.amount = self.recipientTextField.text
+            self.fetchRate.currencyFrom = self.currencySecondLabel.text
+            self.fetchRate.currencyTo = self.currencyFirstLabel.text
+            self.fetchRate.fetch { currencyRate in
+                guard let rates = currencyRate else { return }
+                self.sendAmountTextField.text = String(rates.value)
+            }
         }
     }
     
