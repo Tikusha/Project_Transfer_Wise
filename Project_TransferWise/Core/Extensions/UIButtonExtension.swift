@@ -11,7 +11,7 @@ import UIKit
 extension UIButton {
     
     // MARK: - Round corners
-    func customCorner(cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor) {
+    func customCornerButton(cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor) {
         self.layer.cornerRadius = cornerRadius
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor.cgColor

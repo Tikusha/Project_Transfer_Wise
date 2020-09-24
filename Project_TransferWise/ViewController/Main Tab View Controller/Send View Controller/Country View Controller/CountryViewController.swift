@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SetCountryCodeDelegate {
-    func setCountryCode(image: UIImage, code: String)
+    func setCountryCode(image: UIImage, code: String, country: String)
 }
 
 class CountryViewController: UIViewController {
@@ -120,7 +120,7 @@ extension CountryViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension CountryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.setCountryCode(image: self.countriesList[indexPath.row].image!, code: self.countriesList[indexPath.row].code ?? "")
+        self.delegate?.setCountryCode(image: self.countriesList[indexPath.row].image!, code: self.countriesList[indexPath.row].code ?? "", country: self.countriesList[indexPath.row].country)
         self.dismiss(animated: true, completion: nil)
     }
 }

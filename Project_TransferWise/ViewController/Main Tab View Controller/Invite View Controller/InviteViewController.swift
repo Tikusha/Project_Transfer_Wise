@@ -21,7 +21,7 @@ class InviteViewController: UIViewController {
     
     // MARK: - Configuration
     private func configuration() {
-        self.inviteFriendButton.customCorner(cornerRadius: 3, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
+        self.inviteFriendButton.customCornerButton(cornerRadius: 3, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
     }
     
     // MARK: - IBActions

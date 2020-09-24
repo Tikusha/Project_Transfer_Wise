@@ -8,12 +8,19 @@
 
 import UIKit
 
+protocol PersonalAccountDelegate {
+    func moveAboutUser()
+}
+
 class PersonalAccountView: UIView {
     
     // MARK: - @IBOutlets
     @IBOutlet private weak var viewLine: UIView!
     @IBOutlet private weak var personalView: UIView!
     @IBOutlet private weak var businessView: UIView!
+    
+    // MARK: - Properties
+    var delegate: PersonalAccountDelegate?
     
     // MARK: - View LifeCyrcle
     override func layoutSubviews() {
@@ -33,8 +40,6 @@ class PersonalAccountView: UIView {
     
     // MARK: - IBActions
     @IBAction private func aboutUser() {
-        let vc = AboutUserViewController(nibName: "AboutUserViewController", bundle: nil)
-        vc.modalPresentationStyle = .overFullScreen
-//        self.present(vc, animated: true)
+        self.delegate?.moveAboutUser()
     }
 }

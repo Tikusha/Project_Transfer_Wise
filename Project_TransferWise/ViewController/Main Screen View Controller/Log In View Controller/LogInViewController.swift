@@ -36,10 +36,10 @@ class LogInViewController: UIViewController {
     
     // MARK: - Configuration
     private func configuration() {
-        self.logInButton.customCorner(cornerRadius: 3, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
-        self.appleButton.customCorner(cornerRadius: 3, borderWidth: 0.7, borderColor: .black)
-        self.faceButton.customCorner(cornerRadius: 3, borderWidth: 0.7, borderColor: Constants.Color.navyDark)
-        self.googleButton.customCorner(cornerRadius: 3, borderWidth: 0.7, borderColor: Constants.Color.blueDown)
+        self.logInButton.customCornerButton(cornerRadius: 3, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
+        self.appleButton.customCornerButton(cornerRadius: 3, borderWidth: 0.7, borderColor: .black)
+        self.faceButton.customCornerButton(cornerRadius: 3, borderWidth: 0.7, borderColor: Constants.Color.navyDark)
+        self.googleButton.customCornerButton(cornerRadius: 3, borderWidth: 0.7, borderColor: Constants.Color.blueDown)
         self.passwordTextfield.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
         self.emailTextfield.attributedPlaceholder = NSAttributedString(string: "Your email", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
         self.eyeButton.isHidden = true
@@ -47,18 +47,18 @@ class LogInViewController: UIViewController {
         self.emailTextfield.delegate = self
     }
     
-    private func showAlert() {
+    private func emptyFieldsAlert() {
         self.alert = UIAlertController(title: "Info", message: "Please fill in all fields", preferredStyle: UIAlertController.Style.alert)
         present(alert, animated: true)
     }
     
-    private func incorrectAlert() {
+    private func incorrectDataAlert() {
         self.alert = UIAlertController(title: "Info", message: "Your mail or password is not correct", preferredStyle: UIAlertController.Style.alert)
         present(alert, animated: true)
     }
     
     private func dismissAlert() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
             self.alert.dismiss(animated: true, completion: nil)
         })
     }
@@ -67,7 +67,7 @@ class LogInViewController: UIViewController {
     @IBAction private func logIn() {
         guard let email = self.emailTextfield.text?.isNotEmpty,
               let password = self.passwordTextfield.text?.isNotEmpty else {
-            self.showAlert()
+            self.emptyFieldsAlert()
             self.dismissAlert()
             return
         }
@@ -79,7 +79,7 @@ class LogInViewController: UIViewController {
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
             } else {
-                self.incorrectAlert()
+                self.incorrectDataAlert()
                 self.dismissAlert()
             }
         }
@@ -142,7 +142,6 @@ extension LogInViewController {
                 self.eyeButton.isHidden = true
                 self.lineBottomView.backgroundColor = Constants.Color.keylineGrey
                 self.lineTopView.backgroundColor = Constants.Color.keylineGrey
-                
             }
         }
     }

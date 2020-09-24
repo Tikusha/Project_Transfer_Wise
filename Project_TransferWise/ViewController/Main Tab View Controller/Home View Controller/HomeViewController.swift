@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Configuration
     private func configuration() {
-        self.openButton.customCorner(cornerRadius: 10, borderWidth: 0.2, borderColor: .gray)
+        self.openButton.customCornerButton(cornerRadius: 10, borderWidth: 0.2, borderColor: .gray)
         self.transactionView.layer.cornerRadius = 10
     }
     

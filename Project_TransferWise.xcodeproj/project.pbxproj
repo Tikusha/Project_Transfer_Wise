@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC08190F251A3DB30034CE52 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC08190D251A3DB30034CE52 /* BusinessViewController.swift */; };
+		AC081910251A3DB30034CE52 /* BusinessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC08190E251A3DB30034CE52 /* BusinessViewController.xib */; };
 		AC140DD424D72AD300EC0E86 /* AccountSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC140DD324D72AD300EC0E86 /* AccountSettingView.swift */; };
 		AC140DD624D72AE300EC0E86 /* AccountSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC140DD524D72AE300EC0E86 /* AccountSettingView.xib */; };
 		AC1B7F0024B9C19800826349 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B7EFE24B9C19800826349 /* LogInViewController.swift */; };
@@ -71,6 +73,8 @@
 		2ECC5762BE8C8E6E81B7709A /* Pods_Project_TransferWise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_TransferWise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA6584C5C161D2649DC0C38 /* Pods-Project_TransferWise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_TransferWise.debug.xcconfig"; path = "Target Support Files/Pods-Project_TransferWise/Pods-Project_TransferWise.debug.xcconfig"; sourceTree = "<group>"; };
 		711324846D293682CA8BBEFC /* Pods-Project_TransferWise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_TransferWise.release.xcconfig"; path = "Target Support Files/Pods-Project_TransferWise/Pods-Project_TransferWise.release.xcconfig"; sourceTree = "<group>"; };
+		AC08190D251A3DB30034CE52 /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
+		AC08190E251A3DB30034CE52 /* BusinessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessViewController.xib; sourceTree = "<group>"; };
 		AC140DD324D72AD300EC0E86 /* AccountSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingView.swift; sourceTree = "<group>"; };
 		AC140DD524D72AE300EC0E86 /* AccountSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSettingView.xib; sourceTree = "<group>"; };
 		AC1B7EFE24B9C19800826349 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +165,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC08190C251A3D710034CE52 /* Business View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC08190E251A3DB30034CE52 /* BusinessViewController.xib */,
+				AC08190D251A3DB30034CE52 /* BusinessViewController.swift */,
+			);
+			path = "Business View Controller";
+			sourceTree = "<group>";
+		};
 		AC140DD224D72AAE00EC0E86 /* Settings Slide View */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +241,7 @@
 				AC2F77CA24D5B87E00119F48 /* RecipientViewController.xib */,
 				AC2F77C924D5B87E00119F48 /* RecipientViewController.swift */,
 				AC735CCF24E5A63900BBCF04 /* Add Recipient Screan View Controller */,
+				AC08190C251A3D710034CE52 /* Business View Controller */,
 			);
 			path = "Recipient View Controller";
 			sourceTree = "<group>";
@@ -554,6 +568,7 @@
 				AC41576524CDE681001B06B6 /* SendScreenViewController.xib in Resources */,
 				AC735CD324E5A69A00BBCF04 /* AddRecipientViewController.xib in Resources */,
 				AC41578A24D340A2001B06B6 /* SetUpBalanceViewController.xib in Resources */,
+				AC081910251A3DB30034CE52 /* BusinessViewController.xib in Resources */,
 				AC2F77C824D5B7C200119F48 /* AccountViewController.xib in Resources */,
 				ACBA327A24E9646A00D7CD7C /* CountryViewController.xib in Resources */,
 				AC608C9E24F24D8F00BD51E9 /* GoogleService-Info.plist in Resources */,
@@ -630,6 +645,7 @@
 				AC7A956B24F6C1A9002A4E75 /* TransferWiseImage.swift in Sources */,
 				AC9DE3D624B9AF1500E6A8A4 /* TitleCell.swift in Sources */,
 				AC6A937F24C4C5DF005347C7 /* HomeViewController.swift in Sources */,
+				AC08190F251A3DB30034CE52 /* BusinessViewController.swift in Sources */,
 				AC9C1B3E251369F500E6AF9D /* AboutUserViewController.swift in Sources */,
 				ACBA328724EEBACE00D7CD7C /* FetchCurrency.swift in Sources */,
 				AC41578924D340A2001B06B6 /* SetUpBalanceViewController.swift in Sources */,

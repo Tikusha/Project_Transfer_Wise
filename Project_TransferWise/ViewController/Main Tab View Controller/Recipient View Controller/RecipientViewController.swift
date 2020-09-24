@@ -17,6 +17,8 @@ class RecipientViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction private func add() {
-        self.present(AddRecipientViewController(), animated: true)
+        let vc = AddRecipientViewController()
+        vc.modalPresentationStyle = .popover
+        self.present(vc, animated: true)
     }
 }

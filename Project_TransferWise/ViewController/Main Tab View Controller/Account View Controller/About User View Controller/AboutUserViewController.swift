@@ -28,6 +28,7 @@ class AboutUserViewController: UIViewController {
     @IBOutlet private weak var monthLineView: UIView!
     @IBOutlet private weak var yearLineView: UIView!
     @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var saveButton: UIButton!
     
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
@@ -46,6 +47,7 @@ class AboutUserViewController: UIViewController {
         self.dayTextfield.attributedPlaceholder = NSAttributedString(string: "DD", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
         self.monthTextfield.attributedPlaceholder = NSAttributedString(string: "MM", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
         self.yearTextfield.attributedPlaceholder = NSAttributedString(string: "YYYY", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
+        self.saveButton.customCornerButton(cornerRadius: 3, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
         self.firstnameTextfield.delegate = self
         self.lastnameTextfield.delegate = self
         self.addressTextfield.delegate = self

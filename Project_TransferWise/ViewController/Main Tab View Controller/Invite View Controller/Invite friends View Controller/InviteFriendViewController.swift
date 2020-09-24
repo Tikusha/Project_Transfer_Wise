@@ -24,9 +24,9 @@ class InviteFriendViewController: UIViewController, MFMessageComposeViewControll
     
     // MARK: - Configuration
     private func configuration() {
-        self.inviteViaEmailButton.customCorner(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.brandBlue)
-        self.inviteViaSMSButton.customCorner(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.brandBlue)
-        self.copyLinkButton.customCorner(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.brandBlue)
+        self.inviteViaEmailButton.customCornerButton(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.brandBlue)
+        self.inviteViaSMSButton.customCornerButton(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.brandBlue)
+        self.copyLinkButton.customCornerButton(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.brandBlue)
     }
     
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {

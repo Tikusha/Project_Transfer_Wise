@@ -18,6 +18,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet private weak var eyeImage: UIImageView!
     @IBOutlet private weak var passwordLineView: UIView!
     @IBOutlet private weak var emailLineView: UIView!
+    @IBOutlet private weak var registerButton: UIButton!
     
     // MARK: - Properties
     var alert = UIAlertController()
@@ -34,18 +35,19 @@ class RegisterViewController: UIViewController {
     private func configuration() {
         self.emailTextfield.attributedPlaceholder = NSAttributedString(string: "Your email", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
         self.passwordTextfield.attributedPlaceholder = NSAttributedString(string: "Choose a password", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
+        self.registerButton.customCornerButton(cornerRadius: 3, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
         self.eyeImage.isHidden = true
         self.passwordTextfield.delegate = self
         self.emailTextfield.delegate = self
     }
     
     private func showAlert() {
-        self.alert = UIAlertController(title: "Info", message: "Please fill in all fields", preferredStyle: UIAlertController.Style.alert)
+        self.alert = UIAlertController(title: "Can't save", message: "Please fill in all fields", preferredStyle: UIAlertController.Style.alert)
         present(self.alert, animated: true)
     }
     
     private func dismissAlert() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
             self.alert.dismiss(animated: true, completion: nil)
         })
     }

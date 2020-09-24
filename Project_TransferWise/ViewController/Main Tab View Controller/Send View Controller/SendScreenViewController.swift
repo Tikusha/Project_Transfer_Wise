@@ -22,6 +22,7 @@ class SendScreenViewController: UIViewController {
     @IBOutlet private weak var currentSecondImage: UIImageView!
     @IBOutlet private weak var currentFirstButton: UIButton!
     @IBOutlet private weak var currentSecondButton: UIButton!
+    @IBOutlet private weak var continueButton: UIButton!
     
     // MARK: - Properties
     private let fetchRate = FetchCurrency()
@@ -37,9 +38,10 @@ class SendScreenViewController: UIViewController {
     
     // MARK: - Configuration
     private func configuration() {
-        self.priceComparisonButton.customCorner(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.brandBlue)
+        self.priceComparisonButton.customCornerButton(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.brandBlue)
         self.topView.cornerView(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
         self.bottomView.cornerView(cornerRadius: 3, borderWidth: 1, borderColor: Constants.Color.keylineGrey)
+        self.continueButton.customCornerButton(cornerRadius: 3, borderWidth: 0.2, borderColor: Constants.Color.payGreen)
     }
     
     private func moveCountryScreen() {
@@ -115,7 +117,7 @@ class SendScreenViewController: UIViewController {
 
 // MARK: - Delegate set country code
 extension SendScreenViewController: SetCountryCodeDelegate {
-    func setCountryCode(image: UIImage, code: String) {
+    func setCountryCode(image: UIImage, code: String, country: String) {
         if self.isTagCurrentFirstButton {
             print(self.isTagCurrentFirstButton)
             self.currentFirstImage.image = image
