@@ -9,6 +9,10 @@
 import UIKit
 
 struct TransferWiseImage {
-    let images = [UIImage(named: "transfer_wise_blue"), UIImage(named: "transfer_wise_globe"), UIImage(named: "transfer_wise_disc")]
+    let images = [UIImage(named: "transfer_wise_blue"),
+                  UIImage(named: "transfer_wise_disc"),
+                  UIImage(named: "money_earth"),
+                  UIImage(named: "transfer_wise_globus")
+    ]
 }
 

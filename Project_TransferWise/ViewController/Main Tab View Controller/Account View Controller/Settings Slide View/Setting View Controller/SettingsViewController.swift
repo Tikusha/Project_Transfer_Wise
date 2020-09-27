@@ -10,8 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    // MARK: - View LifeCyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 }

@@ -10,9 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Project_TransferWise" customModuleProvider="target">
             <connections>
-                <outlet property="emailLineView" destination="ckb-Gs-Njz" id="pUh-4Z-Xey"/>
-                <outlet property="emailTextfield" destination="tVA-un-k6H" id="EYV-Ob-cNA"/>
-                <outlet property="eyeImage" destination="0Ia-5e-bgN" id="Qiy-0P-huo"/>
+                <outlet property="eyeButton" destination="FUz-Z7-Atz" id="mfm-nd-pmX"/>
+                <outlet property="mailLineView" destination="ckb-Gs-Njz" id="pUh-4Z-Xey"/>
+                <outlet property="mailTextfield" destination="tVA-un-k6H" id="EYV-Ob-cNA"/>
                 <outlet property="passwordLineView" destination="4Rt-P2-lme" id="cCH-gx-vfQ"/>
                 <outlet property="passwordTextfield" destination="Jso-xu-uXx" id="osF-fw-US7"/>
                 <outlet property="registerButton" destination="VT8-UX-0XF" id="f2r-is-J4R"/>
@@ -68,13 +68,6 @@
                         <action selector="chandeColorMail" destination="-1" eventType="touchDown" id="7Rd-lY-fd3"/>
                     </connections>
                 </textField>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckb-Gs-Njz" userLabel="Email View Line">
-                    <rect key="frame" x="16" y="273.66666666666669" width="382" height="0.66666666666668561"/>
-                    <color key="backgroundColor" red="0.82745098039215681" green="0.83529411764705885" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="0.67000000000000004" id="bXS-72-FqF"/>
-                    </constraints>
-                </view>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jso-xu-uXx" userLabel="Password Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
                     <rect key="frame" x="16" y="321.33333333333331" width="382" height="24"/>
                     <constraints>
@@ -89,13 +82,20 @@
                         <action selector="chandeColorPassword" destination="-1" eventType="touchDown" id="CZe-FO-hht"/>
                     </connections>
                 </textField>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-5e-bgN">
-                    <rect key="frame" x="369" y="321.33333333333331" width="29" height="24"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckb-Gs-Njz" userLabel="Email View Line">
+                    <rect key="frame" x="16" y="273.66666666666669" width="382" height="0.66666666666668561"/>
+                    <color key="backgroundColor" red="0.82745098039215681" green="0.83529411764705885" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="24" id="cHz-yy-tan"/>
-                        <constraint firstAttribute="width" constant="29" id="fHv-P3-yi3"/>
+                        <constraint firstAttribute="height" constant="0.67000000000000004" id="bXS-72-FqF"/>
                     </constraints>
-                </imageView>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUz-Z7-Atz" userLabel="Eye Button">
+                    <rect key="frame" x="369" y="319" width="29" height="29"/>
+                    <state key="normal" image="closed_eye"/>
+                    <connections>
+                        <action selector="showPassword:" destination="-1" eventType="touchUpInside" id="AQu-LG-LZt"/>
+                    </connections>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Rt-P2-lme" userLabel="Password View Line">
                     <rect key="frame" x="16" y="357.33333333333331" width="382" height="0.66666666666668561"/>
                     <color key="backgroundColor" red="0.82745098039215681" green="0.83529411764705885" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -201,6 +201,7 @@
                 <constraint firstItem="dt3-bo-7wZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="BLk-rR-GVr"/>
                 <constraint firstItem="qD6-gJ-TVV" firstAttribute="top" secondItem="UFg-eL-ogJ" secondAttribute="bottom" constant="23" id="CE6-br-XCU"/>
                 <constraint firstItem="Otk-DY-jZx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="GLH-p5-xdj"/>
+                <constraint firstItem="FUz-Z7-Atz" firstAttribute="trailing" secondItem="Jso-xu-uXx" secondAttribute="trailing" id="GXJ-ok-HTg"/>
                 <constraint firstItem="tVA-un-k6H" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Gs7-qW-NXg"/>
                 <constraint firstItem="tVA-un-k6H" firstAttribute="top" secondItem="dt3-bo-7wZ" secondAttribute="bottom" constant="47" id="Ild-6u-sUA"/>
                 <constraint firstItem="UFg-eL-ogJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="JIG-T2-god"/>
@@ -217,6 +218,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0qH-L4-js8" secondAttribute="trailing" constant="16" id="cD1-1Z-MBM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tVA-un-k6H" secondAttribute="trailing" constant="16" id="cmK-TQ-f90"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L0m-7b-VJr" secondAttribute="trailing" constant="17" id="e4q-SL-ope"/>
+                <constraint firstItem="FUz-Z7-Atz" firstAttribute="centerY" secondItem="Jso-xu-uXx" secondAttribute="centerY" id="f6s-X8-WwX"/>
                 <constraint firstItem="ckb-Gs-Njz" firstAttribute="top" secondItem="tVA-un-k6H" secondAttribute="bottom" constant="12" id="hfM-m8-Y4c"/>
                 <constraint firstItem="ckb-Gs-Njz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="idT-Yg-nF7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VT8-UX-0XF" secondAttribute="trailing" constant="20" id="jEI-g5-t1w"/>
@@ -229,8 +231,6 @@
                 <constraint firstItem="Otk-DY-jZx" firstAttribute="top" secondItem="mrc-hw-bYs" secondAttribute="bottom" constant="12" id="uAI-NO-M2b"/>
                 <constraint firstItem="dt3-bo-7wZ" firstAttribute="top" secondItem="iMT-24-M2r" secondAttribute="bottom" constant="36" id="wBW-hF-4FU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="mrc-hw-bYs" secondAttribute="trailing" constant="337" id="wRa-8c-W2Z"/>
-                <constraint firstItem="0Ia-5e-bgN" firstAttribute="centerY" secondItem="Jso-xu-uXx" secondAttribute="centerY" id="wbn-Wi-Q9e"/>
-                <constraint firstItem="0Ia-5e-bgN" firstAttribute="trailing" secondItem="Jso-xu-uXx" secondAttribute="trailing" id="yQ2-aD-UyY"/>
                 <constraint firstItem="QdO-kH-Hzt" firstAttribute="top" secondItem="Otk-DY-jZx" secondAttribute="bottom" constant="50" id="zQj-8g-F8P"/>
             </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="140.21739130434784"/>
@@ -238,6 +238,6 @@
     </objects>
     <resources>
         <image name="close" width="20" height="20"/>
-        <image name="eye" width="29" height="29"/>
+        <image name="closed_eye" width="29" height="29"/>
     </resources>
 </document>

@@ -29,3 +29,20 @@ extension UIView {
         layer.mask = mask
     }
 }
+
+extension UIView {
+    
+    func anchorConstraints(top: NSLayoutYAxisAnchor, leading: NSLayoutXAxisAnchor, trailing: NSLayoutXAxisAnchor, bottom: NSLayoutYAxisAnchor, pedding: UIEdgeInsets = .zero) {
+        topAnchor.constraint(equalTo: top, constant: pedding.top).isActive = true
+        trailingAnchor.constraint(equalTo: trailing, constant: pedding.right).isActive = true
+        bottomAnchor.constraint(equalTo: bottom, constant: pedding.bottom).isActive = true
+        leadingAnchor.constraint(equalTo: leading, constant: pedding.left).isActive = true
+    }
+    
+    func anchorConstraints(top: NSLayoutYAxisAnchor, leading: NSLayoutXAxisAnchor, trailing: NSLayoutXAxisAnchor, bottom: NSLayoutYAxisAnchor) {
+        topAnchor.constraint(equalTo: top).isActive = true
+        trailingAnchor.constraint(equalTo: trailing).isActive = true
+        bottomAnchor.constraint(equalTo: bottom).isActive = true
+        leadingAnchor.constraint(equalTo: leading).isActive = true
+    }
+}

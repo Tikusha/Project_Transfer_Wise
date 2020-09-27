@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SetCountryCodeDelegate {
+protocol SetCountryCodeDelegate: class {
     func setCountryCode(image: UIImage, code: String, country: String)
 }
 
@@ -23,7 +23,7 @@ class CountryViewController: UIViewController {
     // MARK: - Properties
     var countriesList = [CountryModel]()
     var searchCountries = [CountryModel]()
-    var delegate: SetCountryCodeDelegate?
+    weak var delegate: SetCountryCodeDelegate?
     var searching = false
     
     // MARK: - View LifeCyrcle

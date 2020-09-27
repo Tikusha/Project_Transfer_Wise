@@ -40,6 +40,9 @@
                     <state key="normal" title="Continue">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="continueTo" destination="-1" eventType="touchUpInside" id="lcl-3t-BDT"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GD-8G-L5I">
                     <rect key="frame" x="23" y="45" width="20" height="22"/>
@@ -56,9 +59,6 @@
                     <state key="normal" title="Price comparison">
                         <color key="titleColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <connections>
-                        <action selector="priceComparison" destination="-1" eventType="touchUpInside" id="aAd-5g-K8e"/>
-                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZQ-MW-lJP" userLabel="Top View">
                     <rect key="frame" x="15" y="87" width="384" height="83.333333333333314"/>
@@ -72,7 +72,7 @@
                                     <color key="textColor" red="0.6588235294117647" green="0.66666666666666663" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K65-nR-ioh" userLabel="Send Amount">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K65-nR-ioh" userLabel="Send Amount">
                                     <rect key="frame" x="0.0" y="30.666666666666657" width="248.66666666666666" height="24.666666666666671"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="textColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CloseScreanDelegate {
+    func closeScreen()
+}
+
 class AboutUserViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -29,6 +33,9 @@ class AboutUserViewController: UIViewController {
     @IBOutlet private weak var yearLineView: UIView!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var saveButton: UIButton!
+    
+    // MARK: - Properties
+    var delegate: CloseScreanDelegate?
     
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
@@ -55,127 +62,50 @@ class AboutUserViewController: UIViewController {
         self.postCodeTextfield.delegate = self
     }
     
-    private func colors() {
-        self.firstnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.lastnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.addressLineView.backgroundColor = Constants.Color.keylineGrey
-        self.cityLineView.backgroundColor = Constants.Color.keylineGrey
-        self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dayLineView.backgroundColor = Constants.Color.keylineGrey
-        self.monthLineView.backgroundColor = Constants.Color.keylineGrey
-        self.yearLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dateLabel.textColor = Constants.Color.disabledGrey
-    }
-    
     // MARK: - IBActions
     @IBAction private func chandeColorFirstname() {
+        self.colorChangesOfLine()
         self.firstnameLineView.backgroundColor = Constants.Color.brandBlue
-        
-        self.lastnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.addressLineView.backgroundColor = Constants.Color.keylineGrey
-        self.cityLineView.backgroundColor = Constants.Color.keylineGrey
-        self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dateLabel.textColor = Constants.Color.disabledGrey
-        self.dayLineView.backgroundColor = Constants.Color.keylineGrey
-        self.monthLineView.backgroundColor = Constants.Color.keylineGrey
-        self.yearLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dateLabel.textColor = Constants.Color.disabledGrey
     }
     
     @IBAction private func chandeColorLastname() {
+        self.colorChangesOfLine()
         self.lastnameLineView.backgroundColor = Constants.Color.brandBlue
-        
-        self.firstnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.addressLineView.backgroundColor = Constants.Color.keylineGrey
-        self.cityLineView.backgroundColor = Constants.Color.keylineGrey
-        self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dayLineView.backgroundColor = Constants.Color.keylineGrey
-        self.monthLineView.backgroundColor = Constants.Color.keylineGrey
-        self.yearLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dateLabel.textColor = Constants.Color.disabledGrey
     }
     
     @IBAction private func chandeColorAddress() {
+        self.colorChangesOfLine()
         self.addressLineView.backgroundColor = Constants.Color.brandBlue
-        
-        self.firstnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.lastnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.cityLineView.backgroundColor = Constants.Color.keylineGrey
-        self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dayLineView.backgroundColor = Constants.Color.keylineGrey
-        self.monthLineView.backgroundColor = Constants.Color.keylineGrey
-        self.yearLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dateLabel.textColor = Constants.Color.disabledGrey
     }
     
     @IBAction private func chandeColorCity() {
+        self.colorChangesOfLine()
         self.cityLineView.backgroundColor = Constants.Color.brandBlue
-        
-        self.firstnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.lastnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.addressLineView.backgroundColor = Constants.Color.keylineGrey
-        self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dayLineView.backgroundColor = Constants.Color.keylineGrey
-        self.monthLineView.backgroundColor = Constants.Color.keylineGrey
-        self.yearLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dateLabel.textColor = Constants.Color.disabledGrey
     }
     
     @IBAction private func chandeColorPostCode() {
+        self.colorChangesOfLine()
         self.postCodeLineView.backgroundColor = Constants.Color.brandBlue
-        
-        self.firstnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.lastnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.addressLineView.backgroundColor = Constants.Color.keylineGrey
-        self.cityLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dayLineView.backgroundColor = Constants.Color.keylineGrey
-        self.monthLineView.backgroundColor = Constants.Color.keylineGrey
-        self.yearLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dateLabel.textColor = Constants.Color.disabledGrey
     }
     
     @IBAction private func chandeColorDay() {
+        self.colorChangesOfLine()
         self.dayLineView.backgroundColor = Constants.Color.brandBlue
-        self.dateLabel.textColor = Constants.Color.brandBlue
-        
-        self.firstnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.lastnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.addressLineView.backgroundColor = Constants.Color.keylineGrey
-        self.cityLineView.backgroundColor = Constants.Color.keylineGrey
-        self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey
-        self.yearLineView.backgroundColor = Constants.Color.keylineGrey
-        self.yearLineView.backgroundColor = Constants.Color.keylineGrey
-        self.monthLineView.backgroundColor = Constants.Color.keylineGrey
     }
     
     @IBAction private func chandeColorMonth() {
+        self.colorChangesOfLine()
         self.monthLineView.backgroundColor = Constants.Color.brandBlue
-        self.dateLabel.textColor = Constants.Color.brandBlue
-        
-        self.firstnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.lastnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.addressLineView.backgroundColor = Constants.Color.keylineGrey
-        self.cityLineView.backgroundColor = Constants.Color.keylineGrey
-        self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dayLineView.backgroundColor = Constants.Color.keylineGrey
-        self.yearLineView.backgroundColor = Constants.Color.keylineGrey
     }
     
     @IBAction private func chandeColorYear() {
+        self.colorChangesOfLine()
         self.yearLineView.backgroundColor = Constants.Color.brandBlue
-        self.dateLabel.textColor = Constants.Color.brandBlue
-        
-        self.firstnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.lastnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.addressLineView.backgroundColor = Constants.Color.keylineGrey
-        self.cityLineView.backgroundColor = Constants.Color.keylineGrey
-        self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dayLineView.backgroundColor = Constants.Color.keylineGrey
-        self.monthLineView.backgroundColor = Constants.Color.keylineGrey
     }
     
     @IBAction private func close(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        self.delegate?.closeScreen()
     }
     
     @IBAction private func save() {
@@ -187,8 +117,8 @@ class AboutUserViewController: UIViewController {
             self.dayTextfield.text == "" ||
             self.monthTextfield.text == "" ||
             self.yearTextfield.text == "" {
-            let alert = UIAlertController(title: "Check your details", message: "Please check that all fields are filled in.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            let alert = UIAlertController(title: "Check your details", message: "Please check that all fields are filled in.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         } else {
             let alert = UIAlertController(title: "Save", message: "Your data is saved.", preferredStyle: UIAlertController.Style.alert)
@@ -207,16 +137,7 @@ extension AboutUserViewController {
         if sender.state == .ended {
             self.view.endEditing(true)
         }
-        sender.cancelsTouchesInView = false
-        self.firstnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.lastnameLineView.backgroundColor = Constants.Color.keylineGrey
-        self.addressLineView.backgroundColor = Constants.Color.keylineGrey
-        self.cityLineView.backgroundColor = Constants.Color.keylineGrey
-        self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dayLineView.backgroundColor = Constants.Color.keylineGrey
-        self.monthLineView.backgroundColor = Constants.Color.keylineGrey
-        self.yearLineView.backgroundColor = Constants.Color.keylineGrey
-        self.dateLabel.textColor = Constants.Color.disabledGrey
+        self.colorChangesOfLine()
     }
 }
 
@@ -225,17 +146,50 @@ extension AboutUserViewController: UITextFieldDelegate {
         switch textField {
         case self.firstnameTextfield:
             self.lastnameTextfield.becomeFirstResponder()
+            self.lastnameLineView.backgroundColor = Constants.Color.brandBlue
         case self.lastnameTextfield:
             self.addressTextfield.becomeFirstResponder()
+            self.addressLineView.backgroundColor = Constants.Color.brandBlue
         case self.addressTextfield:
             self.cityTextfield.becomeFirstResponder()
+            self.cityLineView.backgroundColor = Constants.Color.brandBlue
         case self.cityTextfield:
             self.postCodeTextfield.becomeFirstResponder()
+            self.postCodeLineView.backgroundColor = Constants.Color.brandBlue
         case self.postCodeTextfield:
             self.dayTextfield.becomeFirstResponder()
+            self.dayLineView.backgroundColor = Constants.Color.brandBlue
         default:
             self.dayTextfield.resignFirstResponder()
         }
         return true
+    }
+}
+
+extension AboutUserViewController {
+    private func colorChangesOfLine() {
+        if self.firstnameTextfield.text != "" { self.firstnameLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.firstnameLineView.backgroundColor = Constants.Color.keylineGrey }
+        
+        if self.lastnameTextfield.text != "" { self.lastnameLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.lastnameLineView.backgroundColor = Constants.Color.keylineGrey }
+        
+        if self.addressTextfield.text != "" { self.addressLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.addressLineView.backgroundColor = Constants.Color.keylineGrey }
+        
+        if self.cityTextfield.text != "" { self.cityLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.cityLineView.backgroundColor = Constants.Color.keylineGrey }
+        
+        if self.postCodeTextfield.text != "" { self.postCodeLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey }
+        
+        if self.dayTextfield.text != "" { self.dayLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey }
+        
+        if self.monthTextfield.text != "" { self.monthLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.monthLineView.backgroundColor = Constants.Color.keylineGrey }
+        
+        if self.yearTextfield.text != "" { self.yearLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.yearLineView.backgroundColor = Constants.Color.keylineGrey }
     }
 }

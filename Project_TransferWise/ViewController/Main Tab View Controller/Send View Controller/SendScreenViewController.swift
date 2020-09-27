@@ -26,7 +26,8 @@ class SendScreenViewController: UIViewController {
     
     // MARK: - Properties
     private let fetchRate = FetchCurrency()
-    var isTagCurrentFirstButton: Bool = false
+    private var isTagCurrentFirstButton: Bool = false
+    private var countRightNumber = 0
     
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
@@ -52,38 +53,25 @@ class SendScreenViewController: UIViewController {
     }
     
     @objc func editingFirstChanged() {
-        guard let text = self.sendAmountTextField.text else { return }
-        if text.isEmpty {
-            self.sendAmountTextField.text = ""
-            self.recipientTextField.text = ""
-            self.sendAmountTextField.placeholder = "0"
-            self.recipientTextField.placeholder = "0"
-        } else {
-            self.fetchRate.amount = self.sendAmountTextField.text
-            self.fetchRate.currencyFrom = self.currencyFirstLabel.text
-            self.fetchRate.currencyTo = self.currencySecondLabel.text
-            self.fetchRate.fetch { currencyRate in
-                guard let rates = currencyRate else { return }
-                self.recipientTextField.text = String(rates.value)
-            }
+        self.fetchRate.amount = self.sendAmountTextField.text
+        self.fetchRate.currencyFrom = self.currencyFirstLabel.text
+        self.fetchRate.currencyTo = self.currencySecondLabel.text
+        self.fetchRate.fetch { currencyRate in
+            guard let rates = currencyRate else { return }
+            self.recipientTextField.text = String(rates.value)
         }
     }
     
     @objc func editingSecondChanged() {
-        guard let text = self.recipientTextField.text else { return }
-        if text.isEmpty {
-            self.sendAmountTextField.text = ""
-            self.recipientTextField.text = ""
-            self.recipientTextField.placeholder = "0"
-            self.sendAmountTextField.placeholder = "0"
-        } else {
-            self.fetchRate.amount = self.recipientTextField.text
-            self.fetchRate.currencyFrom = self.currencySecondLabel.text
-            self.fetchRate.currencyTo = self.currencyFirstLabel.text
-            self.fetchRate.fetch { currencyRate in
-                guard let rates = currencyRate else { return }
-                self.sendAmountTextField.text = String(rates.value)
-            }
+        self.fetchRate.amount = self.recipientTextField.text
+        print(self.fetchRate.amount)
+        self.fetchRate.currencyFrom = self.currencySecondLabel.text
+        print(self.fetchRate.currencyFrom)
+        self.fetchRate.currencyTo = self.currencyFirstLabel.text
+        print(self.fetchRate.currencyTo)
+        self.fetchRate.fetch { currencyRate in
+            guard let rates = currencyRate else { return }
+            self.sendAmountTextField.text = String(rates.value)
         }
     }
     
@@ -100,8 +88,11 @@ class SendScreenViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
-    @IBAction private func priceComparison() {
-        print("Price Comparison")
+    @IBAction private func continueTo() {
+        let vc = AddRecipientViewController()
+        vc.name = "Who are you sending to?"
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction private func getCountryFrom(_ sender: UIButton) {
@@ -131,3 +122,5 @@ extension SendScreenViewController: SetCountryCodeDelegate {
         }
     }
 }
+
+

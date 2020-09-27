@@ -25,13 +25,20 @@ class SetUpBalanceViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction private func close() {
+    @IBAction internal func close() {
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction private func letsGo() {
         let vc = AboutUserViewController()
-        vc.modalPresentationStyle = .popover
+        vc.delegate = self
+        vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true, completion: nil)
+    }
+}
+
+extension SetUpBalanceViewController: CloseScreanDelegate {
+    func closeScreen() {
+        self.close()
     }
 }

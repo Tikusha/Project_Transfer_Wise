@@ -57,7 +57,7 @@ class AccountViewController: UIViewController {
         guard let shadow = Bundle.main.loadNibNamed("AccountSettingView", owner: nil, options: nil)?.first as? AccountSettingView else { return }
         self.sliderSettings = shadow
         self.sliderSettings?.delegate = self
-        let slideHeight: CGFloat = self.view.frame.size.height/2.5
+        let slideHeight: CGFloat = self.view.frame.size.height/2.4
         loadSlide(sliderBackground: self.sliderBackground, slider: self.sliderSettings, slideHeight: slideHeight)
         self.sliderBackground?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.closeSlideOfSettings)))
     }
@@ -100,9 +100,16 @@ extension AccountViewController: MoveOtherScreenDelegate {
 }
 
 extension AccountViewController: PersonalAccountDelegate {
-    func moveAboutUser() {
+    func movePersonalAccount() {
         self.closeSlideOfPersonal()
         let vc = AboutUserViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func moveBusinessAccount() {
+        self.closeSlideOfPersonal()
+        let vc = BusinessAccountViewController()
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true, completion: nil)
     }

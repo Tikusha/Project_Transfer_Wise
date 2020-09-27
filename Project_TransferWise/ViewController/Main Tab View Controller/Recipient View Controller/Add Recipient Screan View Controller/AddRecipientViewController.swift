@@ -14,19 +14,20 @@ class AddRecipientViewController: UIViewController {
     @IBOutlet private weak var myselfView: UIView!
     @IBOutlet private weak var someoneElseView: UIView!
     @IBOutlet private weak var businessView: UIView!
-    @IBOutlet private weak var webView: UIWebView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    
+    // MARK: - Properties
+    var name: String?
     
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configuration()
-        let url = URL(string: "https://www.google.com")
-        let requestObj = URLRequest(url: url!)
-        webView.loadRequest(requestObj)
     }
     
     // MARK: - Configuration
     private func configuration() {
+        self.titleLabel.text = name
         let heightMyself = self.myselfView.frame.size.height
         let heightSomeone = self.someoneElseView.frame.size.height
         let heightBusiness = self.businessView.frame.size.height
@@ -41,22 +42,46 @@ class AddRecipientViewController: UIViewController {
     }
     
     @IBAction private func aboutMyself() {
-        let vc = AboutUserViewController()
-        vc.modalPresentationStyle = .pageSheet
-        self.present(vc, animated: true, completion: nil)
+        if self.titleLabel.text == "Who are you sending to?" {
+            let vc = MyselfViewController()
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true, completion: nil)
+        } else {
+            let vc = AboutUserViewController()
+            vc.modalPresentationStyle = .pageSheet
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     @IBAction private func aboutSomeoneElse() {
         let vc = BusinessViewController()
         vc.name = "Someone else"
-        vc.modalPresentationStyle = .popover
-        self.present(vc, animated: true, completion: nil)
+        if self.titleLabel.text == "Who are you sending to?" {
+            vc.nameButton = "Continue"
+            vc.colorButton = Constants.Color.payGreen
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true, completion: nil)
+        } else {
+            vc.nameButton = "Add"
+            vc.colorButton = Constants.Color.brandBlue
+            vc.modalPresentationStyle = .popover
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     @IBAction private func aboutBusiness() {
         let vc = BusinessViewController()
         vc.name = "A business / charity"
-        vc.modalPresentationStyle = .popover
-        self.present(vc, animated: true, completion: nil)
+        if self.titleLabel.text == "Who are you sending to?" {
+            vc.nameButton = "Continue"
+            vc.colorButton = Constants.Color.payGreen
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true, completion: nil)
+        } else {
+            vc.nameButton = "Add"
+            vc.colorButton = Constants.Color.brandBlue
+            vc.modalPresentationStyle = .popover
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 }

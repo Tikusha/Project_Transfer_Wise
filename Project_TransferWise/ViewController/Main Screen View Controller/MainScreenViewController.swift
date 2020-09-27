@@ -43,7 +43,6 @@ class MainScreenViewController: UIViewController {
         self.lineTwoView.cornerView(cornerRadius: 4, borderWidth: 0.2, borderColor: Constants.Color.backgroundGrey)
         self.lineThreeView.cornerView(cornerRadius: 4, borderWidth: 0.2, borderColor: Constants.Color.backgroundGrey)
         self.lineFourView.cornerView(cornerRadius: 4, borderWidth: 0.2, borderColor: Constants.Color.backgroundGrey)
-//        self.pictureView.image = UIImage(named: "transfer_wise_blue")
     }
     
     private func registerCell() {
@@ -65,7 +64,6 @@ class MainScreenViewController: UIViewController {
         let vc = LogInViewController()
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true, completion: nil)
-        //        self.navigationController?.pushViewController(LogInViewController(), animated: true)
     }
     
     @IBAction private func register(_ sender: Any) {
@@ -79,7 +77,6 @@ class MainScreenViewController: UIViewController {
 extension MainScreenViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.pictureView.image = self.listImage.images[indexPath.row]
-        print("ppp")
     }
 }
 

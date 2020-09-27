@@ -11,15 +11,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BusinessViewController" customModule="Project_TransferWise" customModuleProvider="target">
             <connections>
-                <outlet property="IBANLineView" destination="x0V-8t-7rF" id="faU-uk-mze"/>
-                <outlet property="IBANTextField" destination="0Bf-bD-0lB" id="D05-ZI-ZpS"/>
                 <outlet property="addButton" destination="PVf-71-g4K" id="Bj8-Fa-d0n"/>
                 <outlet property="countryLabel" destination="g5L-Jc-clN" id="CCC-3E-9JL"/>
                 <outlet property="currencyImage" destination="Bpg-Kd-57O" id="LWR-x7-x6R"/>
-                <outlet property="holderNameLineView" destination="UvI-vb-6MA" id="ct3-fC-ZWD"/>
+                <outlet property="iBANLineView" destination="x0V-8t-7rF" id="faU-uk-mze"/>
+                <outlet property="iBANTextField" destination="0Bf-bD-0lB" id="uew-gf-nDT"/>
                 <outlet property="mailLineView" destination="khD-ts-Kie" id="Yul-qo-66O"/>
                 <outlet property="mailTextField" destination="bIB-UW-Fh2" id="QLR-jL-pvs"/>
+                <outlet property="nameLineView" destination="UvI-vb-6MA" id="ct3-fC-ZWD"/>
                 <outlet property="nameTextField" destination="hZC-Qm-Pfj" id="HEY-sE-8Hn"/>
+                <outlet property="segmanetControl" destination="OIg-FC-Qmy" id="7Yf-pM-aHf"/>
                 <outlet property="titleLabel" destination="WIk-xO-f5q" id="syG-Sx-jhK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -53,6 +54,9 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Recient's email (optional)"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="chandeColorMail" destination="-1" eventType="touchDown" id="bGI-rc-JWL"/>
+                    </connections>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khD-ts-Kie" userLabel="Email Line View">
                     <rect key="frame" x="20" y="149.66666666666666" width="374" height="0.66666666666665719"/>
@@ -68,6 +72,9 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Name of business / charity"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="chandeColorHoldName" destination="-1" eventType="touchDown" id="Keg-Np-1Uy"/>
+                    </connections>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvI-vb-6MA" userLabel="Holder Line View">
                     <rect key="frame" x="20" y="220.33333333333334" width="374" height="0.66666666666665719"/>
@@ -77,13 +84,13 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2K-Hp-LLC">
-                    <rect key="frame" x="22" y="251" width="112" height="15"/>
+                    <rect key="frame" x="22" y="235" width="112" height="15"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMA-u5-Tvd" userLabel="Currency Button">
-                    <rect key="frame" x="20" y="274" width="374" height="30"/>
+                    <rect key="frame" x="20" y="258" width="374" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="1HF-rG-IgC"/>
                     </constraints>
@@ -92,57 +99,61 @@
                     </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gel" translatesAutoresizingMaskIntoConstraints="NO" id="Bpg-Kd-57O" userLabel="euro">
-                    <rect key="frame" x="20" y="281.66666666666669" width="15" height="15"/>
+                    <rect key="frame" x="20" y="265.66666666666669" width="15" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="SZs-9x-KA9"/>
                         <constraint firstAttribute="width" constant="15" id="fPr-2i-qCk"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GEL - Georgian lari" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5L-Jc-clN">
-                    <rect key="frame" x="47" y="278.66666666666669" width="141.33333333333334" height="21"/>
+                    <rect key="frame" x="47" y="262.66666666666669" width="141.33333333333334" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <color key="textColor" red="0.18039215689999999" green="0.26274509800000001" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down arrow" translatesAutoresizingMaskIntoConstraints="NO" id="a4D-RB-Vtw">
-                    <rect key="frame" x="373" y="281.66666666666669" width="15" height="15"/>
+                    <rect key="frame" x="373" y="265.66666666666669" width="15" height="15"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="15" id="169-4m-dGb"/>
                         <constraint firstAttribute="height" constant="15" id="N7X-ge-VdW"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ds-1v-eHy" userLabel="Currency Line View">
-                    <rect key="frame" x="20" y="316" width="374" height="0.66666666666668561"/>
+                    <rect key="frame" x="20" y="300" width="374" height="0.66666666666668561"/>
                     <color key="backgroundColor" red="0.8862745098" green="0.90196078430000004" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="0.67000000000000004" id="zUQ-37-ZuM"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipient's bank details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxf-mX-gzc">
-                    <rect key="frame" x="20" y="346.66666666666669" width="189" height="19.333333333333314"/>
+                    <rect key="frame" x="20" y="320.66666666666669" width="189" height="19.333333333333314"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <color key="textColor" red="0.18039215689999999" green="0.26274509800000001" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OIg-FC-Qmy">
-                    <rect key="frame" x="20" y="378" width="374" height="32"/>
+                    <rect key="frame" x="20" y="352" width="374" height="32"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <segments>
                         <segment title="Inside Europe"/>
                         <segment title="Outside Europe"/>
                     </segments>
+                    <color key="tintColor" red="0.6588235294" green="0.2432844606" blue="0.73983304790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="selectedSegmentTintColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </segmentedControl>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Bf-bD-0lB" userLabel="IBAN Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
-                    <rect key="frame" x="20" y="438.66666666666669" width="374" height="18.666666666666686"/>
+                    <rect key="frame" x="20" y="412.66666666666669" width="374" height="18.666666666666686"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="IBAN"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="chandeColorIBAN" destination="-1" eventType="touchDown" id="ERA-4b-quF"/>
+                    </connections>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0V-8t-7rF" userLabel="IBAN LIne View">
-                    <rect key="frame" x="20" y="469.33333333333331" width="374" height="0.66666666666668561"/>
+                    <rect key="frame" x="20" y="443.33333333333331" width="374" height="0.66666666666668561"/>
                     <color key="backgroundColor" red="0.8862745098" green="0.90196078430000004" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="0.67000000000000004" id="opU-IL-viQ"/>
@@ -163,7 +174,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rpw-zh-AW1" userLabel="Add Line View">
-                    <rect key="frame" x="20" y="668.33333333333337" width="374" height="0.66666666666662877"/>
+                    <rect key="frame" x="0.0" y="668.33333333333337" width="414" height="0.66666666666662877"/>
                     <color key="backgroundColor" red="0.8862745098" green="0.90196078430000004" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="0.67000000000000004" id="fJZ-6d-qKv"/>
@@ -177,7 +188,7 @@
                 <constraint firstItem="UvI-vb-6MA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0aQ-E4-KA6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gMA-u5-Tvd" secondAttribute="trailing" constant="20" id="0gU-ep-IXV"/>
                 <constraint firstItem="a4D-RB-Vtw" firstAttribute="centerY" secondItem="gMA-u5-Tvd" secondAttribute="centerY" id="58g-i3-PyT"/>
-                <constraint firstItem="t2K-Hp-LLC" firstAttribute="top" secondItem="UvI-vb-6MA" secondAttribute="bottom" constant="30" id="5Nw-ml-4aV"/>
+                <constraint firstItem="t2K-Hp-LLC" firstAttribute="top" secondItem="UvI-vb-6MA" secondAttribute="bottom" constant="14" id="5Nw-ml-4aV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="WIk-xO-f5q" secondAttribute="trailing" constant="286" id="5f9-MZ-aOF"/>
                 <constraint firstItem="WIk-xO-f5q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="8gj-VR-83q"/>
                 <constraint firstItem="khD-ts-Kie" firstAttribute="top" secondItem="bIB-UW-Fh2" secondAttribute="bottom" constant="12" id="9gy-m1-bXJ"/>
@@ -212,26 +223,19 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="t2K-Hp-LLC" secondAttribute="trailing" constant="280" id="im5-mA-fQe"/>
                 <constraint firstItem="9ds-1v-eHy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="k2Q-ye-UaK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UvI-vb-6MA" secondAttribute="trailing" constant="20" id="kMT-Er-bJx"/>
-                <constraint firstItem="Rpw-zh-AW1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ko6-KL-Zsw"/>
+                <constraint firstItem="Rpw-zh-AW1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ko6-KL-Zsw"/>
                 <constraint firstItem="9ds-1v-eHy" firstAttribute="top" secondItem="gMA-u5-Tvd" secondAttribute="bottom" constant="12" id="lcg-Pp-RKD"/>
                 <constraint firstItem="x0V-8t-7rF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="m9B-zv-QZx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9ds-1v-eHy" secondAttribute="trailing" constant="20" id="mDt-qq-jFZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Bf-bD-0lB" secondAttribute="trailing" constant="20" id="n1r-Pz-e89"/>
                 <constraint firstItem="x0V-8t-7rF" firstAttribute="top" secondItem="0Bf-bD-0lB" secondAttribute="bottom" constant="12" id="nW0-rc-LYW"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rpw-zh-AW1" secondAttribute="trailing" constant="20" id="p5s-1Q-jfZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rpw-zh-AW1" secondAttribute="trailing" id="p5s-1Q-jfZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PVf-71-g4K" secondAttribute="trailing" constant="20" id="qzX-5C-6Kc"/>
                 <constraint firstItem="hZC-Qm-Pfj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rUr-xy-18S"/>
-                <constraint firstItem="yxf-mX-gzc" firstAttribute="top" secondItem="9ds-1v-eHy" secondAttribute="bottom" constant="30" id="taG-tO-Nm2"/>
+                <constraint firstItem="yxf-mX-gzc" firstAttribute="top" secondItem="9ds-1v-eHy" secondAttribute="bottom" constant="20" id="taG-tO-Nm2"/>
                 <constraint firstItem="0Bf-bD-0lB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zY6-kV-RmW"/>
             </constraints>
             <point key="canvasLocation" x="92.753623188405811" y="89.673913043478265"/>
-        </view>
-        <view contentMode="scaleToFill" id="KQX-eJ-jgq">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <viewLayoutGuide key="safeArea" id="Qiq-C4-JqR"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="48" y="746"/>
         </view>
     </objects>
     <resources>

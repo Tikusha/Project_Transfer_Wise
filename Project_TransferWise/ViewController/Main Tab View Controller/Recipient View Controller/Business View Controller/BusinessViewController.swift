@@ -13,17 +13,20 @@ class BusinessViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var mailTextField: UITextField!
     @IBOutlet private weak var nameTextField: UITextField!
-    @IBOutlet private weak var IBANTextField: UITextField!
+    @IBOutlet private weak var iBANTextField: UITextField!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var mailLineView: UIView!
-    @IBOutlet private weak var holderNameLineView: UIView!
-    @IBOutlet private weak var IBANLineView: UIView!
+    @IBOutlet private weak var nameLineView: UIView!
+    @IBOutlet private weak var iBANLineView: UIView!
     @IBOutlet private weak var addButton: UIButton!
     @IBOutlet private weak var currencyImage: UIImageView!
     @IBOutlet private weak var countryLabel: UILabel!
+    @IBOutlet private weak var segmanetControl: UISegmentedControl!
     
     // MARK: - Properties
     var name: String?
+    var nameButton: String?
+    var colorButton: UIColor?
     private var alert = UIAlertController()
     
     // MARK: - View LifeCyrcle
@@ -31,18 +34,29 @@ class BusinessViewController: UIViewController {
         super.viewDidLoad()
         self.configuration()
         self.dismissKeyboard()
+        self.changeLineColors()
+        self.setSegmantColor()
     }
     
     // MARK: - Configuration
     private func configuration() {
         self.titleLabel.text = name
+        self.addButton.setTitle(nameButton, for: .normal)
+        self.addButton.backgroundColor = colorButton
         self.mailTextField.delegate = self
         self.nameTextField.delegate = self
-        self.IBANTextField.delegate = self
+        self.iBANTextField.delegate = self
         self.mailTextField.attributedPlaceholder = NSAttributedString(string: "Recient's email (optional)", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
         self.nameTextField.attributedPlaceholder = NSAttributedString(string: "Your Name of business / charity", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
-        self.IBANTextField.attributedPlaceholder = NSAttributedString(string: "IBAN", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
+        self.iBANTextField.attributedPlaceholder = NSAttributedString(string: "IBAN", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
         self.addButton.customCornerButton(cornerRadius: 3, borderWidth: 0.2, borderColor: Constants.Color.brandBlue)
+    }
+    
+    private func setSegmantColor() {
+        let titleTextAttributeFirst = [NSAttributedString.Key.foregroundColor: Constants.Color.brandBlue]
+        self.segmanetControl.setTitleTextAttributes(titleTextAttributeFirst, for:.normal)
+        let titleTextAttributeSecond = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.segmanetControl.setTitleTextAttributes(titleTextAttributeSecond, for:.selected)
     }
     
     private func emptyFieldsAlert() {
@@ -51,7 +65,7 @@ class BusinessViewController: UIViewController {
     }
     
     private func addDataAlert() {
-        self.alert = UIAlertController(title: "Add", message: "Added your data", preferredStyle: UIAlertController.Style.alert)
+        self.alert = UIAlertController(title: "Save", message: "Your data is saved", preferredStyle: UIAlertController.Style.alert)
         present(alert, animated: true)
     }
     
@@ -59,6 +73,10 @@ class BusinessViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
             self.alert.dismiss(animated: true, completion: nil)
         })
+    }
+    
+    @objc private func setUpperCaseString(textField: UITextField) {
+        textField.text = textField.text?.uppercased()
     }
     
     // MARK: - IBActions
@@ -76,13 +94,44 @@ class BusinessViewController: UIViewController {
     @IBAction private func add() {
         if self.mailTextField.text == "" ||
             self.nameTextField.text == "" ||
-            self.IBANTextField.text == "" {
+            self.iBANTextField.text == "" {
             self.emptyFieldsAlert()
             self.dismissAlert()
         } else {
             self.addDataAlert()
             self.dismissAlert()
         }
+    }
+    
+    @IBAction private func chandeColorMail() {
+        self.mailLineView.backgroundColor = Constants.Color.brandBlue
+        
+        if self.nameTextField.text != "" { self.nameLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.nameLineView.backgroundColor = Constants.Color.keylineGrey }
+       
+        if self.iBANTextField.text != "" {  self.iBANLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.iBANLineView.backgroundColor = Constants.Color.keylineGrey }
+    }
+    
+    @IBAction private func chandeColorHoldName() {
+        self.nameLineView.backgroundColor = Constants.Color.brandBlue
+        
+        if self.iBANTextField.text != "" {  self.iBANLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.iBANLineView.backgroundColor = Constants.Color.keylineGrey }
+        
+        if self.mailTextField.text != "" { self.mailLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.mailLineView.backgroundColor = Constants.Color.keylineGrey }
+    }
+    
+    @IBAction private func chandeColorIBAN() {
+        self.iBANLineView.backgroundColor = Constants.Color.brandBlue
+        
+        if self.nameTextField.text != "" { self.nameLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.nameLineView.backgroundColor = Constants.Color.keylineGrey }
+        
+        if self.mailTextField.text != "" { self.mailLineView.backgroundColor = Constants.Color.brandBlue }
+        else { self.mailLineView.backgroundColor = Constants.Color.keylineGrey }
+        self.iBANTextField.addTarget(self, action: #selector(setUpperCaseString), for: .editingChanged)
     }
 }
 
@@ -91,10 +140,12 @@ extension BusinessViewController: UITextFieldDelegate {
         switch textField {
         case self.mailTextField:
             self.nameTextField.becomeFirstResponder()
+            self.nameLineView.backgroundColor = Constants.Color.brandBlue
         case self.nameTextField:
-            self.IBANTextField.becomeFirstResponder()
+            self.iBANTextField.becomeFirstResponder()
+            self.iBANLineView.backgroundColor = Constants.Color.brandBlue
         default:
-            self.IBANTextField.resignFirstResponder()
+            self.iBANTextField.resignFirstResponder()
         }
         return true
     }
@@ -107,4 +158,23 @@ extension BusinessViewController: SetCountryCodeDelegate {
     }
 }
 
+extension BusinessViewController {
+    func changeLineColors() {
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.changeColor)))
+    }
+    
+    @objc func changeColor(sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            self.view.endEditing(true)
+            if self.nameTextField.text != "" { self.nameLineView.backgroundColor = Constants.Color.brandBlue }
+            else { self.nameLineView.backgroundColor = Constants.Color.keylineGrey }
+           
+            if self.iBANTextField.text != "" {  self.iBANLineView.backgroundColor = Constants.Color.brandBlue }
+            else { self.iBANLineView.backgroundColor = Constants.Color.keylineGrey }
+            
+            if self.mailTextField.text != "" { self.mailLineView.backgroundColor = Constants.Color.brandBlue }
+            else { self.mailLineView.backgroundColor = Constants.Color.keylineGrey }
+        }
+    }
+}
 

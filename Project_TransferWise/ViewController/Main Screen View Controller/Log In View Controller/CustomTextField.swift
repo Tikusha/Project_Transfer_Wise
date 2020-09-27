@@ -53,7 +53,6 @@ class CustomTextField: UITextField {
             self.customLabel.frame = CGRect(x: 0, y: 0, width: customLabel.frame.width + 7, height: customLabel.frame.height + 5)
             self.customLabel.textAlignment = .center
             self.addSubview(self.customLabel)
-            //            self.layer.borderColor = .init(srgbRed: 255, green: 255, blue: 255, alpha: 1)
             
             self.customLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: -10).isActive = true 
             self.placeholder = ""

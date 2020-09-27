@@ -8,8 +8,9 @@
 
 import UIKit
 
-protocol PersonalAccountDelegate {
-    func moveAboutUser()
+protocol PersonalAccountDelegate: class {
+    func movePersonalAccount()
+    func moveBusinessAccount()
 }
 
 class PersonalAccountView: UIView {
@@ -20,7 +21,7 @@ class PersonalAccountView: UIView {
     @IBOutlet private weak var businessView: UIView!
     
     // MARK: - Properties
-    var delegate: PersonalAccountDelegate?
+    weak var delegate: PersonalAccountDelegate?
     
     // MARK: - View LifeCyrcle
     override func layoutSubviews() {
@@ -39,7 +40,11 @@ class PersonalAccountView: UIView {
     }
     
     // MARK: - IBActions
-    @IBAction private func aboutUser() {
-        self.delegate?.moveAboutUser()
+    @IBAction private func personalAccout() {
+        self.delegate?.movePersonalAccount()
+    }
+    
+    @IBAction private func businessAccount() {
+        self.delegate?.moveBusinessAccount()
     }
 }

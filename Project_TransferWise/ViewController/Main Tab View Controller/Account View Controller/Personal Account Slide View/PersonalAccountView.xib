@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,13 +28,13 @@
                     <color key="textColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggO-6c-tGH" userLabel="Personal Button">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggO-6c-tGH" userLabel="Personal Button">
                     <rect key="frame" x="20" y="84.666666666666686" width="374" height="130"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="130" id="SBd-LE-ktl"/>
                     </constraints>
                     <connections>
-                        <action selector="aboutUser" destination="iN0-l3-epB" eventType="touchUpInside" id="BDQ-aE-NAd"/>
+                        <action selector="personalAccout" destination="iN0-l3-epB" eventType="touchUpInside" id="BDQ-aE-NAd"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsj-hQ-SDw">
@@ -43,7 +44,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is for individuals using TransferWise for their own money" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBb-kN-49g">
-                    <rect key="frame" x="73" y="142" width="322" height="33.666666666666657"/>
+                    <rect key="frame" x="73" y="142" width="321.66666666666669" height="33.666666666666657"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.6588235294117647" green="0.66666666666666663" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -69,16 +70,19 @@
                         <constraint firstAttribute="height" constant="0.67000000000000004" id="sRE-4J-YfV"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB0-kb-Q84" userLabel="Business Button">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB0-kb-Q84" userLabel="Business Button">
                     <rect key="frame" x="20" y="215.33333333333337" width="374" height="130"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="130" id="bne-6v-VWW"/>
                     </constraints>
+                    <connections>
+                        <action selector="businessAccount" destination="iN0-l3-epB" eventType="touchUpInside" id="4ih-6T-bEe"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is for freelancers, sole-traders, businesses and charities" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXX-hV-lG5">
-                    <rect key="frame" x="73" y="272.66666666666669" width="310.33333333333331" height="33.666666666666686"/>
+                    <rect key="frame" x="73" y="272.66666666666669" width="310" height="33.666666666666686"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" red="0.6588235294" green="0.66666666669999997" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.6588235294117647" green="0.66666666666666663" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqf-ky-O9Z">
@@ -109,7 +113,8 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="RBb-kN-49g" firstAttribute="top" secondItem="Nsj-hQ-SDw" secondAttribute="bottom" constant="2" id="8N8-fY-WLV"/>
                 <constraint firstItem="MXX-hV-lG5" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hB0-kb-Q84" secondAttribute="trailing" constant="10" id="B5w-HM-Wya"/>
@@ -148,7 +153,6 @@
                 <constraint firstItem="ggO-6c-tGH" firstAttribute="top" secondItem="xgt-el-7iR" secondAttribute="bottom" constant="20" id="y7I-F2-C8Z"/>
                 <constraint firstItem="hB0-kb-Q84" firstAttribute="top" secondItem="S09-h9-bOT" secondAttribute="bottom" id="yCn-T9-8yV"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="businessView" destination="u8L-W2-ccq" id="03U-aq-I5f"/>
                 <outlet property="personalView" destination="ADs-rR-rAb" id="MAi-E4-W1o"/>
@@ -160,5 +164,8 @@
     <resources>
         <image name="busness" width="20" height="20"/>
         <image name="peronal" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

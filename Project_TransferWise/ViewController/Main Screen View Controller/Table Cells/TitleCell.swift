@@ -14,6 +14,7 @@ class TitleCell: UICollectionViewCell {
     @IBOutlet weak var largeText: UILabel!
     @IBOutlet weak var smallText: UILabel!
     
+    // MARK: - View LifeCyrcle
     override func layoutSubviews() {
         super.layoutSubviews()
     }

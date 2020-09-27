@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-protocol MoveOtherScreenDelegate {
+protocol MoveOtherScreenDelegate: class {
     func selectLogOut()
 }
 
@@ -22,7 +22,7 @@ class AccountSettingView: UIView {
     @IBOutlet private weak var logOutView: UIView!
     
     // MARK: - Properties
-    var delegate: MoveOtherScreenDelegate?
+    weak var delegate: MoveOtherScreenDelegate?
     
     // MARK: - View LifeCyrcle
     override func layoutSubviews() {

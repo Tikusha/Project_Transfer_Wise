@@ -16,10 +16,10 @@ class LogInViewController: UIViewController {
     @IBOutlet private weak var appleButton: UIButton!
     @IBOutlet private weak var faceButton: UIButton!
     @IBOutlet private weak var googleButton: UIButton!
-    @IBOutlet private weak var emailTextfield: UITextField!
+    @IBOutlet private weak var mailTextfield: UITextField!
     @IBOutlet private weak var passwordTextfield: UITextField!
-    @IBOutlet private weak var lineTopView: UIView!
-    @IBOutlet private weak var lineBottomView: UIView!
+    @IBOutlet private weak var mailLineView: UIView!
+    @IBOutlet private weak var passwordLineView: UIView!
     @IBOutlet private weak var eyeButton: UIButton!
     
     // MARK: - Properties
@@ -41,10 +41,10 @@ class LogInViewController: UIViewController {
         self.faceButton.customCornerButton(cornerRadius: 3, borderWidth: 0.7, borderColor: Constants.Color.navyDark)
         self.googleButton.customCornerButton(cornerRadius: 3, borderWidth: 0.7, borderColor: Constants.Color.blueDown)
         self.passwordTextfield.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
-        self.emailTextfield.attributedPlaceholder = NSAttributedString(string: "Your email", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
+        self.mailTextfield.attributedPlaceholder = NSAttributedString(string: "Your email", attributes: [NSAttributedString.Key.foregroundColor: Constants.Color.disabledGrey])
         self.eyeButton.isHidden = true
         self.passwordTextfield.delegate = self
-        self.emailTextfield.delegate = self
+        self.mailTextfield.delegate = self
     }
     
     private func emptyFieldsAlert() {
@@ -65,7 +65,7 @@ class LogInViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction private func logIn() {
-        guard let email = self.emailTextfield.text?.isNotEmpty,
+        guard let email = self.mailTextfield.text?.isNotEmpty,
               let password = self.passwordTextfield.text?.isNotEmpty else {
             self.emptyFieldsAlert()
             self.dismissAlert()
@@ -86,15 +86,24 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction private func chandeColorMail() {
-        self.lineTopView.backgroundColor = Constants.Color.brandBlue
-        self.lineBottomView.backgroundColor = Constants.Color.keylineGrey
-        self.eyeButton.isHidden = true
+        self.mailLineView.backgroundColor = Constants.Color.brandBlue
+        if self.passwordTextfield.text != "" {
+            self.passwordLineView.backgroundColor = Constants.Color.brandBlue
+            self.eyeButton.isHidden = false
+        } else {
+            self.passwordLineView.backgroundColor = Constants.Color.keylineGrey
+            self.eyeButton.isHidden = true
+        }
     }
     
     @IBAction private func chandeColorPassword() {
         self.eyeButton.isHidden = false
-        self.lineBottomView.backgroundColor = Constants.Color.brandBlue
-        self.lineTopView.backgroundColor = Constants.Color.keylineGrey
+        self.passwordLineView.backgroundColor = Constants.Color.brandBlue
+        if self.mailTextfield.text != "" {
+            self.mailLineView.backgroundColor = Constants.Color.brandBlue
+        } else {
+            self.mailLineView.backgroundColor = Constants.Color.keylineGrey
+        }
     }
     
     @IBAction private func close(_ sender: Any) {
@@ -117,8 +126,10 @@ class LogInViewController: UIViewController {
 extension LogInViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
-        case self.emailTextfield:
+        case self.mailTextfield:
             self.passwordTextfield.becomeFirstResponder()
+            self.passwordLineView.backgroundColor = Constants.Color.brandBlue
+            self.eyeButton.isHidden = false
         default:
             self.passwordTextfield.resignFirstResponder()
             self.logIn()
@@ -133,16 +144,19 @@ extension LogInViewController {
     }
     
     @objc func changeColor(sender: UITapGestureRecognizer) {
-        if !self.isSecureTextEntryPassword {
-            self.view.endEditing(false)
-        } else {
-            if sender.state == .ended {
-                self.view.endEditing(true)
-                sender.cancelsTouchesInView = false
-                self.eyeButton.isHidden = true
-                self.lineBottomView.backgroundColor = Constants.Color.keylineGrey
-                self.lineTopView.backgroundColor = Constants.Color.keylineGrey
+        if sender.state == .ended {
+            self.view.endEditing(true)
+            if self.mailTextfield.text != "" {
+                self.mailLineView.backgroundColor = Constants.Color.brandBlue
+            } else {
+                self.mailLineView.backgroundColor = Constants.Color.keylineGrey }
+            if self.passwordTextfield.text != "" {
+                self.eyeButton.isHidden = false
+                self.passwordLineView.backgroundColor = Constants.Color.brandBlue
             }
+            else {
+                self.eyeButton.isHidden = true
+                self.passwordLineView.backgroundColor = Constants.Color.keylineGrey }
         }
     }
 }

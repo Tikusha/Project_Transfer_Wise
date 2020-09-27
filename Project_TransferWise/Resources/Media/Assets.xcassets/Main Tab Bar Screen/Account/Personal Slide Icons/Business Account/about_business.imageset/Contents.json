@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "money-earth@1x.png",
+      "filename" : "Icon-40.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "money-earth@2x.png",
+      "filename" : "Icon-40@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "money-earth@3x.png",
+      "filename" : "Icon-40@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

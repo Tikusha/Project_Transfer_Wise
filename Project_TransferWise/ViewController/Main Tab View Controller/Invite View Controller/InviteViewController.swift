@@ -28,4 +28,10 @@ class InviteViewController: UIViewController {
     @IBAction private func inviteFriend() {
         self.present(InviteFriendViewController(), animated: true)
     }
+    
+    @IBAction private func learnMore() {
+        let vc = LoadSiteViewController()
+        vc.modalPresentationStyle = .popover
+        self.present(vc, animated: true, completion: nil)
+    }
 }

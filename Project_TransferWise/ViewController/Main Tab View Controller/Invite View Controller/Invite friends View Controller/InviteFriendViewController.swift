@@ -90,7 +90,7 @@ class InviteFriendViewController: UIViewController, MFMessageComposeViewControll
 
 extension InviteFriendViewController {
     enum Constant {
-        static let copied = "copied"
+        static let copied = "Copied"
         static let completed = "completed"
         static let cencalled = "cencaled"
         static let presented = "presented"

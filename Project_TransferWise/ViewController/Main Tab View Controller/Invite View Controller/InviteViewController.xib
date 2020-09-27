@@ -69,6 +69,9 @@
                     <state key="normal" title="Learn more">
                         <color key="titleColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="learnMore" destination="-1" eventType="touchUpInside" id="opb-Br-wfo"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite your friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSS-ZZ-iad">
                     <rect key="frame" x="20" y="65" width="195" height="28"/>

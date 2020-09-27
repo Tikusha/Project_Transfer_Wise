@@ -58,11 +58,7 @@ class MainTabViewController: UITabBarController {
     private func setupMiddleIcon() {
         let frame = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         var shadeFrame = frame.frame
-        shadeFrame.origin.y = self.view.bounds.height - self.tabBar.frame.height - shadeFrame.height/2 - 34
-        print(shadeFrame.origin.y)
-        print(self.view.bounds.height)
-        print(self.tabBar.frame.height)
-        print(shadeFrame.height/2)
+        shadeFrame.origin.y = self.view.frame.height - self.tabBar.frame.height - shadeFrame.height/2 - 35
         shadeFrame.origin.x = self.view.bounds.width/2 - shadeFrame.size.width/2
         frame.frame = shadeFrame
         frame.backgroundColor = UIColor.white

@@ -57,7 +57,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y0k-YW-uzx" userLabel="First Name Stack View">
                     <rect key="frame" x="20" y="119.00000000000001" width="374" height="18.666666666666671"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4x-6x-FAP" userLabel="First Name Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4x-6x-FAP" userLabel="First Name Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="182" height="18.666666666666668"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -68,7 +68,7 @@
                                 <action selector="chandeColorFirstname" destination="-1" eventType="touchDown" id="8gB-Yg-uEM"/>
                             </connections>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TRR-rl-6PI" userLabel="Last Name Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TRR-rl-6PI" userLabel="Last Name Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
                             <rect key="frame" x="192" y="0.0" width="182" height="18.666666666666668"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -110,7 +110,7 @@
                     <rect key="frame" x="20" y="220.33333333333334" width="374" height="0.66666666666665719"/>
                     <color key="backgroundColor" red="0.88627450980392153" green="0.90196078431372551" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gGX-Rt-ODO" userLabel="address Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gGX-Rt-ODO" userLabel="address Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
                     <rect key="frame" x="20" y="260.33333333333331" width="374" height="18.666666666666686"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -128,7 +128,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="itZ-l8-4hm" userLabel="City Stack View">
                     <rect key="frame" x="20" y="332" width="374" height="18.666666666666686"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Oj-k9-mI4" userLabel="City Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Oj-k9-mI4" userLabel="City Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="183" height="18.666666666666668"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -139,10 +139,10 @@
                                 <action selector="chandeColorCity" destination="-1" eventType="touchDown" id="Nne-DQ-geq"/>
                             </connections>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mXz-a2-EQ3" userLabel="Post Code Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Post code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mXz-a2-EQ3" userLabel="Post Code Text Field" customClass="CustomTextField" customModule="Project_TransferWise" customModuleProvider="target">
                             <rect key="frame" x="191" y="0.0" width="183" height="18.666666666666668"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Post code"/>
                             </userDefinedRuntimeAttributes>
@@ -168,13 +168,13 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhd-Qz-eex">
                     <rect key="frame" x="20" y="385" width="87" height="13.333333333333314"/>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                    <color key="textColor" red="0.6588235294117647" green="0.66666666666666663" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.1450980392" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mrD-cw-212" userLabel="Date Stack View">
                     <rect key="frame" x="20" y="403.33333333333331" width="159" height="18.666666666666686"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zxC-iT-uiq" userLabel="Day Text Field">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zxC-iT-uiq" userLabel="Day Text Field">
                             <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="18.666666666666668"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -185,7 +185,7 @@
                                 <action selector="chandeColorDay" destination="-1" eventType="touchDown" id="HMD-P5-JN3"/>
                             </connections>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hMJ-ES-4s5" userLabel="Month Text Field">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hMJ-ES-4s5" userLabel="Month Text Field">
                             <rect key="frame" x="83.666666666666686" y="0.0" width="75.333333333333314" height="18.666666666666668"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -198,7 +198,7 @@
                         </textField>
                     </subviews>
                 </stackView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0bx-vY-872" userLabel="Year Text Field">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0bx-vY-872" userLabel="Year Text Field">
                     <rect key="frame" x="187" y="403.33333333333331" width="207" height="18.666666666666686"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="207" id="UaW-HS-XPh"/>
