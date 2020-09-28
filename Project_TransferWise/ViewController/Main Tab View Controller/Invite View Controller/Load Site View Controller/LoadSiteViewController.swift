@@ -12,6 +12,9 @@ class LoadSiteViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var webView: UIWebView!
+    
+    // MARK: - Properties
+    var linkPath: String?
 
     // MARK: - View LifeCyrcle
     override func viewDidLoad() {
@@ -21,7 +24,10 @@ class LoadSiteViewController: UIViewController {
     
     // MARK: - Load Site
     private func loadSite() {
-        let url = URL(string: "https://www.transferwise.com")
+        guard let path = linkPath else {
+            return
+        }
+        let url = URL(string: path)
         let requestObj = URLRequest(url: url!)
         webView.loadRequest(requestObj)
     }

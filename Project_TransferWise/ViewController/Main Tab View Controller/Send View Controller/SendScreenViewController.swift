@@ -101,6 +101,15 @@ class SendScreenViewController: UIViewController {
         self.isTagCurrentFirstButton = false
         self.moveCountryScreen()
     }
+    
+    @IBAction private func priceComparison(_ sender: UIButton) {
+        let vc = PriceCompareViewController()
+        vc.passMoney = self.sendAmountTextField.text
+        vc.passFrom = self.currencyFirstLabel.text
+        vc.passTo = self.currencySecondLabel.text
+        vc.modalPresentationStyle = .popover
+        self.present(vc, animated: true, completion: nil)
+    }
 }
 
 // MARK: - Delegate set country code

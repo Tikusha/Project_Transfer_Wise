@@ -184,7 +184,7 @@ extension AboutUserViewController {
         else { self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey }
         
         if self.dayTextfield.text != "" { self.dayLineView.backgroundColor = Constants.Color.brandBlue }
-        else { self.postCodeLineView.backgroundColor = Constants.Color.keylineGrey }
+        else { self.dayLineView.backgroundColor = Constants.Color.keylineGrey }
         
         if self.monthTextfield.text != "" { self.monthLineView.backgroundColor = Constants.Color.brandBlue }
         else { self.monthLineView.backgroundColor = Constants.Color.keylineGrey }

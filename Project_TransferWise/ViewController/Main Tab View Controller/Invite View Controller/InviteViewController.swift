@@ -31,6 +31,7 @@ class InviteViewController: UIViewController {
     
     @IBAction private func learnMore() {
         let vc = LoadSiteViewController()
+        vc.linkPath = "https://www.transferwise.com"
         vc.modalPresentationStyle = .popover
         self.present(vc, animated: true, completion: nil)
     }
