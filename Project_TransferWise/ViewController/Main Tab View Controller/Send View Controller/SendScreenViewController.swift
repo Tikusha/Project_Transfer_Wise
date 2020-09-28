@@ -64,11 +64,8 @@ class SendScreenViewController: UIViewController {
     
     @objc func editingSecondChanged() {
         self.fetchRate.amount = self.recipientTextField.text
-        print(self.fetchRate.amount)
         self.fetchRate.currencyFrom = self.currencySecondLabel.text
-        print(self.fetchRate.currencyFrom)
         self.fetchRate.currencyTo = self.currencyFirstLabel.text
-        print(self.fetchRate.currencyTo)
         self.fetchRate.fetch { currencyRate in
             guard let rates = currencyRate else { return }
             self.sendAmountTextField.text = String(rates.value)

@@ -107,8 +107,8 @@
             filePath = "Project_TransferWise/ViewController/Main Tab View Controller/Send View Controller/Network/FetchCurrency.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "fetch(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -171,8 +171,8 @@
             filePath = "Project_TransferWise/ViewController/Main Tab View Controller/Send View Controller/Network/FetchCurrency.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "fetch(_:)"
             landmarkType = "7">
          </BreakpointContent>
